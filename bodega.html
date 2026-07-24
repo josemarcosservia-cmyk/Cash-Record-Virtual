@@ -13,9 +13,8 @@ html,body{height:100%;overflow:hidden;background:#0c0806}
   position:absolute;inset:0;
   background:
     linear-gradient(180deg,rgba(8,5,3,.18) 0%,transparent 22%,transparent 72%,rgba(8,5,3,.55) 100%),
-    url('bodega-interior.jpg');
+    url('banner.png') center/cover no-repeat;
   background-size:cover;
-  background-position:center;
 }
 .etiquetas-layer{
   position:absolute;inset:0;pointer-events:none;
@@ -268,6 +267,7 @@ doors.addEventListener('keydown', function(e){
   if(e.key==='Enter'||e.key===' '){ e.preventDefault(); stage.classList.add('open'); }
 });
 btnClose.addEventListener('click', function(){ stage.classList.remove('open'); });
+setTimeout(function(){ stage.classList.add('open'); }, 500);
 </script>
 </body>
 </html>
