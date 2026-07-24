@@ -14,29 +14,17 @@
             text-align: center;
             color: #ffffff;
       }
-      .hero {
-            position: relative;
-            background: linear-gradient(rgba(20,25,20,0.55), rgba(20,25,20,0.85)), url('banner.png');
-            background-size: cover;
-            background-position: center;
-            padding: 90px 20px 70px 20px;
+      .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
       }
-      .logo {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 90px;
+      .welcome {
+            padding: 30px 20px;
+            background: #1c231d;
       }
-      .hero h1 {
+      .welcome p {
             margin: 0;
-            font-size: 2.4em;
-            letter-spacing: 1px;
-            color: #ff5a1f;
-            text-transform: uppercase;
-            font-weight: 900;
-      }
-      .hero p {
-            margin-top: 15px;
             font-size: 1.2em;
             color: #ffffff;
       }
@@ -45,7 +33,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            padding: 50px 20px;
+            padding: 20px 20px 50px 20px;
             background: #1c231d;
       }
       .card {
@@ -78,10 +66,10 @@
     </style>
   </head>
   <body>
-      <div class="hero">
-            <img class="logo" src="logo.png" alt="Cash Record">
-            <h1>Expertos en tu negocio</h1>
-          <p>Bienvenido a Cash Record Virtual &mdash; selecciona una sección para continuar</p>
+      <img class="banner-img" src="banner.png" alt="Cash Record - Expertos en tu negocio">
+
+      <div class="welcome">
+            <p>Selecciona una sección para continuar</p>
       </div>
   
     <div class="menu">
