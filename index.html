@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+  <html lang="es">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Record Virtual</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f1ea;
+        margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #2c2c2c;
+}
+  header {
+        background: #2f6b3e;
+    color: white;
+    padding: 40px 20px;
+}
+  header h1 {
+        margin: 0;
+    font-size: 2em;
+  }
+  header p {
+        margin-top: 10px;
+    font-size: 1.1em;
+}
+  .menu {
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  .card {
+        background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 30px 20px;
+    width: 200px;
+    text-decoration: none;
+    color: #2c2c2c;
+    transition: transform 0.2s;
+}
+  .card:hover {
+        transform: translateY(-5px);
+}
+  .card h2 {
+        margin: 10px 0 0 0;
+    font-size: 1.3em;
+}
+  footer {
+        padding: 20px;
+    color: #777;
+    font-size: 0.9em;
+}
+</style>
+  </head>
+  <body>
+    <header>
+      <h1>Bienvenido a Cash Record Virtual</h1>
+    <p>Selecciona una sección para continuar</p>
+    </header>
+
+    <div class="menu">
+      <a class="card" href="#bodega">
+        <h2>Bodega</h2>
+      </a>
+      <a class="card" href="#carniceria">
+        <h2>Carnicería</h2>
+      </a>
+      <a class="card" href="#pescaderia">
+        <h2>Pescadería</h2>
+      </a>
+      <a class="card" href="#fruteria">
+        <h2>Frutería</h2>
+      </a>
+    </div>
+
+    <footer>
+      &copy; 2026 Cash Record Virtual
+  </footer>
+</body>
+</html>
