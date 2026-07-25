@@ -38,6 +38,8 @@ html,body{height:100%;overflow:hidden;background:#0c0806}
     /* color de fondo — piedra cálida */
     linear-gradient(160deg, #2a1a0c 0%, #1c1008 40%, #150d06 70%, #0e0804 100%);
 }
+  /* ── FONDO FOTOGRAFICO DE LA BODEGA (visible al abrir las puertas) ── */
+  .interior{background:radial-gradient(ellipse 110% 90% at 50% 40%, transparent 45%, rgba(4,2,1,.65) 100%), linear-gradient(180deg, rgba(10,5,2,.45) 0%, transparent 20%), url('bodega-fondo.jpg') center/cover no-repeat #0e0804;}
 .etiquetas-layer{
   position:absolute;inset:0;pointer-events:none;
   opacity:0;transition:opacity .8s ease 2.4s;
