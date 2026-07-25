@@ -58,6 +58,8 @@ legend{color:#d9b96a;font-size:12px;letter-spacing:1px;text-transform:uppercase;
 .caja p{font-size:12.5px;color:#a2967a;line-height:1.55}
 .caja ol{font-size:12.5px;color:#a2967a;padding-left:18px;line-height:1.7}
 .caja .fila{display:flex;gap:8px;justify-content:flex-end;margin-top:4px}
+button.pend{background:#8a2a1c;border-color:#e0523f;color:#ffe3dc;font-weight:600}
+button.ok{background:#254d24;border-color:#4f9a4c;color:#d8f0d6}
 input[type=password]{background:#0e0c08;color:#e8e0cd;border:1px solid #4a3d28;border-radius:6px;padding:7px 9px;font:inherit;width:100%}
 </style>
 </head>
@@ -136,12 +138,12 @@ function cargarRepo(){
     .catch(function(e){ estado('Error al cargar: ' + e.message); });
 }
 function trasCarga(){
-  calcDups(); pintarZonas(); pintarLista(); pintarForm(); guardarBorrador();
+  calcDups(); pintarZonas(); pintarLista(); pintarForm(); guardarBorrador(); refrescarGuardado();
 }
 function guardarBorrador(){
   try { localStorage.setItem('editorVinosBorrador', JSON.stringify(DATA)); } catch(e){}
 }
-function cambio(){ calcDups(); pintarLista(); guardarBorrador(); estado('Cambios sin descargar - ' + total() + ' vinos'); }
+function cambio(){ calcDups(); pintarLista(); guardarBorrador(); estado('Cambios sin guardar en GitHub'); pedirRefresco(); }
 
 /* ---------- duplicados ---------- */
 function calcDups(){
@@ -457,10 +459,23 @@ function guardarEnGitHub(){
     })
     .then(function(j){
       BASE_TXT = texto;
+      refrescarGuardado();
       estado('Guardado en GitHub, commit ' + j.commit.sha.slice(0, 7) + '. La bodega se actualiza en un minuto.');
     })
     .catch(function(e){ estado(e.message); });
 }
+var tRef = null;
+function pedirRefresco(){ clearTimeout(tRef); tRef = setTimeout(refrescarGuardado, 400); }
+function refrescarGuardado(){
+  var b = $('btnGuardar');
+  if(!b || !DATA) return;
+  var hay = (BASE_TXT === null) ? true : (jsonTexto().trim() !== BASE_TXT.trim());
+  b.textContent = hay ? 'GUARDAR cambios en GitHub' : 'Todo guardado en GitHub';
+  b.className = hay ? 'pend' : 'ok';
+}
+document.addEventListener('keydown', function(e){
+  if((e.ctrlKey || e.metaKey) && String(e.key).toLowerCase() === 's'){ e.preventDefault(); guardarEnGitHub(); }
+});
 $('btnGuardar').addEventListener('click', guardarEnGitHub);
 $('btnToken').addEventListener('click', abrirModal);
 $('btnCerrarModal').addEventListener('click', cerrarModal);
