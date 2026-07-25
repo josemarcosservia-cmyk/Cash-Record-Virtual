@@ -11,7 +11,7 @@
         "desc": "Color amarillo paja con reflejos verdosos. Nariz expresiva con notas de lima, melocotón y piña sobre un fondo salino y mineral típico de la Ría de Arousa. Boca fresca, de cuerpo medio, con acidez vibrante y final limpio.",
         "mar": "Mariscos, ostras, pescado a la plancha, pulpo á feira",
         "cata": [2, 4, 4, 2, 1, 3],
-        "img": "",
+        "img": "img/martin-codax.webp",
         "bot": "7,50 €",
         "copa": "—"
       },
@@ -24,7 +24,7 @@
         "desc": "Albariño fresco y afrutado, con aromas de fruta blanca, flores y un toque cítrico. Textura sedosa en boca con buena acidez y retrogusto mineral limpio. Fácil y muy versátil en la mesa.",
         "mar": "Empanada, mejillones al vapor, ensalada de marisco",
         "cata": [2, 4, 3, 2, 1, 3],
-        "img": "",
+        "img": "img/burgans.webp",
         "bot": "6,20 €",
         "copa": "—"
       },
@@ -37,7 +37,7 @@
         "desc": "Albariño con crianza sobre lías que aporta mayor complejidad y volumen. Notas de mantequilla, fruta madura, flores blancas y un sutil toque mineral. Boca untuosa, equilibrada y de largo final.",
         "mar": "Merluza en salsa verde, vieiras, langosta",
         "cata": [3, 3, 4, 2, 1, 4],
-        "img": "",
+        "img": "img/pazo-san-mauro.webp",
         "bot": "9,00 €",
         "copa": "—"
       }
@@ -55,7 +55,7 @@
         "desc": "Vino blanco singular de producción ecológica. Nariz intensa con notas de fruta de hueso, flores amarillas y un sutil ahumado mineral. Gran tensión en boca, acidez precisa y un final largo y salino. Referencia absoluta de Monterrei.",
         "mar": "Trucha á ribeirá, carnes blancas, queso de tetilla",
         "cata": [3, 4, 3, 1, 1, 5],
-        "img": "",
+        "img": "img/quinta-da-muradella.webp",
         "bot": "9,00 €",
         "copa": "—"
       },
@@ -68,7 +68,7 @@
         "desc": "Blanco atlántico del valle del Támega. Nariz de fruta blanca madura, hierbas de monte y fondo calcáreo. Fresco y gastronómico, con buena acidez y un final limpio y mineral.",
         "mar": "Empanada de bacalao, trucha, quesos suaves del país",
         "cata": [2, 4, 3, 1, 1, 3],
-        "img": "",
+        "img": "img/gargalo.webp",
         "bot": "7,50 €",
         "copa": "—"
       },
@@ -81,7 +81,7 @@
         "desc": "Tinto ligero de Monterrei sobre suelos de granito. Perfumado, con notas de cereza fresca, violeta y tierra húmeda. Taninos finos, boca ágil y final frutal persistente. Elegante y de fácil disfrute.",
         "mar": "Carne de ternera, lacón con grelos, quesos semicurados",
         "cata": [2, 4, 4, 1, 2, 3],
-        "img": "",
+        "img": "img/ladredo-mencia.webp",
         "bot": "8,00 €",
         "copa": "—"
       }
@@ -99,7 +99,7 @@
         "desc": "Godello elegante sobre lías con notas cítricas, melocotón blanco, hinojo y mineralidad granítica. Boca equilibrada, sedosa y untuosa, con acidez fresca que alarga el final. Gran expresión del Godello atlántico.",
         "mar": "Pescados en salsa, mariscos, arroz caldoso de marisco",
         "cata": [3, 3, 4, 1, 1, 4],
-        "img": "",
+        "img": "img/godelia.webp",
         "bot": "8,50 €",
         "copa": "—"
       },
@@ -112,7 +112,7 @@
         "desc": "Referencia de la D.O. Valdeorras. Godello de viñas viejas con 6 meses sobre lías finas. Notas de fruta de hueso, miel y piedra mojada. Boca extraordinariamente equilibrada, cremosa y de largo final expresivo.",
         "mar": "Bacalao con patatas, rodaballo al horno, sepia",
         "cata": [3, 4, 3, 1, 1, 5],
-        "img": "",
+        "img": "img/valdesil.webp",
         "bot": "10,50 €",
         "copa": "—"
       }
@@ -130,7 +130,7 @@
         "desc": "Blanco aromático y floral con notas características de anís, hierbas de monte y fruta blanca. Boca fresca, de cuerpo ligero y final limpio. Muy versátil y representativo del Ribeiro clásico.",
         "mar": "Tapas, queso tetilla, empanada de bacalao",
         "cata": [2, 4, 3, 2, 1, 3],
-        "img": "",
+        "img": "img/vina-costeira-treixadura.webp",
         "bot": "5,80 €",
         "copa": "—"
       },
@@ -143,7 +143,7 @@
         "desc": "Blanco de buen volumen en boca con notas florales y herbáceas típicas del Ribeiro gallego. Accesible, fresco y muy gastronómico. Ideal para el día a día de la cocina gallega.",
         "mar": "Caldo gallego, lacón, quesos suaves",
         "cata": [2, 3, 3, 2, 1, 2],
-        "img": "",
+        "img": "img/pazo-tizon.webp",
         "bot": "4,90 €",
         "copa": "—"
       }
@@ -161,7 +161,7 @@
         "desc": "Tinto de bancales pizarrosos del Amandi. Nariz limpia y fresca con marcadas notas de fruta negra y roja, flores violáceas y un toque mineral. Cuerpo medio, taninos sedosos y acidez que lo hace vivo y sabroso.",
         "mar": "Carnes magras, caza menor, pulpo á feira",
         "cata": [2, 4, 4, 1, 2, 3],
-        "img": "",
+        "img": "img/guimaro.webp",
         "bot": "9,50 €",
         "copa": "—"
       },
@@ -174,7 +174,7 @@
         "desc": "Mencía elegante de terrenos pizarrosos del Sil. Nariz floral y frutal con notas de cereza, frambuesa y fondo mineral. Boca de acidez fresca, paso agradable y final persistente. Accesible y muy representativo de la DO.",
         "mar": "Chuletón, cordero asado, quesos semicurados",
         "cata": [2, 3, 4, 1, 2, 3],
-        "img": "",
+        "img": "img/regina-viarum.webp",
         "bot": "7,80 €",
         "copa": "—"
       }
@@ -192,7 +192,7 @@
         "desc": "Crianza riojana clásica con 12 meses en roble. Notas de fruta roja madura (cereza, ciruela), vainilla y especias suaves. Boca redonda y equilibrada, con taninos maduros y un final cálido y agradable.",
         "mar": "Cordero asado, cochinillo, embutidos ibéricos",
         "cata": [3, 3, 3, 1, 3, 3],
-        "img": "",
+        "img": "img/campo-viejo-crianza.webp",
         "bot": "6,50 €",
         "copa": "—"
       },
@@ -205,7 +205,7 @@
         "desc": "Referencia histórica de La Rioja con 93 puntos James Suckling. Muy equilibrado, con fruta roja madura, notas tostadas de roble americano y un final largo y cálido. Acidez total de 5,7 g/l bien integrada.",
         "mar": "Asados, carnes rojas, caza mayor",
         "cata": [3, 3, 3, 1, 3, 4],
-        "img": "",
+        "img": "img/faustino-v-crianza.webp",
         "bot": "7,20 €",
         "copa": "—"
       },
@@ -218,7 +218,7 @@
         "desc": "Crianza elegante de La Rioja Alta. Alta intensidad aromática con notas de fresas silvestres, frambuesas, canela y vainilla. Cuerpo medio, acidez fresca, taninos suaves y redondeados. Final largo y balsámico.",
         "mar": "Chuletón, setas, estofados de carne",
         "cata": [3, 3, 4, 1, 3, 4],
-        "img": "",
+        "img": "img/vina-alberdi-crianza.webp",
         "bot": "10,00 €",
         "copa": "—"
       }
@@ -236,7 +236,7 @@
         "desc": "3 años de crianza: 12 meses en roble francés y americano y 2 años en botella. Color cereza con reflejos púrpuras. Fruta negra madura, tabaco, chocolate y especias. Taninos firmes pero bien integrados.",
         "mar": "Cordero lechal, cochinillo, carnes asadas",
         "cata": [4, 3, 4, 1, 4, 4],
-        "img": "",
+        "img": "img/protos-crianza.webp",
         "bot": "9,80 €",
         "copa": "—"
       },
@@ -249,7 +249,7 @@
         "desc": "Ribera del Duero clásico de Alejandro Fernández. Concentrado y expresivo, con fruta negra, notas minerales y roble perfectamente integrado. Estructura elegante con taninos maduros y final persistente.",
         "mar": "Chuletón, embutidos curados, caza mayor",
         "cata": [4, 3, 4, 1, 4, 4],
-        "img": "",
+        "img": "img/condado-de-haza-crianza.webp",
         "bot": "11,00 €",
         "copa": "—"
       },
@@ -262,7 +262,7 @@
         "desc": "Ruby profundo con notas aromáticas de cereza, romero y anís. En boca, frambuesa, pimienta y regaliz dulce con taninos masticables y buena estructura. Fresco y frutal con el roble muy bien medido.",
         "mar": "Pasta con carne, hamburguesas gourmet, quesos curados",
         "cata": [3, 3, 4, 1, 3, 3],
-        "img": "",
+        "img": "img/pago-de-los-capellanes-roble.webp",
         "bot": "8,50 €",
         "copa": "—"
       }
@@ -280,7 +280,7 @@
         "desc": "Toro de gran formato. Mora y moras silvestres, Earl Grey, tierra y hierro. Taninos cremosos y musculosos, acidez fresca sorprendente para su potencia. Final muy largo con recuerdos de especias orientales y cacao.",
         "mar": "Chuletón de buey, cordero lechal, cocidos contundentes",
         "cata": [5, 2, 4, 1, 4, 5],
-        "img": "",
+        "img": "img/numanthia.webp",
         "bot": "18,00 €",
         "copa": "—"
       },
@@ -293,7 +293,7 @@
         "desc": "Expresión accesible de la D.O. Toro. Fruta negra abundante, ciruela madura y notas de regaliz. Potencia estructurada con taninos maduros y un final largo que evoca especias y canela.",
         "mar": "Asados de cordero, embutidos ibéricos, quesos curados",
         "cata": [4, 2, 4, 1, 3, 4],
-        "img": "",
+        "img": "img/vetus.webp",
         "bot": "8,00 €",
         "copa": "—"
       }
@@ -311,7 +311,7 @@
         "desc": "El cava más reconocido del mundo. Burbuja fina y persistente. Notas de manzana verde, pera madura, cítricos y un toque de jengibre. Seco y refrescante, con un final limpio y muy versátil.",
         "mar": "Aperitivos, jamón ibérico, tapas variadas",
         "cata": [2, 5, 3, 1, 1, 3],
-        "img": "",
+        "img": "img/freixenet-cordon-negro-brut.webp",
         "bot": "6,00 €",
         "copa": "—"
       },
@@ -324,7 +324,7 @@
         "desc": "El cava más antiguo de España, desde 1872. Fresco y mineral, con notas de frutas blancas, levadura y un toque cítrico delicado. Boca equilibrada y elegante con burbuja muy bien integrada.",
         "mar": "Langostinos, mariscos, salmón ahumado",
         "cata": [2, 4, 3, 2, 1, 3],
-        "img": "",
+        "img": "img/codorniu-clasico-brut.webp",
         "bot": "5,50 €",
         "copa": "—"
       },
@@ -337,7 +337,7 @@
         "desc": "Cava de mayor crianza y profundidad aromática. Burbuja muy fina e integrada, con notas de fruta madura, bollería, talco y una complejidad que lo distingue de los cavas convencionales. Elegante y festivo.",
         "mar": "Foie, ostras, celebraciones y aperitivos de nivel",
         "cata": [3, 4, 3, 1, 1, 4],
-        "img": "",
+        "img": "img/juve-y-camps-cinta-purpura.webp",
         "bot": "9,50 €",
         "copa": "—"
       }
@@ -355,7 +355,7 @@
         "desc": "El champagne más vendido del mundo. Color dorado paja con reflejos verdosos. Nariz de manzana verde, pera y melocotón con matices minerales y un ligero tostado. Burbuja elegante y final largo y refrescante.",
         "mar": "Ostras, foie gras, salmón ahumado, aperitivos finos",
         "cata": [2, 5, 4, 1, 1, 4],
-        "img": "",
+        "img": "img/moet-chandon-imperial-brut.webp",
         "bot": "38,00 €",
         "copa": "—"
       },
@@ -368,7 +368,7 @@
         "desc": "La etiqueta amarilla más icónica. Alto porcentaje de Pinot Noir que aporta estructura y carácter. Potente y estructurado, con notas distintivas de brioche tostado, miel, manzana asada y especias dulces.",
         "mar": "Langosta, vieiras, jamón de bellota, grandes celebraciones",
         "cata": [3, 4, 4, 1, 1, 4],
-        "img": "",
+        "img": "img/veuve-clicquot-brut.webp",
         "bot": "45,00 €",
         "copa": "—"
       },
@@ -381,7 +381,7 @@
         "desc": "100% Chardonnay de Grand Cru y Premier Cru de elegancia suprema. Burbuja finísima, con notas de flores blancas, cítricos, mantequilla y una tensión mineral excepcional. Frescura y longitud extraordinarias.",
         "mar": "Caviar, ostras finas, pescados nobles, tartar de atún",
         "cata": [2, 5, 4, 1, 1, 5],
-        "img": "",
+        "img": "img/billecart-salmon-blanc-de-blancs.webp",
         "bot": "55,00 €",
         "copa": "—"
       }
