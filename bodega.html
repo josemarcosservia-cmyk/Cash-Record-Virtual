@@ -200,11 +200,21 @@ html,body{height:100%;overflow:hidden;background:#0c0806}
   background:rgba(10,6,3,.88);border:1px solid rgba(201,162,75,.4);
   border-radius:3px;padding:8px 16px;
   font:.76rem/1.45 Georgia,serif;color:#e3d3ad;
-  text-align:center;max-width:280px;backdrop-filter:blur(6px);
-  opacity:0;pointer-events:none;transition:opacity .25s ease;white-space:nowrap;
+  text-align:center;max-width:min(340px,86vw);backdrop-filter:blur(6px);
+  opacity:0;pointer-events:none;transition:opacity .25s ease;white-space:normal;
 }
 .tooltip.show{opacity:1;}
 .tooltip strong{color:#c9a24b;font-size:.84rem;display:block;margin-bottom:2px;}
+.tooltip .tip-info{display:block;color:#e3d3ad;}
+.tooltip .tip-sub{display:block;margin-top:6px;padding-top:6px;border-top:1px solid rgba(201,162,75,.22);font:.68rem/1.45 Georgia,serif;color:rgba(220,200,145,.75);}
+.tooltip .tip-sub b{display:block;font:.42rem/1 'Marcellus SC',serif;letter-spacing:.18em;text-transform:uppercase;color:#c9a24b;margin-bottom:3px;font-weight:normal;}
+.tooltip.anchored{bottom:auto;}
+
+/* ── AJUSTE A PANTALLA DE ORDENADOR (en móvil se queda igual) ── */
+@media (min-width:820px){
+  .etiquetas-layer{left:50%;right:auto;width:min(100%,1150px);transform:translateX(-50%);}
+  .hint{bottom:78px;}
+}
 
 /* ── BUSCADOR ── */
 .buscador{
@@ -496,18 +506,38 @@ var COPIAS  = 3;
 ══════════════════════════════════════════ */
 var DOS = [
   /* ── GALICIA ── */
-  {do:'Rias Baixas',     region:'Galicia',         ccaa:'Galicia',           seal:'RB', color:'#3a6038'},
-  {do:'Monterrei',       region:'Galicia',         ccaa:'Galicia',           seal:'MO', color:'#6a3010'},
-  {do:'Valdeorras',      region:'Galicia',         ccaa:'Galicia',           seal:'VO', color:'#2a4870'},
-  {do:'Ribeiro',         region:'Galicia',         ccaa:'Galicia',           seal:'RO', color:'#7a3a18'},
-  {do:'Ribeira Sacra',   region:'Galicia',         ccaa:'Galicia',           seal:'RS', color:'#582060'},
+  {do:'Rias Baixas',     region:'Galicia',         ccaa:'Galicia',           seal:'RB', color:'#3a6038',
+   info:'Blancos atlánticos de Albariño: frescos, florales y con un fondo salino muy marcado.',
+   subs:'Val do Salnés · O Rosal · Condado do Tea · Soutomaior · Ribeira do Ulla'},
+  {do:'Monterrei',       region:'Galicia',         ccaa:'Galicia',           seal:'MO', color:'#6a3010',
+   info:'Godello y Treixadura en blanco, Mencía en tinto. Clima más continental.',
+   subs:'Val de Monterrei · Ladeira de Monterrei'},
+  {do:'Valdeorras',      region:'Galicia',         ccaa:'Galicia',           seal:'VO', color:'#2a4870',
+   info:'Cuna del Godello, sobre suelos de pizarra en el valle del Sil.',
+   subs:'O Barco · A Rúa · Vilamartín · Petín · Larouco · Rubiá'},
+  {do:'Ribeiro',         region:'Galicia',         ccaa:'Galicia',           seal:'RO', color:'#7a3a18',
+   info:'Blancos de Treixadura en los valles que rodean Ribadavia.',
+   subs:'Valle do Avia · Valle do Miño · Valle do Arnoia'},
+  {do:'Ribeira Sacra',   region:'Galicia',         ccaa:'Galicia',           seal:'RS', color:'#582060',
+   info:'Viticultura heroica en bancales sobre el Sil y el Miño. Mencía fresca y fina.',
+   subs:'Amandi · Chantada · Quiroga-Bibei · Ribeiras do Miño · Ribeiras do Sil'},
   /* ── LA RIOJA · CASTILLA Y LEÓN ── */
-  {do:'Rioja',           region:'La Rioja',        ccaa:'La Rioja',          seal:'RI', color:'#8a1c2a'},
-  {do:'Ribera del Duero',region:'Castilla y León', ccaa:'Castilla y León',   seal:'RD', color:'#6e1a12'},
-  {do:'Toro',            region:'Castilla y León', ccaa:'Castilla y León',   seal:'TO', color:'#6a2c10'},
+  {do:'Rioja',           region:'La Rioja',        ccaa:'La Rioja',          seal:'RI', color:'#8a1c2a',
+   info:'Tempranillo y crianza en barrica: el tinto clásico español.',
+   subs:'Rioja Alta · Rioja Alavesa · Rioja Oriental'},
+  {do:'Ribera del Duero',region:'Castilla y León', ccaa:'Castilla y León',   seal:'RD', color:'#6e1a12',
+   info:'Tinto Fino en la meseta: gran color, estructura y potencia.',
+   subs:'Burgos · Valladolid · Soria · Segovia'},
+  {do:'Toro',            region:'Castilla y León', ccaa:'Castilla y León',   seal:'TO', color:'#6a2c10',
+   info:'Tinta de Toro sobre suelos arenosos: intensos, concentrados y cálidos.',
+   subs:'Zamora · Valladolid'},
   /* ── ESPUMOSOS ── */
-  {do:'Cava',            region:'Catalunya',       ccaa:'Espumosos',         seal:'CV', color:'#6a5610'},
-  {do:'Champagne',       region:'Francia',         ccaa:'Espumosos',         seal:'CH', color:'#8a7020'},
+  {do:'Cava',            region:'Catalunya',       ccaa:'Espumosos',         seal:'CV', color:'#6a5610',
+   info:'Espumoso de método tradicional con Macabeo, Xarel·lo y Parellada.',
+   subs:'Comtats de Barcelona · Valle del Ebro · Viñedos de Almendralejo · Levante'},
+  {do:'Champagne',       region:'Francia',         ccaa:'Espumosos',         seal:'CH', color:'#8a7020',
+   info:'Espumoso francés de Chardonnay, Pinot Noir y Meunier, con larga crianza.',
+   subs:'Montagne de Reims · Vallée de la Marne · Côte des Blancs · Côte de Sézanne · Côte des Bar'},
 ];
 
 /* Posiciones agrupadas: izquierda = Galicia / derecha = resto */
@@ -587,7 +617,15 @@ DOS.forEach(function(d, i){
 
   function showTip(){
     clearTimeout(tipTimer);
-    tooltip.innerHTML = '<strong>' + d.do + '</strong>Ver vinos';
+    tooltip.innerHTML =
+      '<strong>' + esc(d.do) + '</strong>' +
+      '<span class="tip-info">' + esc(d.info || '') + '</span>' +
+      (d.subs ? '<span class="tip-sub"><b>Subzonas</b>' + esc(d.subs) + '</span>' : '');
+    var r = el.getBoundingClientRect();
+    var cx = Math.min(Math.max(r.left + r.width / 2, 180), window.innerWidth - 180);
+    tooltip.classList.add('anchored');
+    tooltip.style.left = cx + 'px';
+    tooltip.style.top  = Math.min(r.bottom + 10, window.innerHeight - 190) + 'px';
     tooltip.classList.add('show');
   }
   function hideTip(){
@@ -814,7 +852,7 @@ function pintarFicha(w){
     '<div class="ov-do-label">' + esc(w.do || '') + '</div>' +
     '<div class="ov-nom">' + esc(w.nom) + '</div>' +
     '<div class="ov-bod">' + esc(w.bodega) + '</div>' +
-    '<div class="ov-precio">Botella &mdash; ' + esc(w.bot) + '</div>' +
+    '<div class="ov-precio">' + esc(w.subzona || w.do || '') + '</div>' +
     '<button class="ov-cta" id="ovCtaBtn">Ver la cata</button>' +
     '<div class="ov-contador">' + (ovCentro+1) + ' de ' + ovLista.length + '</div>';
   document.getElementById('ovCtaBtn').onclick = function(){ abrirCata(w); };
@@ -901,8 +939,7 @@ function abrirCata(w){
         '<span class="mc-uva-tag">'+esc(w.uva||'')+'</span>' +
         '<div class="mc-meta">' +
           '<div><div class="lbl">Temperatura</div><div class="val">'+esc(w.temp||'—')+'</div></div>' +
-          '<div><div class="lbl">Copa</div><div class="val">'+esc(w.copa||'—')+'</div></div>' +
-          '<div><div class="lbl">Botella</div><div class="val">'+esc(w.bot||'—')+'</div></div>' +
+          '<div><div class="lbl">Subzona</div><div class="val">'+esc(w.subzona||'—')+'</div></div>' +
         '</div>' +
         '<div class="mc-desc">'+esc(w.desc||'')+'</div>' +
         '<div class="mc-mar"><b>Marida con:</b> '+esc(w.mar||'')+'</div>' +
