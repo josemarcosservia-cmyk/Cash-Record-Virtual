@@ -559,14 +559,22 @@
     "orig": "BCO R.BAIXAS COLEC.P.SEÑ.0,75L C"
    },
    {
-    "nom": "R. Baix. Arousa M. Codax",
-    "bodega": "",
-    "uva": "",
+    "nom": "Martin Codax Arousa",
+    "bodega": "Martín Códax ",
+    "uva": "100 % Albariño",
     "subzona": "",
     "temp": "",
-    "desc": "",
-    "mar": "",
-    "img": "img/r-baix-arousa-m-codax.webp",
+    "desc": "El Arousa  de Bodegas Martín Códax se produce en la D.O. Rías Baixas es un albariño inspirado por la desembocadura de la ría de Arousa, con suelos graníticos y una fuerte influencia marítima. Se elabora con 100 % Albariño, fermentado en acero inoxidable y con 18 meses sobre lías, lo que le brinda volumen y carácter atlántico. Su color es amarillo pajizo con reflejos verdosos. En nariz destacan notas de lima, limón, algas y hierbas, con una sensación marina sutil. En boca es intenso, persistente, sabroso y salino, con gran frescura.",
+    "mar": "Arroces, Guisos, Legumbres, Carnes blancas, Pescado azul",
+    "cata": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "img": "img/martin-codax-arousa.webp",
     "bot": "",
     "copa": "",
     "cod": "27068758",
