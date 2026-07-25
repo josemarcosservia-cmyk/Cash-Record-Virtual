@@ -581,14 +581,22 @@
     "orig": "V. R.BAIX.AROUSA M.CODAX 0,75L C/6"
    },
    {
-    "nom": "Albariño Paco & Lola Prime",
+    "nom": "Paco & Lola Prime",
     "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
+    "uva": "100 % Albariño",
+    "subzona": "Val do Salnés",
+    "temp": "8-10 ºC",
+    "desc": "Vino especial de alta gama que\nsolamente se produce en ediciones limitadas.\nElegante y persistente, resultado de un proceso enológico basado en la experimentación, la precisión y la artesanía técnica.\nElaborado a partir de tres crianzas sobre lías en acero inoxidable, foudre y huevo de granito, que aportan un perfil floral, sedoso y mineral.",
     "mar": "",
-    "img": "img/albarino-paco-lola-prime.webp",
+    "cata": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "img": "img/paco-lola-prime.webp",
     "bot": "",
     "copa": "",
     "cod": "27110030",
