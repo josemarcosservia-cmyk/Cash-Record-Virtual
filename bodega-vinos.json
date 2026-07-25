@@ -412,9 +412,9 @@
    },
    {
     "nom": "Godello Mar Frades",
-    "bodega": "",
+    "bodega": "Bodega Mar de Frades",
     "uva": "100% Godello",
-    "subzona": "Val do salnes",
+    "subzona": "Val do Salnés",
     "temp": "9-12 ºC",
     "desc": "Mar de Frades Godello es un vino de color amarillo limón pálido.\nEn nariz aparecen aromas de frutas como lichi, uva, grosella, fruta de la pasión, pera, nectarina, mango y piña.\nEn boca es cremoso y con volumen, reflejo de su crianza sobre lías. Destaca por su agradable acidez que marcará su longevidad.",
     "mar": "",
@@ -462,9 +462,9 @@
    },
    {
     "nom": "Espumoso Brut Mar de Frades",
-    "bodega": "",
+    "bodega": "Bodega Mar de Frades",
     "uva": "",
-    "subzona": "",
+    "subzona": "Val do Salnés",
     "temp": "",
     "desc": "",
     "mar": "",
@@ -498,7 +498,7 @@
    },
    {
     "nom": "Blanco Mar Frades",
-    "bodega": "",
+    "bodega": "Bodega Mar de Frades",
     "uva": "",
     "subzona": "",
     "temp": "",
