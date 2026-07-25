@@ -949,7 +949,7 @@ function abrirCata(w){
       '</div>' +
       '<div class="mc-radar"><div class="mc-radar-lbl">Estrella de cata</div>'+((Array.isArray(w.cata)&&w.cata.length===6)?radar(w.cata):'<div style="opacity:.4;font-size:13px;text-align:center;padding:56px 12px;line-height:1.6">Pendiente<br>de completar</div>')+'</div>' +
       '<div class="mc-info">' +
-        '<div class="mc-winery">'+esc(w.bodega||'')+'</div>' +
+        (w.bodega?'<div class="mc-winery">'+esc(w.bodega)+'</div>':'') +
         '<h3>'+esc(w.nom)+'</h3>' +
         '<div class="mc-do2">'+esc(w.do||ovDoName.textContent)+'</div>' +
         '<div class="mc-meta">' +
@@ -957,8 +957,8 @@ function abrirCata(w){
           '<div><div class="lbl">Subzona</div><div class="val">'+esc(w.subzona||'—')+'</div></div>' +
           '<div><div class="lbl">Uvas</div><div class="val">'+esc(w.uva||'—')+'</div></div>' +
         '</div>' +
-        '<div class="mc-desc">'+esc(w.desc||'')+'</div>' +
-        '<div class="mc-mar"><b>Marida con:</b> '+esc(w.mar||'')+'</div>' +
+        (w.desc?'<div class="mc-desc">'+esc(w.desc)+'</div>':'') +
+        (w.mar?'<div class="mc-mar"><b>Marida con:</b> '+esc(w.mar)+'</div>':'') +
       '</div>' +
     '</div>';
   mcModal.hidden = false;
