@@ -782,7 +782,7 @@ function renderCarrusel(vinos){
       b.dataset.i = i;
       b.setAttribute('aria-label', w.nom + ', ' + w.bodega);
       var cuerpo = w.img
-        ? '<img src="' + esc(w.img) + '" alt="" loading="lazy" onerror="this.replaceWith(siluetaEl())">'
+        ? '<img src="' + esc(w.img) + '" alt="" loading="lazy" onerror="fbImg(this)">'
         : siluetaEl().outerHTML;
       b.innerHTML = cuerpo;
       b.onclick = function(){
@@ -808,6 +808,22 @@ function siluetaEl(){
   d.className = 'sf';
   d.innerHTML = SILUETA;
   return d;
+}
+
+var EXTS = ['.webp','.png','.jpg','.jpeg'];
+function fbImg(el){
+  var s = el.getAttribute('src') || '';
+  var p = s.lastIndexOf('.');
+  var base = p > 0 ? s.slice(0, p) : '';
+  var ext = p > 0 ? s.slice(p).toLowerCase() : '';
+  var k = EXTS.indexOf(ext);
+  if(base && k > -1 && k < EXTS.length - 1){ el.setAttribute('src', base + EXTS[k + 1]); return; }
+  var sil = siluetaEl();
+  if(el.parentNode && el.parentNode.classList && el.parentNode.classList.contains('mc-bottle')){
+    sil.style.width = '80px';
+    sil.style.opacity = '.3';
+  }
+  el.replaceWith(sil);
 }
 
 function actualizarCarrusel(){
@@ -929,7 +945,7 @@ function abrirCata(w){
     '<button class="mc-close" data-close aria-label="Cerrar">&#10005;</button>' +
     '<div class="mc-detail">' +
       '<div class="mc-bottle">' +
-        (src ? '<img src="'+esc(src)+'" alt="">' : '<div class="sf" style="width:80px;opacity:.3">'+SILUETA+'</div>') +
+        (src ? '<img src="'+esc(src)+'" alt="" onerror="fbImg(this)">' : '<div class="sf" style="width:80px;opacity:.3">'+SILUETA+'</div>') +
       '</div>' +
       '<div class="mc-radar"><div class="mc-radar-lbl">Estrella de cata</div>'+radar(w.cata)+'</div>' +
       '<div class="mc-info">' +
