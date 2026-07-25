@@ -10,6 +10,14 @@
     "temp": "9 ºc",
     "desc": "Albariño 100%. Amarillo dorado con reflejos verdosos. En nariz, intensidad media-alta con aromas florales y frutas blancas, limpio y elegante. Boca fresca, amplia, redonda y con marcada persistencia aromática.",
     "mar": "",
+    "cata": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
     "img": "img/condes-de-albarei.webp",
     "bot": "",
     "copa": "",
@@ -483,14 +491,22 @@
     "orig": "ESPUM.D.O.R.BAIX.BRUT N.M.FRADES"
    },
    {
-    "nom": "Espum. Valtea",
+    "nom": "Espumoso Valtea",
     "bodega": "",
     "uva": "",
     "subzona": "",
     "temp": "",
     "desc": "",
     "mar": "",
-    "img": "img/espum-valtea.webp",
+    "cata": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "img": "img/espumoso-valtea.webp",
     "bot": "",
     "copa": "",
     "cod": "26504860",
