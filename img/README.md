@@ -2,55 +2,56 @@
 
 Coloca en esta carpeta las fotos de cada vino.
 
-Formato recomendado: PNG con fondo transparente, unos 700-900 px de alto y menos de 300 KB por archivo.
+Formato recomendado: WEBP con fondo transparente, unos 700-900 px de alto y menos de 150 KB por archivo.
 Los nombres deben ir en minusculas, sin acentos ni espacios.
+
+La pagina busca primero el archivo .webp. Si no lo encuentra prueba con .png, luego con .jpg y,
+si tampoco existe, muestra una silueta de botella. Asi puedes subir las fotos poco a poco.
 
 Nombres esperados por el archivo bodega-vinos.json:
 
 ## Rias Baixas
-- martin-codax.png
-- burgans.png
-- pazo-san-mauro.png
+- martin-codax.webp
+- burgans.webp
+- pazo-san-mauro.webp
 
 ## Monterrei
-- quinta-da-muradella.png
-- gargalo.png
-- ladredo-mencia.png
+- quinta-da-muradella.webp
+- gargalo.webp
+- ladredo-mencia.webp
 
 ## Valdeorras
-- godelia.png
-- valdesil.png
+- godelia.webp
+- valdesil.webp
 
 ## Ribeiro
-- vina-costeira-treixadura.png
-- pazo-tizon.png
+- vina-costeira-treixadura.webp
+- pazo-tizon.webp
 
 ## Ribeira Sacra
-- guimaro.png
-- regina-viarum.png
+- guimaro.webp
+- regina-viarum.webp
 
 ## Rioja
-- campo-viejo-crianza.png
-- faustino-v-crianza.png
-- vina-alberdi-crianza.png
+- campo-viejo-crianza.webp
+- faustino-v-crianza.webp
+- vina-alberdi-crianza.webp
 
 ## Ribera del Duero
-- protos-crianza.png
-- condado-de-haza-crianza.png
-- pago-de-los-capellanes-roble.png
+- protos-crianza.webp
+- condado-de-haza-crianza.webp
+- pago-de-los-capellanes-roble.webp
 
 ## Toro
-- numanthia.png
-- vetus.png
+- numanthia.webp
+- vetus.webp
 
 ## Cava
-- freixenet-cordon-negro-brut.png
-- codorniu-clasico-brut.png
-- juve-y-camps-cinta-purpura.png
+- freixenet-cordon-negro-brut.webp
+- codorniu-clasico-brut.webp
+- juve-y-camps-cinta-purpura.webp
 
 ## Champagne
-- moet-chandon-imperial-brut.png
-- veuve-clicquot-brut.png
-- billecart-salmon-blanc-de-blancs.png
-
-Si falta alguna foto, la pagina muestra automaticamente una silueta de botella.
+- moet-chandon-imperial-brut.webp
+- veuve-clicquot-brut.webp
+- billecart-salmon-blanc-de-blancs.webp
