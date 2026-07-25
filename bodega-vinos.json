@@ -461,14 +461,22 @@
     "orig": "V.ESPUM.ALBAR.A.ATLÁNTIC 0,37L C"
    },
    {
-    "nom": "Espum. . R. Baix. Brut N. M. Frades",
+    "nom": "Espumoso Brut Mar de Frades",
     "bodega": "",
     "uva": "",
     "subzona": "",
     "temp": "",
     "desc": "",
     "mar": "",
-    "img": "img/espum-r-baix-brut-n-m-frades.webp",
+    "cata": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "img": "img/espumoso-brut-mar-de-frades.webp",
     "bot": "",
     "copa": "",
     "cod": "90045489",
