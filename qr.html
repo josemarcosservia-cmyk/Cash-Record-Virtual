@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codigo QR - Bodega Cash Record</title>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Marcellus+SC&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:#0b0704;color:#e3d3ad;font-family:'Marcellus',serif;
+display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px 16px;gap:16px}
+h1{font-family:'Marcellus SC',serif;color:#c9a24b;font-size:1.35rem;letter-spacing:.14em;text-align:center}
+.sub{font-size:.8rem;color:rgba(220,200,145,.55);text-align:center;letter-spacing:.06em}
+.marco{background:#fff;padding:18px;border-radius:8px;border:1px solid rgba(201,162,75,.35);line-height:0}
+canvas{display:block;width:300px;height:300px;image-rendering:pixelated}
+.url{font-size:.72rem;color:rgba(220,200,145,.75);word-break:break-all;text-align:center;max-width:420px}
+.fila{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:4px}
+button,a.btn{background:transparent;border:1px solid rgba(201,162,75,.45);color:#e3d3ad;
+font-family:'Marcellus SC',serif;font-size:.62rem;letter-spacing:.16em;padding:9px 15px;
+border-radius:2px;cursor:pointer;text-decoration:none;transition:border-color .2s,background .2s}
+button:hover,a.btn:hover{border-color:#c9a24b;background:rgba(201,162,75,.12)}
+.aviso{font-size:.7rem;color:#e0a06a;text-align:center;max-width:420px}
+select,input{background:#140e09;color:#e3d3ad;border:1px solid rgba(201,162,75,.3);
+padding:7px 9px;border-radius:2px;font-family:'Marcellus',serif;font-size:.75rem}
+@media print{
+  body{background:#fff;color:#000}
+  .fila,.aviso,.sub{display:none}
+  h1{color:#000}
+  .marco{border:none}
+  .url{color:#000}
+}
+</style>
+</head>
+<body>
+<h1>Bodega Cash Record</h1>
+<div class="sub">Escanea para abrir la pagina principal</div>
+<div class="marco"><canvas id="cv"></canvas></div>
+<div class="url" id="txt"></div>
+<div class="fila">
+  <label class="url" style="display:flex;align-items:center;gap:6px">Tamano
+    <select id="tam">
+      <option value="600">600 px</option>
+      <option value="1000" selected>1000 px</option>
+      <option value="2000">2000 px (imprenta)</option>
+    </select>
+  </label>
+  <button id="bDesc">Descargar PNG</button>
+  <button id="bImp">Imprimir</button>
+</div>
+<div class="aviso" id="aviso"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+<script>
+(function(){
+  var URL_DESTINO = location.origin + location.pathname.replace(/qr\.html$/, '');
+  document.getElementById('txt').textContent = URL_DESTINO;
+
+  function pintar(px){
+    if(typeof QRious === 'undefined'){
+      document.getElementById('aviso').textContent =
+        'No se ha podido cargar el generador de QR. Comprueba la conexion a internet y recarga la pagina.';
+      return null;
+    }
+    var cv = document.getElementById('cv');
+    new QRious({
+      element: cv,
+      value: URL_DESTINO,
+      size: px,
+      level: 'H',
+      padding: Math.round(px * 0.04),
+      background: '#ffffff',
+      foreground: '#000000'
+    });
+    return cv;
+  }
+
+  pintar(1000);
+
+  document.getElementById('tam').addEventListener('change', function(){
+    pintar(parseInt(this.value, 10));
+  });
+
+  document.getElementById('bDesc').addEventListener('click', function(){
+    var px = parseInt(document.getElementById('tam').value, 10);
+    var cv = pintar(px);
+    if(!cv) return;
+    var a = document.createElement('a');
+    a.href = cv.toDataURL('image/png');
+    a.download = 'qr-bodega-cash-record-' + px + '.png';
+    a.click();
+  });
+
+  document.getElementById('bImp').addEventListener('click', function(){
+    window.print();
+  });
+})();
+</script>
+</body>
+</html>
