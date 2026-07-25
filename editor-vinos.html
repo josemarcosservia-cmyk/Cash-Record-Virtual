@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editor de vinos · Bodega Cash Record</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#12100c;color:#e8e0cd;font:14px/1.5 system-ui,Segoe UI,Roboto,sans-serif;height:100vh;display:flex;flex-direction:column;overflow:hidden}
+header{background:#1b1710;border-bottom:1px solid #3a3020;padding:10px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+header h1{font-size:17px;color:#d9b96a;font-weight:600;white-space:nowrap}
+.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+button,.btn{background:#2a2318;color:#e8e0cd;border:1px solid #4a3d28;border-radius:6px;padding:6px 12px;cursor:pointer;font-size:13px}
+button:hover,.btn:hover{background:#3a3020}
+button.primary{background:#7a5c1e;border-color:#c9a24b;color:#fff2d0}
+button.danger{background:#5a1f1f;border-color:#8a3a3a}
+#estado{font-size:12px;color:#9c9078;margin-left:auto}
+main{flex:1;display:flex;min-height:0}
+aside{width:320px;border-right:1px solid #3a3020;display:flex;flex-direction:column;background:#171309}
+aside .filtros{padding:10px;display:flex;flex-direction:column;gap:7px;border-bottom:1px solid #3a3020}
+select,input[type=text],input[type=number],textarea{background:#0e0c08;color:#e8e0cd;border:1px solid #4a3d28;border-radius:6px;padding:6px 8px;font:inherit;width:100%}
+textarea{resize:vertical;min-height:86px;line-height:1.55}
+label.chk{font-size:12px;color:#b8ab90;display:flex;align-items:center;gap:6px;cursor:pointer}
+label.chk input{width:auto}
+#lista{flex:1;overflow:auto}
+.item{padding:7px 10px;border-bottom:1px solid #241d13;cursor:pointer;display:flex;gap:8px;align-items:center}
+.item:hover{background:#221b11}
+.item.sel{background:#3a2d16;border-left:3px solid #d9b96a;padding-left:7px}
+.item .nm{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item .zn{font-size:10px;color:#8a7c60}
+.dot{width:8px;height:8px;border-radius:50%;flex:none;background:#3f7a3f}
+.dot.inc{background:#c98b2b}
+.dot.dup{background:#c2453f}
+.listfoot{padding:8px;display:flex;gap:6px;border-top:1px solid #3a3020}
+.listfoot button{flex:1;padding:6px 4px;font-size:12px}
+section.form{flex:1;overflow:auto;padding:16px 20px}
+.vacio{color:#7c7157;padding:40px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px 16px;margin-bottom:14px}
+.f{display:flex;flex-direction:column;gap:4px}
+.f>span{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:#a2967a}
+.wide{grid-column:1/-1}
+fieldset{border:1px solid #3a3020;border-radius:8px;padding:12px 14px;margin-bottom:14px}
+legend{color:#d9b96a;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:0 6px}
+.cata{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start}
+.ejes{flex:1;min-width:260px;display:flex;flex-direction:column;gap:8px}
+.eje{display:flex;align-items:center;gap:10px}
+.eje label{width:74px;font-size:12px;color:#c3b596}
+.eje input[type=range]{flex:1}
+.eje .v{width:20px;text-align:center;color:#d9b96a}
+.imgprev{display:flex;gap:12px;align-items:center}
+.imgprev img{width:70px;height:110px;object-fit:contain;background:#0b0906;border:1px solid #3a3020;border-radius:6px}
+.aviso{font-size:12px;color:#9c9078}
+.pill{font-size:11px;border:1px solid #4a3d28;border-radius:99px;padding:2px 9px;color:#c3b596}
+</style>
+</head>
+<body>
+<header>
+  <h1>Editor de vinos</h1>
+  <div class="tools">
+    <button id="btnRecargar">Recargar del repositorio</button>
+    <label class="btn">Abrir JSON del ordenador<input type="file" id="fileIn" accept=".json,application/json" hidden></label>
+    <button id="btnDescargar" class="primary">Descargar bodega-vinos.json</button>
+    <button id="btnCopiar">Copiar JSON</button>
+    <button id="btnBorrador">Descartar borrador</button>
+  </div>
+  <span id="estado"></span>
+</header>
+<main>
+  <aside>
+    <div class="filtros">
+      <select id="selZona"></select>
+      <input type="text" id="buscar" placeholder="Buscar por nombre, bodega o codigo">
+      <label class="chk"><input type="checkbox" id="soloInc"> Solo incompletos</label>
+      <label class="chk"><input type="checkbox" id="soloDup"> Solo posibles duplicados</label>
+    </div>
+    <div id="lista"></div>
+    <div class="listfoot">
+      <button id="btnNuevo">+ Vino</button>
+      <button id="btnDup">Duplicar</button>
+      <button id="btnBorrar" class="danger">Borrar</button>
+    </div>
+  </aside>
+  <section class="form" id="form"><div class="vacio">Selecciona un vino en la lista de la izquierda.</div></section>
+</main>
+<script>
+var LABELS = ['Cuerpo','Acidez','Fruta','Dulzor','Taninos','Final'];
+var ORDEN  = ['nom','bodega','uva','subzona','temp','desc','mar','cata','img','bot','copa','cod','orig'];
+var ZONAS_OK = ['Rias Baixas','Monterrei','Valdeorras','Ribeiro','Ribeira Sacra','Rioja','Ribera del Duero','Toro','Cava','Champagne'];
+var DATA = null, zi = -1, wi = -1, dups = {};
+
+function $(id){ return document.getElementById(id); }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function estado(t){ $('estado').textContent = t; }
+function total(){ var n=0; DATA.forEach(function(z){ n+=z.vinos.length; }); return n; }
+function norm(s){ return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,''); }
+function slug(s){ return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+function incompleto(w){ return !w.uva || !w.subzona || !w.temp || !w.desc || !w.mar || !(Array.isArray(w.cata) && w.cata.length===6); }
+
+/* ---------- carga y guardado ---------- */
+function cargarRepo(){
+  fetch('bodega-vinos.json?v=' + Date.now())
+    .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(j){ DATA = j; zi = -1; wi = -1; trasCarga(); estado('Cargado del repositorio: ' + total() + ' vinos'); })
+    .catch(function(e){ estado('Error al cargar: ' + e.message); });
+}
+function trasCarga(){
+  calcDups(); pintarZonas(); pintarLista(); pintarForm(); guardarBorrador();
+}
+function guardarBorrador(){
+  try { localStorage.setItem('editorVinosBorrador', JSON.stringify(DATA)); } catch(e){}
+}
+function cambio(){ calcDups(); pintarLista(); guardarBorrador(); estado('Cambios sin descargar - ' + total() + ' vinos'); }
+
+/* ---------- duplicados ---------- */
+function calcDups(){
+  dups = {};
+  DATA.forEach(function(z, iz){
+    var mapa = {};
+    z.vinos.forEach(function(w, iw){
+      var k = norm(w.nom).slice(0,11);
+      if(!k) return;
+      (mapa[k] = mapa[k] || []).push(iw);
+    });
+    Object.keys(mapa).forEach(function(k){
+      if(mapa[k].length > 1) mapa[k].forEach(function(iw){ dups[iz + '-' + iw] = true; });
+    });
+  });
+}
+
+/* ---------- lista ---------- */
+function pintarZonas(){
+  var s = $('selZona'), v = s.value;
+  var h = '<option value="-1">Todas las zonas (' + total() + ')</option>';
+  DATA.forEach(function(z, i){ h += '<option value="' + i + '">' + esc(z.zona) + ' (' + z.vinos.length + ')</option>'; });
+  s.innerHTML = h;
+  if(v !== '' && v != null && s.querySelector('option[value="' + v + '"]')) s.value = v;
+}
+function pintarLista(){
+  var zsel = parseInt($('selZona').value, 10);
+  if(isNaN(zsel)) zsel = -1;
+  var q = norm($('buscar').value);
+  var soloInc = $('soloInc').checked, soloDup = $('soloDup').checked;
+  var h = '', n = 0;
+  DATA.forEach(function(z, iz){
+    if(zsel >= 0 && iz !== zsel) return;
+    z.vinos.forEach(function(w, iw){
+      if(q && norm(w.nom + ' ' + (w.bodega||'') + ' ' + (w.cod||'')).indexOf(q) < 0) return;
+      if(soloInc && !incompleto(w)) return;
+      if(soloDup && !dups[iz + '-' + iw]) return;
+      n++;
+      var cls = dups[iz + '-' + iw] ? 'dot dup' : (incompleto(w) ? 'dot inc' : 'dot');
+      h += '<div class="item' + (iz===zi && iw===wi ? ' sel' : '') + '" data-z="' + iz + '" data-w="' + iw + '">' +
+           '<span class="' + cls + '"></span>' +
+           '<span class="nm">' + esc(w.nom || '(sin nombre)') + '<br><span class="zn">' + esc(w.bodega || '-') + (zsel < 0 ? ' · ' + esc(z.zona) : '') + '</span></span>' +
+           '</div>';
+    });
+  });
+  $('lista').innerHTML = h || '<div class="vacio">Sin resultados</div>';
+  pintarZonas();
+  if(!$('estado').textContent) estado(n + ' vinos en la lista');
+}
+$('lista').addEventListener('click', function(e){
+  var it = e.target.closest('.item'); if(!it) return;
+  zi = +it.dataset.z; wi = +it.dataset.w; pintarLista(); pintarForm();
+});
+
+/* ---------- formulario ---------- */
+function vinoActual(){
+  if(zi < 0 || wi < 0 || !DATA[zi] || !DATA[zi].vinos[wi]) return null;
+  return DATA[zi].vinos[wi];
+}
+function campo(id, etiqueta, valor, ancho){
+  return '<div class="f' + (ancho ? ' wide' : '') + '"><span>' + etiqueta + '</span><input type="text" id="' + id + '" value="' + esc(valor) + '"></div>';
+}
+function pintarForm(){
+  var w = vinoActual();
+  if(!w){ $('form').innerHTML = '<div class="vacio">Selecciona un vino en la lista de la izquierda.</div>'; return; }
+  var tieneCata = Array.isArray(w.cata) && w.cata.length === 6;
+  var h = '';
+  h += '<div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap">';
+  h += '<span class="pill">' + esc(DATA[zi].zona) + '</span>';
+  h += '<span class="pill">' + (incompleto(w) ? 'Ficha incompleta' : 'Ficha completa') + '</span>';
+  if(dups[zi + '-' + wi]) h += '<span class="pill" style="border-color:#c2453f;color:#e08a86">Posible duplicado</span>';
+  h += '<select id="selMover" style="width:auto;margin-left:auto">' + DATA.map(function(z, i){ return '<option value="' + i + '"' + (i===zi?' selected':'') + '>' + esc(z.zona) + '</option>'; }).join('') + '</select>';
+  h += '<button id="btnMover">Mover a esta zona</button></div>';
+  h += '<div class="grid">';
+  h += campo('fNom', 'Nombre del vino', w.nom);
+  h += campo('fBodega', 'Bodega', w.bodega);
+  h += campo('fUva', 'Uvas', w.uva);
+  h += campo('fSubzona', 'Subzona', w.subzona);
+  h += campo('fTemp', 'Temperatura de servicio', w.temp);
+  h += campo('fCod', 'Codigo de articulo', w.cod);
+  h += '<div class="f wide"><span>Descripcion de cata</span><textarea id="fDesc">' + esc(w.desc) + '</textarea></div>';
+  h += campo('fMar', 'Marida con', w.mar, true);
+  h += '</div>';
+  h += '<fieldset><legend>Estrella de cata (0 a 5)</legend><div class="cata">';
+  h += '<div class="ejes"><label class="chk" style="margin-bottom:4px"><input type="checkbox" id="chkCata"' + (tieneCata ? ' checked' : '') + '> Este vino tiene estrella de cata</label>';
+  for(var i = 0; i < 6; i++){
+    var v = tieneCata ? w.cata[i] : 3;
+    h += '<div class="eje"><label>' + LABELS[i] + '</label><input type="range" min="0" max="5" step="1" id="c' + i + '" value="' + v + '"' + (tieneCata ? '' : ' disabled') + '><span class="v" id="cv' + i + '">' + v + '</span></div>';
+  }
+  h += '</div><div><svg id="radarPrev" width="230" height="230" viewBox="0 0 260 260"></svg></div>';
+  h += '</div></fieldset>';
+  h += '<fieldset><legend>Fotografia</legend>';
+  h += '<div class="imgprev"><img id="imgPrev" alt=""><div style="flex:1">';
+  h += '<div class="f">' + '<span>Ruta de la imagen</span><input type="text" id="fImg" value="' + esc(w.img) + '"></div>';
+  h += '<div style="margin-top:8px;display:flex;gap:8px;align-items:center"><button id="btnSlug">Generar nombre desde el titulo</button><span class="aviso" id="avisoImg"></span></div>';
+  h += '</div></div></fieldset>';
+  h += '<fieldset><legend>Datos internos (no se muestran en la bodega)</legend><div class="grid">';
+  h += campo('fOrig', 'Nombre original del catalogo', w.orig);
+  h += campo('fBot', 'Precio botella (historico)', w.bot);
+  h += campo('fCopa', 'Precio copa (historico)', w.copa);
+  h += '</div></fieldset>';
+  $('form').innerHTML = h;
+  enlazarForm();
+  dibujarRadar();
+  refrescarImg();
+}
+function enlazarForm(){
+  var w = vinoActual();
+  var pares = [['fNom','nom'],['fBodega','bodega'],['fUva','uva'],['fSubzona','subzona'],['fTemp','temp'],['fCod','cod'],['fDesc','desc'],['fMar','mar'],['fImg','img'],['fOrig','orig'],['fBot','bot'],['fCopa','copa']];
+  pares.forEach(function(p){
+    var el = $(p[0]); if(!el) return;
+    el.addEventListener('input', function(){
+      w[p[1]] = el.value;
+      if(p[1] === 'img') refrescarImg();
+      cambio();
+    });
+  });
+  $('chkCata').addEventListener('change', function(){
+    if(this.checked){
+      w.cata = [0,1,2,3,4,5].map(function(i){ return +$('c' + i).value; });
+    } else {
+      delete w.cata;
+    }
+    for(var i = 0; i < 6; i++) $('c' + i).disabled = !this.checked;
+    dibujarRadar(); cambio();
+  });
+  for(var i = 0; i < 6; i++){
+    (function(i){
+      $('c' + i).addEventListener('input', function(){
+        $('cv' + i).textContent = this.value;
+        if($('chkCata').checked){
+          if(!Array.isArray(w.cata) || w.cata.length !== 6) w.cata = [3,3,3,3,3,3];
+          w.cata[i] = +this.value;
+        }
+        dibujarRadar(); cambio();
+      });
+    })(i);
+  }
+  $('btnSlug').addEventListener('click', function(){
+    $('fImg').value = 'img/' + slug(w.nom) + '.webp';
+    w.img = $('fImg').value; refrescarImg(); cambio();
+  });
+  $('btnMover').addEventListener('click', function(){
+    var destino = +$('selMover').value;
+    if(destino === zi) return;
+    var v = DATA[zi].vinos.splice(wi, 1)[0];
+    DATA[destino].vinos.push(v);
+    zi = destino; wi = DATA[destino].vinos.length - 1;
+    cambio(); pintarForm(); estado('Vino movido a ' + DATA[destino].zona);
+  });
+}
+function refrescarImg(){
+  var w = vinoActual(); if(!w) return;
+  var im = $('imgPrev'), av = $('avisoImg');
+  if(!w.img){ im.removeAttribute('src'); av.textContent = 'Sin ruta de imagen'; return; }
+  av.textContent = 'Buscando ' + w.img;
+  im.onload = function(){ av.textContent = 'Imagen encontrada'; };
+  im.onerror = function(){ av.textContent = 'Todavia no existe ese archivo en el repositorio'; };
+  im.src = w.img;
+}
+function dibujarRadar(){
+  var w = vinoActual(); var sv = $('radarPrev'); if(!sv || !w) return;
+  var cx = 130, cy = 130, R = 88, N = 6, max = 5;
+  function ang(i){ return (-90 + i * 360 / N) * Math.PI / 180; }
+  function pt(i, r){ return [cx + r * Math.cos(ang(i)), cy + r * Math.sin(ang(i))]; }
+  var g = '';
+  for(var a = 1; a <= max; a++){
+    var rr = R * a / max, p = '';
+    for(var i = 0; i < N; i++){ var xy = pt(i, rr); p += (i ? 'L' : 'M') + xy[0].toFixed(1) + ' ' + xy[1].toFixed(1); }
+    g += '<path d="' + p + 'Z" fill="none" stroke="#b8912a" stroke-width="1" opacity=".6"/>';
+  }
+  for(var i = 0; i < N; i++){
+    var xy = pt(i, R);
+    g += '<line x1="' + cx + '" y1="' + cy + '" x2="' + xy[0].toFixed(1) + '" y2="' + xy[1].toFixed(1) + '" stroke="#f5c542" stroke-width="1" opacity=".55"/>';
+    var lx = pt(i, R + 24);
+    g += '<text x="' + lx[0].toFixed(1) + '" y="' + lx[1].toFixed(1) + '" fill="#c3b596" font-size="11" text-anchor="middle" dominant-baseline="middle">' + LABELS[i] + '</text>';
+  }
+  if(Array.isArray(w.cata) && w.cata.length === 6){
+    var p2 = '';
+    for(var i = 0; i < N; i++){ var xy = pt(i, R * Math.max(0, Math.min(5, w.cata[i])) / max); p2 += (i ? 'L' : 'M') + xy[0].toFixed(1) + ' ' + xy[1].toFixed(1); }
+    g += '<path d="' + p2 + 'Z" fill="#e11d2b" fill-opacity=".72" stroke="#e11d2b" stroke-width="1.5"/>';
+  } else {
+    g += '<text x="130" y="130" fill="#7c7157" font-size="12" text-anchor="middle">Sin estrella de cata</text>';
+  }
+  sv.innerHTML = g;
+}
+
+/* ---------- alta, duplicado, borrado ---------- */
+$('btnNuevo').addEventListener('click', function(){
+  var z = parseInt($('selZona').value, 10);
+  if(isNaN(z) || z < 0) z = (zi >= 0 ? zi : 0);
+  DATA[z].vinos.push({ nom:'Vino nuevo', bodega:'', uva:'', subzona:'', temp:'', desc:'', mar:'', img:'', bot:'', copa:'', cod:'', orig:'' });
+  zi = z; wi = DATA[z].vinos.length - 1;
+  cambio(); pintarForm(); estado('Vino nuevo creado en ' + DATA[z].zona);
+});
+$('btnDup').addEventListener('click', function(){
+  var w = vinoActual(); if(!w) return;
+  var copia = JSON.parse(JSON.stringify(w));
+  copia.nom = w.nom + ' (copia)';
+  DATA[zi].vinos.splice(wi + 1, 0, copia);
+  wi = wi + 1; cambio(); pintarForm();
+});
+$('btnBorrar').addEventListener('click', function(){
+  var w = vinoActual(); if(!w) return;
+  if(!confirm('Borrar el vino "' + w.nom + '" de ' + DATA[zi].zona + '?')) return;
+  DATA[zi].vinos.splice(wi, 1);
+  wi = -1; cambio(); pintarForm(); estado('Vino borrado');
+});
+
+/* ---------- exportar ---------- */
+function limpiaVino(w){
+  var o = {};
+  ORDEN.forEach(function(k){
+    if(k === 'cata'){ if(Array.isArray(w.cata) && w.cata.length === 6) o.cata = w.cata.map(Number); }
+    else { o[k] = (w[k] == null ? '' : w[k]); }
+  });
+  Object.keys(w).forEach(function(k){ if(ORDEN.indexOf(k) < 0) o[k] = w[k]; });
+  return o;
+}
+function jsonTexto(){
+  return JSON.stringify(DATA.map(function(z){ return { zona: z.zona, vinos: z.vinos.map(limpiaVino) }; }), null, 1);
+}
+$('btnDescargar').addEventListener('click', function(){
+  var b = new Blob([jsonTexto()], { type: 'application/json' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(b); a.download = 'bodega-vinos.json';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); }, 4000);
+  estado('Descargado. Subelo a GitHub sustituyendo bodega-vinos.json');
+});
+$('btnCopiar').addEventListener('click', function(){
+  navigator.clipboard.writeText(jsonTexto())
+    .then(function(){ estado('JSON copiado al portapapeles'); })
+    .catch(function(){ estado('No se pudo copiar; usa el boton de descargar'); });
+});
+$('fileIn').addEventListener('change', function(e){
+  var f = e.target.files[0]; if(!f) return;
+  var fr = new FileReader();
+  fr.onload = function(){
+    try { DATA = JSON.parse(fr.result); zi = -1; wi = -1; trasCarga(); estado('Cargado ' + f.name + ': ' + total() + ' vinos'); }
+    catch(err){ estado('Ese archivo no es un JSON valido: ' + err.message); }
+  };
+  fr.readAsText(f, 'utf-8');
+  e.target.value = '';
+});
+$('btnRecargar').addEventListener('click', function(){
+  if(!confirm('Se perderan los cambios que no hayas descargado. Continuar?')) return;
+  localStorage.removeItem('editorVinosBorrador'); cargarRepo();
+});
+$('btnBorrador').addEventListener('click', function(){
+  if(!confirm('Descartar el borrador guardado en este navegador?')) return;
+  localStorage.removeItem('editorVinosBorrador'); cargarRepo();
+});
+['selZona','buscar','soloInc','soloDup'].forEach(function(id){
+  $(id).addEventListener('input', function(){ pintarLista(); });
+  $(id).addEventListener('change', function(){ pintarLista(); });
+});
+window.addEventListener('beforeunload', function(e){ if(DATA){ e.preventDefault(); e.returnValue = ''; } });
+
+/* ---------- arranque ---------- */
+(function(){
+  var b = localStorage.getItem('editorVinosBorrador');
+  if(b){
+    try {
+      var j = JSON.parse(b);
+      if(confirm('Hay un borrador guardado en este navegador. Quieres recuperarlo? Si eliges Cancelar se cargara el archivo del repositorio.')){
+        DATA = j; trasCarga(); estado('Borrador recuperado: ' + total() + ' vinos'); return;
+      }
+    } catch(err){}
+  }
+  cargarRepo();
+})();
+</script>
+</body>
+</html>
