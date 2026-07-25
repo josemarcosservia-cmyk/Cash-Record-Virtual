@@ -2,128 +2,74 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Cash Record Virtual</title>
 <style>
   * { box-sizing: border-box; }
+  html, body { height: 100%; }
   body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #1c231d;
     margin: 0;
     padding: 0;
     text-align: center;
     color: #ffffff;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    background: #1c231d url("banner.png") center center / cover no-repeat;
   }
-  .banner-img {
-    width: 100%;
-    height: auto;
-    display: block;
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(28,35,29,0) 25%, rgba(18,23,19,.60) 55%, rgba(12,16,12,.90) 100%);
+    pointer-events: none;
+    z-index: 0;
   }
-  .welcome {
-    padding: 30px 20px;
-    background: #1c231d;
-  }
-  .welcome p {
-    margin: 0;
-    font-size: 1.2em;
-    color: #ffffff;
-  }
+  .banner-img { display: none; }
+  .menu, .welcome, footer { position: relative; z-index: 1; background: transparent; }
   .menu {
+    flex: 0 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px 20px 50px 20px;
-    background: #1c231d;
+    padding: 14px 16px 10px;
   }
   .card {
-    background: #2a332b;
     border: 2px solid #ff5a1f;
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-    padding: 30px 20px;
-    width: 200px;
+    padding: 22px 18px;
+    width: 210px;
     text-decoration: none;
     color: #ffffff;
-    transition: transform 0.2s, background 0.2s;
+    background: rgba(26,33,27,.78);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 6px 22px rgba(0,0,0,.55);
+    transition: transform .2s, background .2s;
   }
-  .card:hover {
-    transform: translateY(-5px);
-    background: #ff5a1f;
-    color: #1c231d;
-  }
-  .card h2 {
-    margin: 10px 0 0 0;
-    font-size: 1.3em;
-    text-transform: uppercase;
-  }
-  footer {
-    padding: 25px;
-    background: #14180f;
-    color: #999;
-    font-size: 0.9em;
-  }
+  .card:hover { transform: translateY(-5px); background: #ff5a1f; color: #1c231d; }
+  .card h2 { margin: 0; font-size: 1.25em; text-transform: uppercase; text-shadow: 0 1px 4px rgba(0,0,0,.5); }
+  .welcome { flex: 0 0 auto; padding: 6px 20px 14px; }
+  .welcome p { margin: 0; font-size: 1.2em; letter-spacing: .04em; text-shadow: 0 2px 8px rgba(0,0,0,.85); }
+  footer { flex: 0 0 auto; padding: 12px 20px; background: rgba(10,13,10,.72); color: #999999; font-size: .9em; }
 
-  /* ── ORDENADOR: banner a pantalla completa con las secciones encima ── */
-  @media (min-width: 820px) {
-    html, body { height: 100%; }
-    body {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      overflow: hidden;
-      background: #1c231d url('banner.png') center center / cover no-repeat;
-    }
-    /* velo oscuro para que las secciones se lean bien sobre la foto */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background: linear-gradient(to bottom,
-        rgba(28,35,29,0) 30%,
-        rgba(18,23,19,0.55) 58%,
-        rgba(12,16,12,0.88) 100%);
-      pointer-events: none;
-      z-index: 0;
-    }
-    .banner-img { display: none; }
-    .welcome, .menu, footer { position: relative; z-index: 1; background: transparent; }
-    .welcome { padding: 0 20px 4px 20px; }
-    .welcome p {
-      font-size: 1.2em;
-      letter-spacing: .04em;
-      text-shadow: 0 2px 8px rgba(0,0,0,.85);
-    }
-    .menu {
-      flex: 0 0 auto;
-      flex-wrap: nowrap;
-      gap: 26px;
-      padding: 14px 20px 26px 20px;
-    }
-    .card {
-      padding: 24px 18px;
-      width: 210px;
-      background: rgba(26,33,27,0.78);
-      backdrop-filter: blur(3px);
-      box-shadow: 0 6px 22px rgba(0,0,0,.55);
-    }
-    .card:hover { background: #ff5a1f; }
-    .card h2 { font-size: 1.25em; text-shadow: 0 1px 4px rgba(0,0,0,.5); }
-    footer {
-      flex: 0 0 auto;
-      padding: 12px 20px;
-      background: rgba(10,13,10,0.72);
-    }
+  @media (max-width: 819px) {
+    .card { width: calc(50% - 10px); max-width: 210px; padding: 18px 12px; }
+    .card h2 { font-size: 1.05em; }
+    .welcome p { font-size: 1em; }
+  }
+  @media (max-width: 420px) {
+    .menu { gap: 12px; padding: 10px 12px 8px; }
+    .card { padding: 14px 10px; }
   }
 </style>
 </head>
 <body>
   <img class="banner-img" src="banner.png" alt="Cash Record - Expertos en tu negocio">
-
-  <div class="welcome">
-    <p>Selecciona una sección para continuar</p>
-  </div>
 
   <div class="menu">
     <a class="card" href="bodega.html" onclick="try{document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();}catch(e){}">
@@ -138,6 +84,10 @@
     <a class="card" href="#fruteria">
       <h2>Frutería</h2>
     </a>
+  </div>
+
+  <div class="welcome">
+    <p>Selecciona una sección para continuar</p>
   </div>
 
   <footer>
