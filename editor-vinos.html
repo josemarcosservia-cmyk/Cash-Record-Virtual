@@ -51,6 +51,14 @@ legend{color:#d9b96a;font-size:12px;letter-spacing:1px;text-transform:uppercase;
 .imgprev img{width:70px;height:110px;object-fit:contain;background:#0b0906;border:1px solid #3a3020;border-radius:6px}
 .aviso{font-size:12px;color:#9c9078}
 .pill{font-size:11px;border:1px solid #4a3d28;border-radius:99px;padding:2px 9px;color:#c3b596}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:50}
+.modal.on{display:flex}
+.caja{background:#1b1710;border:1px solid #4a3d28;border-radius:10px;padding:20px;width:min(580px,92vw);display:flex;flex-direction:column;gap:10px}
+.caja h2{font-size:15px;color:#d9b96a}
+.caja p{font-size:12.5px;color:#a2967a;line-height:1.55}
+.caja ol{font-size:12.5px;color:#a2967a;padding-left:18px;line-height:1.7}
+.caja .fila{display:flex;gap:8px;justify-content:flex-end;margin-top:4px}
+input[type=password]{background:#0e0c08;color:#e8e0cd;border:1px solid #4a3d28;border-radius:6px;padding:7px 9px;font:inherit;width:100%}
 </style>
 </head>
 <body>
@@ -59,8 +67,11 @@ legend{color:#d9b96a;font-size:12px;letter-spacing:1px;text-transform:uppercase;
   <div class="tools">
     <button id="btnRecargar">Recargar del repositorio</button>
     <label class="btn">Abrir JSON del ordenador<input type="file" id="fileIn" accept=".json,application/json" hidden></label>
-    <button id="btnDescargar" class="primary">Descargar bodega-vinos.json</button>
+    <button id="btnGuardar" class="primary">Guardar en GitHub</button>
+    <button id="btnEditarGH">Editar en GitHub (sin token)</button>
+    <button id="btnDescargar">Descargar bodega-vinos.json</button>
     <button id="btnCopiar">Copiar JSON</button>
+    <button id="btnToken">Conexion</button>
     <button id="btnBorrador">Descartar borrador</button>
   </div>
   <span id="estado"></span>
@@ -82,11 +93,32 @@ legend{color:#d9b96a;font-size:12px;letter-spacing:1px;text-transform:uppercase;
   </aside>
   <section class="form" id="form"><div class="vacio">Selecciona un vino en la lista de la izquierda.</div></section>
 </main>
+<div id="modal" class="modal">
+  <div class="caja">
+    <h2>Conexion con GitHub</h2>
+    <p>Para escribir directamente en bodega-vinos.json el editor necesita un token personal tuyo. Se guarda unicamente en este navegador y solo se usa para hablar con la API de GitHub.</p>
+    <ol>
+      <li>En GitHub: foto de perfil, Settings, Developer settings, Personal access tokens, Fine-grained tokens, Generate new token.</li>
+      <li>Repository access: Only select repositories, y elige Cash-Record-Virtual.</li>
+      <li>Permissions, Repository permissions, Contents: Read and write. Nada mas.</li>
+      <li>Genera el token, copialo y pegalo aqui abajo.</li>
+    </ol>
+    <input type="password" id="inToken" placeholder="github_pat_...">
+    <div class="fila">
+      <button id="btnBorrarToken" class="danger">Borrar token</button>
+      <button id="btnCerrarModal">Cancelar</button>
+      <button id="btnGuardarToken" class="primary">Guardar</button>
+    </div>
+  </div>
+</div>
 <script>
 var LABELS = ['Cuerpo','Acidez','Fruta','Dulzor','Taninos','Final'];
 var ORDEN  = ['nom','bodega','uva','subzona','temp','desc','mar','cata','img','bot','copa','cod','orig'];
 var ZONAS_OK = ['Rias Baixas','Monterrei','Valdeorras','Ribeiro','Ribeira Sacra','Rioja','Ribera del Duero','Toro','Cava','Champagne'];
 var DATA = null, zi = -1, wi = -1, dups = {};
+var REPO = 'josemarcosservia-cmyk/Cash-Record-Virtual';
+var RUTA = 'bodega-vinos.json';
+var BASE_TXT = null;
 
 function $(id){ return document.getElementById(id); }
 function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
@@ -99,8 +131,8 @@ function incompleto(w){ return !w.uva || !w.subzona || !w.temp || !w.desc || !w.
 /* ---------- carga y guardado ---------- */
 function cargarRepo(){
   fetch('bodega-vinos.json?v=' + Date.now())
-    .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(function(j){ DATA = j; zi = -1; wi = -1; trasCarga(); estado('Cargado del repositorio: ' + total() + ' vinos'); })
+    .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+    .then(function(txt){ BASE_TXT = txt; DATA = JSON.parse(txt); zi = -1; wi = -1; trasCarga(); estado('Cargado del repositorio: ' + total() + ' vinos'); })
     .catch(function(e){ estado('Error al cargar: ' + e.message); });
 }
 function trasCarga(){
@@ -349,7 +381,7 @@ $('fileIn').addEventListener('change', function(e){
   var f = e.target.files[0]; if(!f) return;
   var fr = new FileReader();
   fr.onload = function(){
-    try { DATA = JSON.parse(fr.result); zi = -1; wi = -1; trasCarga(); estado('Cargado ' + f.name + ': ' + total() + ' vinos'); }
+    try { DATA = JSON.parse(fr.result); BASE_TXT = null; zi = -1; wi = -1; trasCarga(); estado('Cargado ' + f.name + ': ' + total() + ' vinos'); }
     catch(err){ estado('Ese archivo no es un JSON valido: ' + err.message); }
   };
   fr.readAsText(f, 'utf-8');
@@ -369,6 +401,88 @@ $('btnBorrador').addEventListener('click', function(){
 });
 window.addEventListener('beforeunload', function(e){ if(DATA){ e.preventDefault(); e.returnValue = ''; } });
 
+/* ---------- guardar directamente en GitHub ---------- */
+function token(){ return localStorage.getItem('ghToken') || ''; }
+function abrirModal(){ $('modal').classList.add('on'); $('inToken').value = token(); $('inToken').focus(); }
+function cerrarModal(){ $('modal').classList.remove('on'); }
+function b64(s){
+  var b = new TextEncoder().encode(s), bin = '', i;
+  for(i = 0; i < b.length; i++) bin += String.fromCharCode(b[i]);
+  return btoa(bin);
+}
+function deb64(s){
+  var bin = atob(String(s).replace(/\s/g, ''));
+  var arr = new Uint8Array(bin.length);
+  for(var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+  return new TextDecoder('utf-8').decode(arr);
+}
+function api(url, opts){
+  opts = opts || {};
+  opts.headers = { 'Authorization': 'Bearer ' + token(), 'Accept': 'application/vnd.github+json' };
+  return fetch('https://api.github.com/' + url, opts);
+}
+function guardarEnGitHub(){
+  if(!DATA) return;
+  if(!token()){ estado('Primero configura la conexion con GitHub'); abrirModal(); return; }
+  var texto = jsonTexto();
+  estado('Guardando en GitHub...');
+  api('repos/' + REPO + '/contents/' + RUTA + '?ref=main&t=' + Date.now())
+    .then(function(r){
+      if(r.status === 401) throw new Error('El token no es valido o ha caducado');
+      if(r.status === 403 || r.status === 404) throw new Error('El token no tiene permiso de escritura sobre este repositorio');
+      if(!r.ok) throw new Error('Error al leer el archivo: HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function(meta){
+      var remoto = deb64(meta.content);
+      if(remoto.trim() === texto.trim()) throw new Error('No hay ningun cambio que guardar');
+      if(BASE_TXT !== null && remoto.trim() !== BASE_TXT.trim()){
+        if(!confirm('Ojo: el archivo del repositorio ha cambiado desde que lo cargaste. Si continuas, esos cambios se perderan. Quieres guardar de todas formas?')) throw new Error('Guardado cancelado');
+      }
+      return api('repos/' + REPO + '/contents/' + RUTA, {
+        method: 'PUT',
+        body: JSON.stringify({
+          message: 'Actualizar bodega-vinos.json desde el editor (' + total() + ' vinos)',
+          content: b64(texto),
+          sha: meta.sha,
+          branch: 'main'
+        })
+      });
+    })
+    .then(function(r){
+      return r.json().then(function(j){
+        if(!r.ok) throw new Error(j.message || ('HTTP ' + r.status));
+        return j;
+      });
+    })
+    .then(function(j){
+      BASE_TXT = texto;
+      estado('Guardado en GitHub, commit ' + j.commit.sha.slice(0, 7) + '. La bodega se actualiza en un minuto.');
+    })
+    .catch(function(e){ estado(e.message); });
+}
+$('btnGuardar').addEventListener('click', guardarEnGitHub);
+$('btnToken').addEventListener('click', abrirModal);
+$('btnCerrarModal').addEventListener('click', cerrarModal);
+$('btnGuardarToken').addEventListener('click', function(){
+  var v = $('inToken').value.trim();
+  if(v) localStorage.setItem('ghToken', v); else localStorage.removeItem('ghToken');
+  cerrarModal();
+  estado(v ? 'Conexion con GitHub configurada' : 'Conexion borrada');
+});
+$('btnBorrarToken').addEventListener('click', function(){
+  localStorage.removeItem('ghToken');
+  $('inToken').value = '';
+  estado('Token borrado de este navegador');
+});
+$('modal').addEventListener('click', function(e){ if(e.target === $('modal')) cerrarModal(); });
+$('btnEditarGH').addEventListener('click', function(){
+  navigator.clipboard.writeText(jsonTexto()).then(function(){
+    alert('JSON copiado. Se abrira la pagina de GitHub: pulsa dentro del codigo, Control+A, Control+V y despues Confirmar cambios.');
+    window.open('https://github.com/' + REPO + '/edit/main/' + RUTA, '_blank');
+  }).catch(function(){ estado('No se pudo copiar; usa el boton de descargar'); });
+});
+
 /* ---------- arranque ---------- */
 (function(){
   var b = localStorage.getItem('editorVinosBorrador');
@@ -376,7 +490,7 @@ window.addEventListener('beforeunload', function(e){ if(DATA){ e.preventDefault(
     try {
       var j = JSON.parse(b);
       if(confirm('Hay un borrador guardado en este navegador. Quieres recuperarlo? Si eliges Cancelar se cargara el archivo del repositorio.')){
-        DATA = j; trasCarga(); estado('Borrador recuperado: ' + total() + ' vinos'); return;
+        DATA = j; BASE_TXT = null; trasCarga(); estado('Borrador recuperado: ' + total() + ' vinos'); return;
       }
     } catch(err){}
   }
