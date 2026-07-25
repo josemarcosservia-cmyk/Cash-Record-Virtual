@@ -607,28 +607,6 @@
     "copa": "",
     "cod": "27110030",
     "orig": "VINO ALBARIÑO PACO&LOLA PRIME 0,75L C/6"
-   },
-   {
-    "nom": "Pago de los Capellanes Nogal",
-    "bodega": "Pago de los Capellanes",
-    "uva": "100% Tempranillo ",
-    "subzona": "",
-    "temp": "16-18 ºC",
-    "desc": "Espectacular ya, pero con tanta vida por delante que en unos años creo que me faltarían estrellas para valorarlo. De picota profundo, con ribete granate, capa alta y lágrima densa y abundante. En nariz excelente complejidad e intensidad aromática, de los que a cada segundo que pasa te muestran algo nuevo. Notas de fruta negra madura, madera con toques especiados, vainilla, chocolate, cuero y algún recuerdo de frutas rojas. En boca es sedoso, aterciopelado, elegante",
-    "mar": "",
-    "cata": [
-     3,
-     3,
-     3,
-     3,
-     3,
-     3
-    ],
-    "img": "img/pago-de-los-capellanes-nogal.webp",
-    "bot": "",
-    "copa": "",
-    "cod": "",
-    "orig": ""
    }
   ]
  },
@@ -3929,6 +3907,28 @@
     "copa": "",
     "cod": "27156868",
     "orig": "V. R.DUERO 8000 M.BURGOS 0,75L C"
+   },
+   {
+    "nom": "Pago de los Capellanes Nogal",
+    "bodega": "Pago de los Capellanes",
+    "uva": "100% Tempranillo ",
+    "subzona": "",
+    "temp": "16-18 ºC",
+    "desc": "Espectacular ya, pero con tanta vida por delante que en unos años creo que me faltarían estrellas para valorarlo. De picota profundo, con ribete granate, capa alta y lágrima densa y abundante. En nariz excelente complejidad e intensidad aromática, de los que a cada segundo que pasa te muestran algo nuevo. Notas de fruta negra madura, madera con toques especiados, vainilla, chocolate, cuero y algún recuerdo de frutas rojas. En boca es sedoso, aterciopelado, elegante",
+    "mar": "",
+    "cata": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "img": "img/pago-de-los-capellanes-nogal.webp",
+    "bot": "",
+    "copa": "",
+    "cod": "",
+    "orig": ""
    }
   ]
  },
