@@ -63,6 +63,37 @@
     color: #999;
     font-size: 0.9em;
   }
+
+  /* ── ORDENADOR: todo visible sin desplazarse ── */
+  @media (min-width: 820px) {
+    html, body { height: 100%; }
+    body {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .banner-img {
+      flex: 0 0 auto;
+      width: 100%;
+      height: auto;
+      max-height: 44vh;
+      object-fit: contain;
+      object-position: center;
+    }
+    .welcome { padding: 18px 20px 6px 20px; }
+    .welcome p { font-size: 1.15em; }
+    .menu {
+      flex: 1 1 auto;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 26px;
+      padding: 10px 20px;
+      min-height: 0;
+    }
+    .card { padding: 26px 18px; width: 210px; }
+    .card h2 { font-size: 1.25em; }
+    footer { flex: 0 0 auto; padding: 14px 20px; }
+  }
 </style>
 </head>
 <body>
