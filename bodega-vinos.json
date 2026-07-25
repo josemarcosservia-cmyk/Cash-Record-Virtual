@@ -173,13 +173,21 @@
     "orig": "ALBARIÑO SEÑ.RUBIOS R.BAIXAS 6/7"
    },
    {
-    "nom": "M. de Frades Blanco",
+    "nom": "Mar de Frades",
     "bodega": "Bodega Mar de Frades",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
+    "uva": "100% Albariño",
+    "subzona": "Val do Salnés",
+    "temp": "8-10 ºC",
     "desc": "Albariño 100% (Val do Salnés). Color limón pálido con reflejos verde lima. Nariz fresca e intensa: fruta de pepita (manzana verde, pera) y tropical sobre fondo floral, con toques balsámicos. Boca fresca y fluida, de carácter salino y mineral atlántico.",
-    "mar": "",
+    "mar": "Mariscos, ostras, pescados, sushi",
+    "cata": [
+     3,
+     5,
+     4,
+     1,
+     0,
+     4
+    ],
     "img": "img/m-de-frades-blanco.webp",
     "bot": "",
     "copa": "",
