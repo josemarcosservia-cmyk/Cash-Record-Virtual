@@ -3,28 +3,6 @@
   "zona": "Rias Baixas",
   "vinos": [
    {
-    "nom": "Pazo San Mauro",
-    "bodega": "Pazo San Mauro",
-    "uva": "Albariño 100%",
-    "subzona": "Condado do Tea",
-    "temp": "8-10 °C",
-    "desc": "Albariño con crianza sobre lías que aporta mayor complejidad y volumen. Notas de mantequilla, fruta madura, flores blancas y un sutil toque mineral. Boca untuosa, equilibrada y de largo final.",
-    "mar": "Merluza en salsa verde, vieiras, langosta",
-    "cata": [
-     3,
-     3,
-     4,
-     2,
-     1,
-     4
-    ],
-    "img": "img/pazo-san-mauro.webp",
-    "bot": "9,00 €",
-    "copa": "—",
-    "cod": "",
-    "orig": ""
-   },
-   {
     "nom": "Albariño C. Albarei",
     "bodega": "Adega Condes de Albarei",
     "uva": "",
