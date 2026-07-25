@@ -25,11 +25,11 @@
     "orig": ""
    },
    {
-    "nom": "Condes de  Albarei",
+    "nom": "Albariño C. Albarei",
     "bodega": "Adega Condes de Albarei",
-    "uva": "100% Albariño",
+    "uva": "",
     "subzona": "",
-    "temp": "9 ºc",
+    "temp": "",
     "desc": "Albariño 100%. Amarillo dorado con reflejos verdosos. En nariz, intensidad media-alta con aromas florales y frutas blancas, limpio y elegante. Boca fresca, amplia, redonda y con marcada persistencia aromática.",
     "mar": "",
     "img": "img/albarino-c-albarei.webp",
@@ -173,21 +173,13 @@
     "orig": "ALBARIÑO SEÑ.RUBIOS R.BAIXAS 6/7"
    },
    {
-    "nom": "Mar de Frades",
+    "nom": "M. de Frades Blanco",
     "bodega": "Bodega Mar de Frades",
-    "uva": "100% Albariño",
-    "subzona": "Val do Salnés",
-    "temp": "8-10 ºC",
+    "uva": "",
+    "subzona": "",
+    "temp": "",
     "desc": "Albariño 100% (Val do Salnés). Color limón pálido con reflejos verde lima. Nariz fresca e intensa: fruta de pepita (manzana verde, pera) y tropical sobre fondo floral, con toques balsámicos. Boca fresca y fluida, de carácter salino y mineral atlántico.",
-    "mar": "Mariscos, ostras, pescados, sushi",
-    "cata": [
-     3,
-     5,
-     4,
-     1,
-     0,
-     4
-    ],
+    "mar": "",
     "img": "img/m-de-frades-blanco.webp",
     "bot": "",
     "copa": "",
@@ -621,20 +613,6 @@
     "copa": "",
     "cod": "27110030",
     "orig": "VINO ALBARIÑO PACO&LOLA PRIME 0,75L C/6"
-   },
-   {
-    "nom": "Pago de los Capellanes Nogal",
-    "bodega": "Pago de los Capellanes",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
-    "img": "",
-    "bot": "",
-    "copa": "",
-    "cod": "",
-    "orig": ""
    }
   ]
  },
@@ -2094,12 +2072,12 @@
     "orig": "V.RIOJA C.ALBAI JV.TTO.6/75CL"
    },
    {
-    "nom": "Cecios Joven ",
+    "nom": "Cecios Joven 19 Tinto",
     "bodega": "",
-    "uva": "Garnacha / Tempranillo",
+    "uva": "",
     "subzona": "",
-    "temp": "Entre 14 y 16 ºC",
-    "desc": "El Cecios Tinto Joven es un vino tinto joven, elaborado principalmente con uvas Tempranillo y Garnacha, que ofrece una experiencia fresca y afrutada. Su color cereza picota intenso, con destellos violáceos, anticipa un aroma intenso a frutas rojas como la fresa y la mora, acompañado de sutiles notas florales y especiadas. En boca, destaca su suavidad y equilibrio, con taninos presentes pero redondos que aportan estructura. La acidez refrescante y el final persistente lo convierten en un vino muy agradable. Elaborado por Bodegas Marqués de Reinosa  en la región de  Rioja, este vino joven, sin crianza en barrica, conserva la fruta y la vivacidad de las uvas, siendo ideal para maridar con carnes rojas a la parrilla, embutidos ibéricos, quesos curados y una amplia variedad de platos de la cocina española. Un vino perfecto para disfrutar en cualquier ocasión, solo o acompañado.",
+    "temp": "",
+    "desc": "",
     "mar": "",
     "img": "img/cecios-joven-19-tinto.webp",
     "bot": "",
@@ -3121,7 +3099,7 @@
     "img": "img/pago-de-los-capellanes-roble.webp",
     "bot": "8,50 €",
     "copa": "—",
-    "cod": "25598988",
+    "cod": "",
     "orig": ""
    },
    {
@@ -3585,6 +3563,20 @@
     "copa": "",
     "cod": "23410285",
     "orig": "V.R.DUERO CANONIGOS 16 TTO. 6/75"
+   },
+   {
+    "nom": "Rib Duero P. Capellanes Roble",
+    "bodega": "",
+    "uva": "",
+    "subzona": "",
+    "temp": "",
+    "desc": "",
+    "mar": "",
+    "img": "img/rib-duero-p-capellanes-roble.webp",
+    "bot": "",
+    "copa": "",
+    "cod": "25598988",
+    "orig": "V. RIB DUERO P. CAPELLANES ROBLE"
    },
    {
     "nom": "Rib Duero Lambuena Crianza",
