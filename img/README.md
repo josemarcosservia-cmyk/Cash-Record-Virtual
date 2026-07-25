@@ -14,6 +14,7 @@ Nombres esperados por el archivo bodega-vinos.json:
 - martin-codax.webp
 - burgans.webp
 - pazo-san-mauro.webp
+- sucellos.webp
 
 ## Monterrei
 - quinta-da-muradella.webp
