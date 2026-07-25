@@ -6,37 +6,61 @@
         "nom": "Martín Códax",
         "bodega": "Bodegas Martín Códax",
         "uva": "Albariño",
-        "bot": "7,50 €",
-        "copa": "—",
+        "subzona": "Val do Salnés",
         "temp": "8-10 °C",
         "desc": "Albariño atlántico de gran expresión frutal. Notas de melocotón, piña y cítricos sobre un fondo mineral y salino típico de la Ría de Arousa.",
         "mar": "Mariscos, ostras, pescado a la plancha, pulpo",
-        "cata": [2, 4, 4, 2, 1, 3],
-        "img": ""
+        "cata": [
+          2,
+          4,
+          4,
+          2,
+          1,
+          3
+        ],
+        "img": "",
+        "bot": "7,50 €",
+        "copa": "—"
       },
       {
         "nom": "Burgáns",
         "bodega": "Martín Códax",
         "uva": "Albariño",
-        "bot": "6,20 €",
-        "copa": "—",
+        "subzona": "Val do Salnés",
         "temp": "8-10 °C",
         "desc": "Fresco y afrutado, con notas de fruta blanca y un toque floral. Textura sedosa y retrogusto limpio y mineral.",
         "mar": "Empanada, mejillones, ensalada de marisco",
-        "cata": [2, 4, 3, 2, 1, 3],
-        "img": ""
+        "cata": [
+          2,
+          4,
+          3,
+          2,
+          1,
+          3
+        ],
+        "img": "",
+        "bot": "6,20 €",
+        "copa": "—"
       },
       {
         "nom": "Pazo San Mauro",
         "bodega": "Pazo San Mauro",
         "uva": "Albariño",
-        "bot": "9,00 €",
-        "copa": "—",
+        "subzona": "Condado do Tea",
         "temp": "8-10 °C",
         "desc": "Albariño elegante con crianza sobre lías. Mayor complejidad y volumen en boca, con notas de mantequilla y fruta madura.",
         "mar": "Merluza en salsa, vieiras, langosta",
-        "cata": [3, 3, 4, 2, 1, 4],
-        "img": ""
+        "cata": [
+          3,
+          3,
+          4,
+          2,
+          1,
+          4
+        ],
+        "img": "",
+        "bot": "9,00 €",
+        "copa": "—"
       }
     ]
   },
@@ -47,37 +71,61 @@
         "nom": "Quinta da Muradella",
         "bodega": "Quinta da Muradella",
         "uva": "Treixadura, Doña Branca, Godello",
-        "bot": "9,00 €",
-        "copa": "—",
+        "subzona": "Ladeira de Monterrei",
         "temp": "9-11 °C",
         "desc": "Referencia de Monterrei. Blanco singular con notas de fruta de hueso, flores amarillas y un sutil ahumado mineral. Gran tensión y largo final.",
         "mar": "Trucha a la ribeirá, carnes blancas, queso de tetilla",
-        "cata": [3, 4, 3, 1, 1, 4],
-        "img": ""
+        "cata": [
+          3,
+          4,
+          3,
+          1,
+          1,
+          4
+        ],
+        "img": "",
+        "bot": "9,00 €",
+        "copa": "—"
       },
       {
         "nom": "Gargalo",
         "bodega": "Bodegas Gargalo",
         "uva": "Godello, Treixadura",
-        "bot": "7,50 €",
-        "copa": "—",
+        "subzona": "Val de Monterrei",
         "temp": "9-11 °C",
         "desc": "Blanco atlántico del valle del Tamega. Notas de fruta blanca madura, hierbas de monte y un fondo calcáreo. Fresco y muy gastronómico.",
         "mar": "Empanada de bacalao, trucha, quesos suaves",
-        "cata": [2, 4, 3, 1, 1, 3],
-        "img": ""
+        "cata": [
+          2,
+          4,
+          3,
+          1,
+          1,
+          3
+        ],
+        "img": "",
+        "bot": "7,50 €",
+        "copa": "—"
       },
       {
         "nom": "Ladredo Mencía",
         "bodega": "Bodegas Ladredo",
         "uva": "Mencía",
-        "bot": "8,00 €",
-        "copa": "—",
+        "subzona": "Val de Monterrei",
         "temp": "14-16 °C",
         "desc": "Tinto de Monterrei sobre granito. Mencía perfumada con notas de cereza, violeta y tierra húmeda. Ligero, elegante y de fácil disfrute.",
         "mar": "Carne de ternera, lacón, quesos semicurados",
-        "cata": [2, 4, 4, 1, 2, 3],
-        "img": ""
+        "cata": [
+          2,
+          4,
+          4,
+          1,
+          2,
+          3
+        ],
+        "img": "",
+        "bot": "8,00 €",
+        "copa": "—"
       }
     ]
   },
@@ -88,25 +136,41 @@
         "nom": "Godelia",
         "bodega": "Bodegas Godelia",
         "uva": "Godello",
-        "bot": "8,50 €",
-        "copa": "—",
+        "subzona": "Valle del Sil",
         "temp": "9-11 °C",
         "desc": "Godello de altura con notas de melocotón blanco, hinojo y una mineralidad granítica elegante. Largo y untuoso en boca.",
         "mar": "Pescados en salsa, mariscos, arroz caldoso de marisco",
-        "cata": [3, 3, 4, 1, 1, 4],
-        "img": ""
+        "cata": [
+          3,
+          3,
+          4,
+          1,
+          1,
+          4
+        ],
+        "img": "",
+        "bot": "8,50 €",
+        "copa": "—"
       },
       {
         "nom": "Valdesil",
         "bodega": "Bodegas Valdesil",
         "uva": "Godello",
-        "bot": "10,50 €",
-        "copa": "—",
+        "subzona": "Vilamartín de Valdeorras",
         "temp": "9-11 °C",
         "desc": "Referencia de la D.O. Valdeorras. Godello de viñas viejas, con crianza sobre lías y notas de fruta de hueso, miel y piedra mojada.",
         "mar": "Bacalao con patatas, rodaballo al horno, sepia",
-        "cata": [3, 4, 3, 1, 1, 4],
-        "img": ""
+        "cata": [
+          3,
+          4,
+          3,
+          1,
+          1,
+          4
+        ],
+        "img": "",
+        "bot": "10,50 €",
+        "copa": "—"
       }
     ]
   },
@@ -117,25 +181,41 @@
         "nom": "Viña Costeira Treixadura",
         "bodega": "Viña Costeira",
         "uva": "Treixadura, Lado, Torrontés",
-        "bot": "5,80 €",
-        "copa": "—",
+        "subzona": "Valle do Avia",
         "temp": "8-10 °C",
         "desc": "Vino blanco aromático y floral, con notas de anís, hierbas de monte y fruta blanca. Fácil de beber y muy versátil.",
         "mar": "Tapas, queso tetilla, empanada de bacalao",
-        "cata": [2, 4, 3, 2, 1, 3],
-        "img": ""
+        "cata": [
+          2,
+          4,
+          3,
+          2,
+          1,
+          3
+        ],
+        "img": "",
+        "bot": "5,80 €",
+        "copa": "—"
       },
       {
         "nom": "Pazo Tizón",
         "bodega": "Cooperativa do Ribeiro",
         "uva": "Treixadura, Albariño",
-        "bot": "4,90 €",
-        "copa": "—",
+        "subzona": "Valle do Avia",
         "temp": "8-10 °C",
         "desc": "Blanco de buen volumen en boca, notas florales y herbáceas características del Ribeiro gallego.",
         "mar": "Caldo gallego, lacón, quesos suaves",
-        "cata": [2, 3, 3, 2, 1, 2],
-        "img": ""
+        "cata": [
+          2,
+          3,
+          3,
+          2,
+          1,
+          2
+        ],
+        "img": "",
+        "bot": "4,90 €",
+        "copa": "—"
       }
     ]
   },
@@ -146,25 +226,41 @@
         "nom": "Guímaro",
         "bodega": "Bodegas Guímaro",
         "uva": "Mencía",
-        "bot": "9,50 €",
-        "copa": "—",
+        "subzona": "Amandi",
         "temp": "14-16 °C",
         "desc": "Mencía de pizarra, tinto ligero y perfumado con notas de fruta roja fresca, violeta y un toque mineral. Taninos sedosos.",
         "mar": "Carnes magras, caza menor, pulpo a feira",
-        "cata": [2, 4, 4, 1, 2, 3],
-        "img": ""
+        "cata": [
+          2,
+          4,
+          4,
+          1,
+          2,
+          3
+        ],
+        "img": "",
+        "bot": "9,50 €",
+        "copa": "—"
       },
       {
         "nom": "Regina Viarum",
         "bodega": "Regina Viarum",
         "uva": "Mencía",
-        "bot": "7,80 €",
-        "copa": "—",
+        "subzona": "Amandi",
         "temp": "14-16 °C",
         "desc": "Mencía criado en terrenos pizarrosos del Sil. Aroma floral y frutal, boca elegante con buena acidez y final persistente.",
         "mar": "Chuletón, cordero asado, quesos semicurados",
-        "cata": [2, 3, 4, 1, 2, 3],
-        "img": ""
+        "cata": [
+          2,
+          3,
+          4,
+          1,
+          2,
+          3
+        ],
+        "img": "",
+        "bot": "7,80 €",
+        "copa": "—"
       }
     ]
   },
@@ -175,37 +271,61 @@
         "nom": "Campo Viejo Crianza",
         "bodega": "Bodegas Campo Viejo",
         "uva": "Tempranillo, Garnacha, Mazuelo",
-        "bot": "6,50 €",
-        "copa": "—",
+        "subzona": "Rioja Alta",
         "temp": "16-18 °C",
         "desc": "Clásico riojano con 12 meses en roble. Notas de fruta roja madura, vainilla y especias. Redondo y equilibrado.",
         "mar": "Cordero asado, cochinillo, embutidos ibéricos",
-        "cata": [3, 3, 3, 1, 3, 3],
-        "img": ""
+        "cata": [
+          3,
+          3,
+          3,
+          1,
+          3,
+          3
+        ],
+        "img": "",
+        "bot": "6,50 €",
+        "copa": "—"
       },
       {
         "nom": "Faustino V Crianza",
         "bodega": "Bodegas Faustino",
         "uva": "Tempranillo",
-        "bot": "7,20 €",
-        "copa": "—",
+        "subzona": "Rioja Alavesa",
         "temp": "16-18 °C",
         "desc": "Referencia histórica de La Rioja. Frutas rojas maduras, notas tostadas de roble americano y final largo y cálido.",
         "mar": "Asados, carnes rojas, caza mayor",
-        "cata": [3, 3, 3, 1, 3, 3],
-        "img": ""
+        "cata": [
+          3,
+          3,
+          3,
+          1,
+          3,
+          3
+        ],
+        "img": "",
+        "bot": "7,20 €",
+        "copa": "—"
       },
       {
         "nom": "Viña Alberdi Crianza",
         "bodega": "La Rioja Alta",
         "uva": "Tempranillo",
-        "bot": "10,00 €",
-        "copa": "—",
+        "subzona": "Rioja Alta",
         "temp": "16-18 °C",
         "desc": "Crianza elegante de La Rioja Alta. Fruta roja concentrada, notas balsámicas y especiadas. Estructurado y con potencial de guarda.",
         "mar": "Chuletón, setas, estofados de carne",
-        "cata": [4, 3, 3, 1, 3, 4],
-        "img": ""
+        "cata": [
+          4,
+          3,
+          3,
+          1,
+          3,
+          4
+        ],
+        "img": "",
+        "bot": "10,00 €",
+        "copa": "—"
       }
     ]
   },
@@ -216,37 +336,61 @@
         "nom": "Protos Crianza",
         "bodega": "Bodegas Protos",
         "uva": "Tinto Fino (Tempranillo)",
-        "bot": "9,80 €",
-        "copa": "—",
+        "subzona": "Valladolid · Peñafiel",
         "temp": "16-18 °C",
         "desc": "Tinto Fino potente con 12 meses en roble francés y americano. Fruta negra madura, tabaco, chocolate y taninos firmes pero bien integrados.",
         "mar": "Cordero lechal, cochinillo, carnes asadas",
-        "cata": [4, 3, 4, 1, 4, 4],
-        "img": ""
+        "cata": [
+          4,
+          3,
+          4,
+          1,
+          4,
+          4
+        ],
+        "img": "",
+        "bot": "9,80 €",
+        "copa": "—"
       },
       {
         "nom": "Condado de Haza Crianza",
         "bodega": "Alejandro Fernández",
         "uva": "Tinto Fino",
-        "bot": "11,00 €",
-        "copa": "—",
+        "subzona": "Burgos · Roa",
         "temp": "16-18 °C",
         "desc": "Concentrado y expresivo. Ribera del Duero clásico con fruta negra, notas minerales y un roble perfectamente integrado.",
         "mar": "Chuletón, embutidos curados, caza",
-        "cata": [4, 3, 4, 1, 4, 4],
-        "img": ""
+        "cata": [
+          4,
+          3,
+          4,
+          1,
+          4,
+          4
+        ],
+        "img": "",
+        "bot": "11,00 €",
+        "copa": "—"
       },
       {
         "nom": "Pago de los Capellanes Roble",
         "bodega": "Pago de los Capellanes",
         "uva": "Tinto Fino",
-        "bot": "8,50 €",
-        "copa": "—",
+        "subzona": "Burgos · Pedrosa de Duero",
         "temp": "16-18 °C",
         "desc": "Entrada accesible al universo Capellanes. Fresco, frutal y con un toque de roble que añade complejidad sin perder la vivacidad.",
         "mar": "Pasta con carne, hamburguesas gourmet, quesos curados",
-        "cata": [3, 3, 4, 1, 3, 3],
-        "img": ""
+        "cata": [
+          3,
+          3,
+          4,
+          1,
+          3,
+          3
+        ],
+        "img": "",
+        "bot": "8,50 €",
+        "copa": "—"
       }
     ]
   },
@@ -257,25 +401,41 @@
         "nom": "Numanthia",
         "bodega": "Bodegas Numanthia",
         "uva": "Tinta de Toro",
-        "bot": "18,00 €",
-        "copa": "—",
+        "subzona": "Zamora · Valdefinjas",
         "temp": "17-19 °C",
         "desc": "Toro de gran formato. Tinta de Toro sobre suelos arenosos, intenso y concentrado con notas de mora, café, cacao y especias orientales.",
         "mar": "Chuletón, cordero, cocidos contundentes",
-        "cata": [5, 2, 4, 1, 4, 5],
-        "img": ""
+        "cata": [
+          5,
+          2,
+          4,
+          1,
+          4,
+          5
+        ],
+        "img": "",
+        "bot": "18,00 €",
+        "copa": "—"
       },
       {
         "nom": "Vetus",
         "bodega": "Bodegas Vetus",
         "uva": "Tinta de Toro",
-        "bot": "8,00 €",
-        "copa": "—",
+        "subzona": "Zamora · Toro",
         "temp": "16-18 °C",
         "desc": "Expresión accesible de la D.O. Toro. Fruta negra abundante, potencia estructurada y un final largo con recuerdos de regaliz.",
         "mar": "Asados de cordero, embutidos ibéricos, quesos curados",
-        "cata": [4, 2, 4, 1, 3, 4],
-        "img": ""
+        "cata": [
+          4,
+          2,
+          4,
+          1,
+          3,
+          4
+        ],
+        "img": "",
+        "bot": "8,00 €",
+        "copa": "—"
       }
     ]
   },
@@ -286,37 +446,61 @@
         "nom": "Freixenet Cordon Negro Brut",
         "bodega": "Freixenet",
         "uva": "Macabeo, Xarel·lo, Parellada",
-        "bot": "6,00 €",
-        "copa": "—",
+        "subzona": "Comtats de Barcelona",
         "temp": "6-8 °C",
         "desc": "El cava más reconocido del mundo. Burbuja fina y persistente, con notas de manzana verde, brioche y un toque tostado. Muy versátil.",
         "mar": "Aperitivos, jamón ibérico, tapas variadas",
-        "cata": [2, 5, 3, 1, 2, 3],
-        "img": ""
+        "cata": [
+          2,
+          5,
+          3,
+          1,
+          2,
+          3
+        ],
+        "img": "",
+        "bot": "6,00 €",
+        "copa": "—"
       },
       {
         "nom": "Codorníu Clásico Brut",
         "bodega": "Bodegas Codorníu",
         "uva": "Macabeo, Xarel·lo, Parellada",
-        "bot": "5,50 €",
-        "copa": "—",
+        "subzona": "Comtats de Barcelona",
         "temp": "6-8 °C",
         "desc": "El cava más antiguo de España. Fresco, con notas de frutas blancas, levadura y un toque mineral. Equilibrado y elegante.",
         "mar": "Langostinos, mariscos, salmón ahumado",
-        "cata": [2, 4, 3, 2, 2, 3],
-        "img": ""
+        "cata": [
+          2,
+          4,
+          3,
+          2,
+          2,
+          3
+        ],
+        "img": "",
+        "bot": "5,50 €",
+        "copa": "—"
       },
       {
         "nom": "Juvé y Camps Cinta Púrpura",
         "bodega": "Juvé y Camps",
         "uva": "Xarel·lo, Macabeo, Parellada",
-        "bot": "9,50 €",
-        "copa": "—",
+        "subzona": "Comtats de Barcelona",
         "temp": "6-8 °C",
         "desc": "Cava de calidad superior con mayor crianza. Notas de fruta madura, bollería y una burbuja muy integrada. Lujoso y festivo.",
         "mar": "Foie, ostras, celebraciones y aperitivos finos",
-        "cata": [3, 4, 3, 1, 2, 4],
-        "img": ""
+        "cata": [
+          3,
+          4,
+          3,
+          1,
+          2,
+          4
+        ],
+        "img": "",
+        "bot": "9,50 €",
+        "copa": "—"
       }
     ]
   },
@@ -327,37 +511,61 @@
         "nom": "Moët & Chandon Impérial Brut",
         "bodega": "Moët & Chandon",
         "uva": "Pinot Noir, Chardonnay, Meunier",
-        "bot": "38,00 €",
-        "copa": "—",
+        "subzona": "Vallée de la Marne",
         "temp": "6-8 °C",
         "desc": "El champagne más vendido del mundo. Notas de pera, melocotón y frutos secos tostados, con una burbuja muy elegante y un final largo y refrescante.",
         "mar": "Ostras, foie gras, salmón ahumado, aperitivos finos",
-        "cata": [2, 5, 4, 1, 2, 4],
-        "img": ""
+        "cata": [
+          2,
+          5,
+          4,
+          1,
+          2,
+          4
+        ],
+        "img": "",
+        "bot": "38,00 €",
+        "copa": "—"
       },
       {
         "nom": "Veuve Clicquot Brut",
         "bodega": "Veuve Clicquot",
         "uva": "Pinot Noir, Chardonnay, Meunier",
-        "bot": "45,00 €",
-        "copa": "—",
+        "subzona": "Montagne de Reims",
         "temp": "6-8 °C",
         "desc": "Champagne de gran carácter. La etiqueta amarilla más icónica. Potente y estructurado, con notas de brioche, miel, manzana asada y especias.",
         "mar": "Langosta, vieiras, jamón de bellota, celebraciones",
-        "cata": [3, 4, 4, 1, 2, 4],
-        "img": ""
+        "cata": [
+          3,
+          4,
+          4,
+          1,
+          2,
+          4
+        ],
+        "img": "",
+        "bot": "45,00 €",
+        "copa": "—"
       },
       {
         "nom": "Billecart-Salmon Blanc de Blancs",
         "bodega": "Billecart-Salmon",
         "uva": "Chardonnay",
-        "bot": "55,00 €",
-        "copa": "—",
+        "subzona": "Côte des Blancs",
         "temp": "6-8 °C",
         "desc": "100% Chardonnay de elegancia suprema. Burbuja finísima, notas de flores blancas, cítricos y mantequilla. Tensión y frescura excepcionales.",
         "mar": "Caviar, ostras finas, pescados nobles, tartar de atún",
-        "cata": [2, 5, 4, 1, 1, 5],
-        "img": ""
+        "cata": [
+          2,
+          5,
+          4,
+          1,
+          1,
+          5
+        ],
+        "img": "",
+        "bot": "55,00 €",
+        "copa": "—"
       }
     ]
   }
