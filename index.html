@@ -64,35 +64,57 @@
     font-size: 0.9em;
   }
 
-  /* ── ORDENADOR: todo visible sin desplazarse ── */
+  /* ── ORDENADOR: banner a pantalla completa con las secciones encima ── */
   @media (min-width: 820px) {
     html, body { height: 100%; }
     body {
+      position: relative;
       display: flex;
       flex-direction: column;
+      justify-content: flex-end;
       overflow: hidden;
+      background: #1c231d url('banner.png') center center / cover no-repeat;
     }
-    .banner-img {
-      flex: 0 0 auto;
-      width: 100%;
-      height: auto;
-      max-height: 44vh;
-      object-fit: contain;
-      object-position: center;
+    /* velo oscuro para que las secciones se lean bien sobre la foto */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(to bottom,
+        rgba(28,35,29,0) 30%,
+        rgba(18,23,19,0.55) 58%,
+        rgba(12,16,12,0.88) 100%);
+      pointer-events: none;
+      z-index: 0;
     }
-    .welcome { padding: 18px 20px 6px 20px; }
-    .welcome p { font-size: 1.15em; }
+    .banner-img { display: none; }
+    .welcome, .menu, footer { position: relative; z-index: 1; background: transparent; }
+    .welcome { padding: 0 20px 4px 20px; }
+    .welcome p {
+      font-size: 1.2em;
+      letter-spacing: .04em;
+      text-shadow: 0 2px 8px rgba(0,0,0,.85);
+    }
     .menu {
-      flex: 1 1 auto;
-      align-items: center;
+      flex: 0 0 auto;
       flex-wrap: nowrap;
       gap: 26px;
-      padding: 10px 20px;
-      min-height: 0;
+      padding: 14px 20px 26px 20px;
     }
-    .card { padding: 26px 18px; width: 210px; }
-    .card h2 { font-size: 1.25em; }
-    footer { flex: 0 0 auto; padding: 14px 20px; }
+    .card {
+      padding: 24px 18px;
+      width: 210px;
+      background: rgba(26,33,27,0.78);
+      backdrop-filter: blur(3px);
+      box-shadow: 0 6px 22px rgba(0,0,0,.55);
+    }
+    .card:hover { background: #ff5a1f; }
+    .card h2 { font-size: 1.25em; text-shadow: 0 1px 4px rgba(0,0,0,.5); }
+    footer {
+      flex: 0 0 auto;
+      padding: 12px 20px;
+      background: rgba(10,13,10,0.72);
+    }
   }
 </style>
 </head>
