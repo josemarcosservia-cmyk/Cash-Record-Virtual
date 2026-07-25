@@ -904,22 +904,22 @@ function radar(vals){
   for(var a=1;a<max;a++){
     var rr=R*a/max,p='';
     for(var i=0;i<N;i++){var xy=pt(i,rr);p+=(i?'L':'M')+xy[0].toFixed(1)+' '+xy[1].toFixed(1);}
-    g+='<path d="'+p+'Z" fill="none" stroke="#8a6c1a" stroke-width=".9" opacity=".5"/>';
+    g+='<path d="'+p+'Z" fill="none" stroke="#b8912a" stroke-width="1" opacity=".6"/>';
   }
   var o='';
   for(var i=0;i<N;i++){var xy=pt(i,R);o+=(i?'L':'M')+xy[0].toFixed(1)+' '+xy[1].toFixed(1);}
-  g+='<path d="'+o+'Z" fill="none" stroke="#c9a24b" stroke-width="2.8" stroke-linejoin="round"/>';
+  g+='<path d="'+o+'Z" fill="none" stroke="#f5c542" stroke-width="2.8" stroke-linejoin="round"/>';
   for(var i=0;i<N;i++){
     var xy=pt(i,R);
-    g+='<line x1="'+cx+'" y1="'+cy+'" x2="'+xy[0].toFixed(1)+'" y2="'+xy[1].toFixed(1)+'" stroke="#c9a24b" stroke-width="1.6" opacity=".9"/>';
+    g+='<line x1="'+cx+'" y1="'+cy+'" x2="'+xy[0].toFixed(1)+'" y2="'+xy[1].toFixed(1)+'" stroke="#f5c542" stroke-width="1.6" opacity=".9"/>';
     var lxy=pt(i,R+20);
-    g+='<text x="'+lxy[0].toFixed(1)+'" y="'+lxy[1].toFixed(1)+'" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="600" font-family="Marcellus,serif" fill="#c9a24b">'+LABELS[i]+'</text>';
+    g+='<text x="'+lxy[0].toFixed(1)+'" y="'+lxy[1].toFixed(1)+'" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="600" font-family="Marcellus,serif" fill="#f5c542">'+LABELS[i]+'</text>';
   }
   var v=Array.isArray(vals)&&vals.length===6?vals:[3,3,3,1,3,3];
   var dp='';
   for(var i=0;i<N;i++){var xy=pt(i,R*v[i]/max);dp+=(i?'L':'M')+xy[0].toFixed(1)+' '+xy[1].toFixed(1);}
-  var d='<path d="'+dp+'Z" fill="#7a2233" fill-opacity=".22" stroke="#c9a24b" stroke-width="2" stroke-linejoin="round"/>';
-  for(var i=0;i<N;i++){var xy=pt(i,R*v[i]/max);d+='<circle cx="'+xy[0].toFixed(1)+'" cy="'+xy[1].toFixed(1)+'" r="4.5" fill="#c9a24b" stroke="#0c0806" stroke-width="1.5"/>';}
+  var d='<path d="'+dp+'Z" fill="#e11d2b" fill-opacity=".72" stroke="#f5c542" stroke-width="2" stroke-linejoin="round"/>';
+  for(var i=0;i<N;i++){var xy=pt(i,R*v[i]/max);d+='<circle cx="'+xy[0].toFixed(1)+'" cy="'+xy[1].toFixed(1)+'" r="4.5" fill="#f5c542" stroke="#0c0806" stroke-width="1.5"/>';}
   return '<svg viewBox="0 0 260 260" width="100%" style="max-width:280px" role="img" aria-label="Estrella de cata"><g>'+g+'</g><g class="radar-data">'+d+'</g></svg>';
 }
 
@@ -936,10 +936,10 @@ function abrirCata(w){
         '<div class="mc-winery">'+esc(w.bodega||'')+'</div>' +
         '<h3>'+esc(w.nom)+'</h3>' +
         '<div class="mc-do2">'+esc(w.do||ovDoName.textContent)+'</div>' +
-        '<span class="mc-uva-tag">'+esc(w.uva||'')+'</span>' +
         '<div class="mc-meta">' +
           '<div><div class="lbl">Temperatura</div><div class="val">'+esc(w.temp||'—')+'</div></div>' +
           '<div><div class="lbl">Subzona</div><div class="val">'+esc(w.subzona||'—')+'</div></div>' +
+          '<div><div class="lbl">Uvas</div><div class="val">'+esc(w.uva||'—')+'</div></div>' +
         '</div>' +
         '<div class="mc-desc">'+esc(w.desc||'')+'</div>' +
         '<div class="mc-mar"><b>Marida con:</b> '+esc(w.mar||'')+'</div>' +
