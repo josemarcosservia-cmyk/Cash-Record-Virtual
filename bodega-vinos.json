@@ -40,6 +40,19 @@
         "img": "img/pazo-san-mauro.webp",
         "bot": "9,00 €",
         "copa": "—"
+      },
+      {
+        "nom": "Sucellos",
+        "bodega": "Sucellos",
+        "uva": "Albariño 100%",
+        "subzona": "Val do Salnés",
+        "temp": "8-10 °C",
+        "desc": "Albariño de color amarillo pálido con reflejos verdosos. Nariz limpia y afrutada, con notas de manzana verde, cítricos y flor blanca sobre un fondo salino atlántico. Boca fresca y ligera, de acidez marcada y final limpio.",
+        "mar": "Mariscos, almejas, pescado blanco a la plancha, empanada",
+        "cata": [2, 4, 4, 1, 1, 3],
+        "img": "img/sucellos.webp",
+        "bot": "—",
+        "copa": "—"
       }
     ]
   },
