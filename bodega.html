@@ -169,7 +169,7 @@ html,body{height:100%;overflow:hidden;background:#0c0806}
 }
 .stage.open .seam{opacity:0;}
 /* Puertas abiertas: dejan de interceptar clics */
-.stage.open .doors{pointer-events:none;cursor:default;}
+.stage.open .doors{pointer-events:none !important;cursor:default;}
 @keyframes flicker{0%,100%{opacity:.85}48%{opacity:1}72%{opacity:.7}}
 .hint{
   position:absolute;bottom:clamp(26px,4.5vh,48px);left:50%;transform:translateX(-50%);
