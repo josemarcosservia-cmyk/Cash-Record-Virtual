@@ -624,7 +624,7 @@
    },
    {
     "nom": "Pago de los Capellanes Nogal",
-    "bodega": "",
+    "bodega": "Pago de los Capellanes",
     "uva": "",
     "subzona": "",
     "temp": "",
@@ -3585,20 +3585,6 @@
     "copa": "",
     "cod": "23410285",
     "orig": "V.R.DUERO CANONIGOS 16 TTO. 6/75"
-   },
-   {
-    "nom": "Rib Duero P. Capellanes Roble",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
-    "img": "img/rib-duero-p-capellanes-roble.webp",
-    "bot": "",
-    "copa": "",
-    "cod": "25598988",
-    "orig": "V. RIB DUERO P. CAPELLANES ROBLE"
    },
    {
     "nom": "Rib Duero Lambuena Crianza",
