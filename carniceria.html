@@ -19,21 +19,21 @@
     min-height: 100dvh;
   }
   header {
-    padding: 26px 20px 18px;
+    padding: 22px 20px 16px;
     border-bottom: 2px solid #ff5a1f;
   }
   header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 1.9em;
     letter-spacing: .06em;
     text-transform: uppercase;
     color: #ff5a1f;
   }
-  header p {
+  #ruta {
     margin: 8px 0 0;
     color: #b9c2ba;
     font-size: .9em;
-    letter-spacing: .14em;
+    letter-spacing: .1em;
     text-transform: uppercase;
   }
   main {
@@ -42,48 +42,162 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 30px 20px;
+    gap: 18px;
+    padding: 26px 18px;
   }
-  .panel {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 900px;
+  }
+  .card {
+    font: inherit;
+    color: #ffffff;
     background: #2a332b;
     border: 2px solid #ff5a1f;
-    border-radius: 14px;
-    padding: 34px 28px;
-    max-width: 560px;
-    box-shadow: 0 6px 22px rgba(0,0,0,.45);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.45);
+    padding: 22px 16px;
+    width: 210px;
+    min-height: 84px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    font-size: 1.02em;
+    transition: transform .18s, background .18s, color .18s;
   }
-  .panel h2 { margin: 0 0 10px; font-size: 1.3em; }
-  .panel p { margin: 0; color: #cfd6d0; line-height: 1.5; }
-  .back {
+  .card:hover { transform: translateY(-4px); background: #ff5a1f; color: #1c231d; }
+  .aviso { margin: 0; color: #cfd6d0; max-width: 560px; line-height: 1.5; }
+  .acciones {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding: 0 18px 22px;
+  }
+  .btn {
     display: inline-block;
-    padding: 12px 26px;
+    padding: 11px 24px;
     border: 2px solid #ff5a1f;
     border-radius: 10px;
     color: #ffffff;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
     text-decoration: none;
     transition: background .2s, color .2s;
   }
-  .back:hover { background: #ff5a1f; color: #1c231d; }
-  footer { padding: 14px 20px; background: #14180f; color: #999999; font-size: .9em; }
+  .btn:hover { background: #ff5a1f; color: #1c231d; }
+  footer { padding: 13px 20px; background: #14180f; color: #999999; font-size: .9em; }
+
+  @media (max-width: 700px) {
+    .card { width: calc(50% - 8px); padding: 18px 10px; font-size: .95em; }
+    header h1 { font-size: 1.5em; }
+  }
 </style>
 </head>
 <body>
   <header>
     <h1>Carnicería</h1>
-    <p>Cash Record Virtual</p>
+    <p id="ruta">Cash Record Virtual</p>
   </header>
 
   <main>
-    <div class="panel">
-      <h2>Sección en preparación</h2>
-      <p>Aquí iremos montando el contenido de la carnicería: productos, precios y registro de caja.</p>
-    </div>
-    <a class="back" href="index.html">Volver al inicio</a>
+    <div id="grid" class="grid"></div>
+    <p id="aviso" class="aviso"></p>
   </main>
+
+  <nav class="acciones">
+    <button type="button" class="btn" id="atras">Atrás</button>
+    <a class="btn" href="index.html">Inicio</a>
+  </nav>
 
   <footer>
     &copy; 2026 Cash Record Virtual &mdash; Para ti, profesional
   </footer>
+
+<script>
+var DATOS = [
+  { nombre: "Vacuno", sub: [
+      { nombre: "Ternera", items: ["Ternera Gallega Suprema", "Ternera Gallega", "Ternera Nacional", "Ternera Importación"] },
+      { nombre: "Vaca", items: ["Vaca Gallega", "Vaca Nacional", "Vaca Importación"] }
+  ] },
+  { nombre: "Aves", sub: [
+      { nombre: "Pollo", items: [] },
+      { nombre: "Pavo", items: [] }
+  ] },
+  { nombre: "Cerdo", sub: [
+      { nombre: "Cerdo Blanco", items: [] },
+      { nombre: "Cerdo Ibérico", items: [] },
+      { nombre: "Cerdo Duroc", items: [] }
+  ] },
+  { nombre: "Elaborados", sub: [
+      { nombre: "Hamburguesas", items: [] },
+      { nombre: "Carne Picada", items: [] },
+      { nombre: "Albóndigas", items: [] },
+      { nombre: "Raxo", items: [] },
+      { nombre: "Chorizos", items: [] }
+  ] },
+  { nombre: "Salado", sub: [] },
+  { nombre: "Curado", sub: [] }
+];
+
+var ruta = [];
+
+function opciones() {
+  if (ruta.length === 0) {
+    return DATOS.map(function (c) { return c.nombre; });
+  }
+  var cat = DATOS[ruta[0]];
+  if (ruta.length === 1) {
+    return (cat.sub || []).map(function (s) { return s.nombre; });
+  }
+  if (ruta.length === 2) {
+    var sub = (cat.sub || [])[ruta[1]];
+    return ((sub && sub.items) || []).slice();
+  }
+  return [];
+}
+
+function textoRuta() {
+  var partes = ["Carnicería"];
+  if (ruta.length > 0) { partes.push(DATOS[ruta[0]].nombre); }
+  if (ruta.length > 1) { partes.push(DATOS[ruta[0]].sub[ruta[1]].nombre); }
+  if (ruta.length > 2) { partes.push(DATOS[ruta[0]].sub[ruta[1]].items[ruta[2]]); }
+  return partes.join(" › ");
+}
+
+function pintar() {
+  var grid = document.getElementById("grid");
+  var aviso = document.getElementById("aviso");
+  var atras = document.getElementById("atras");
+  grid.innerHTML = "";
+  document.getElementById("ruta").textContent = textoRuta();
+  atras.style.visibility = ruta.length > 0 ? "visible" : "hidden";
+  var lista = opciones();
+  if (lista.length === 0) {
+    aviso.textContent = "Esta sección todavía no tiene contenido. La iremos completando.";
+    return;
+  }
+  aviso.textContent = "";
+  lista.forEach(function (nombre, i) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "card";
+    b.textContent = nombre;
+    b.addEventListener("click", function () { ruta.push(i); pintar(); });
+    grid.appendChild(b);
+  });
+}
+
+document.getElementById("atras").addEventListener("click", function () {
+  ruta.pop();
+  pintar();
+});
+
+pintar();
+</script>
 </body>
 </html>
