@@ -19,12 +19,12 @@
     min-height: 100dvh;
   }
   header {
-    padding: 22px 20px 16px;
+    padding: 20px 20px 14px;
     border-bottom: 2px solid #ff5a1f;
   }
   header h1 {
     margin: 0;
-    font-size: 1.9em;
+    font-size: 1.8em;
     letter-spacing: .06em;
     text-transform: uppercase;
     color: #ff5a1f;
@@ -32,18 +32,31 @@
   #ruta {
     margin: 8px 0 0;
     color: #b9c2ba;
-    font-size: .9em;
+    font-size: .88em;
     letter-spacing: .1em;
     text-transform: uppercase;
   }
   main {
     flex: 1 1 auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 18px;
-    padding: 26px 18px;
+    padding: 22px 18px;
+  }
+  .contenido {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 26px;
+    width: 100%;
+    max-width: 1180px;
+  }
+  .columna {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
   .grid {
     display: flex;
@@ -51,7 +64,7 @@
     justify-content: center;
     gap: 16px;
     width: 100%;
-    max-width: 900px;
+    max-width: 720px;
   }
   .card {
     font: inherit;
@@ -60,22 +73,61 @@
     border: 2px solid #ff5a1f;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,.45);
-    padding: 22px 16px;
-    width: 210px;
-    min-height: 84px;
+    padding: 20px 14px;
+    width: 200px;
+    min-height: 80px;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: .03em;
-    font-size: 1.02em;
+    font-size: 1em;
     transition: transform .18s, background .18s, color .18s;
   }
   .card:hover { transform: translateY(-4px); background: #ff5a1f; color: #1c231d; }
+  .card.sel { background: #ff5a1f; color: #1c231d; }
   .aviso { margin: 0; color: #cfd6d0; max-width: 560px; line-height: 1.5; }
+  .ficha {
+    display: none;
+    flex: 0 0 330px;
+    width: 330px;
+    text-align: left;
+    background: #2a332b;
+    border: 2px solid #ff5a1f;
+    border-radius: 14px;
+    box-shadow: 0 6px 22px rgba(0,0,0,.5);
+    padding: 18px 18px 20px;
+    max-height: 72vh;
+    overflow-y: auto;
+  }
+  .ficha img {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto 14px;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+  .ficha h2 {
+    margin: 0 0 8px;
+    font-size: 1.1em;
+    color: #ff5a1f;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  .ficha h3 {
+    margin: 16px 0 6px;
+    font-size: .82em;
+    color: #ff5a1f;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+  .ficha p { margin: 0 0 8px; color: #cfd6d0; font-size: .9em; line-height: 1.55; }
+  .ficha ul { margin: 0; padding-left: 18px; color: #cfd6d0; font-size: .9em; line-height: 1.55; }
+  .ficha li { margin-bottom: 4px; }
   .acciones {
     display: flex;
     justify-content: center;
     gap: 14px;
-    padding: 0 18px 22px;
+    padding: 0 18px 20px;
   }
   .btn {
     display: inline-block;
@@ -90,11 +142,16 @@
     transition: background .2s, color .2s;
   }
   .btn:hover { background: #ff5a1f; color: #1c231d; }
-  footer { padding: 13px 20px; background: #14180f; color: #999999; font-size: .9em; }
+  footer { padding: 12px 20px; background: #14180f; color: #999999; font-size: .88em; }
 
+  @media (max-width: 960px) {
+    main { align-items: flex-start; }
+    .contenido { flex-direction: column; align-items: center; }
+    .ficha { flex: 0 0 auto; width: 100%; max-width: 560px; max-height: none; }
+  }
   @media (max-width: 700px) {
-    .card { width: calc(50% - 8px); padding: 18px 10px; font-size: .95em; }
-    header h1 { font-size: 1.5em; }
+    .card { width: calc(50% - 8px); padding: 16px 10px; font-size: .92em; }
+    header h1 { font-size: 1.45em; }
   }
 </style>
 </head>
@@ -105,8 +162,13 @@
   </header>
 
   <main>
-    <div id="grid" class="grid"></div>
-    <p id="aviso" class="aviso"></p>
+    <div class="contenido">
+      <div class="columna">
+        <div id="grid" class="grid"></div>
+        <p id="aviso" class="aviso"></p>
+      </div>
+      <aside id="ficha" class="ficha"></aside>
+    </div>
   </main>
 
   <nav class="acciones">
@@ -144,29 +206,83 @@ var DATOS = [
   { nombre: "Curado", sub: [] }
 ];
 
+var FICHAS = {
+  "Ternera Gallega Suprema": {
+    imagen: "img/ternera-gallega-suprema.png",
+    intro: "Carne certificada por la IGP Ternera Gallega procedente de animales menores de 10 meses criados en explotaciones tradicionales con vacas madres. La lactancia materna mínima de 7 meses le aporta una terneza extrema, mucha jugosidad y un sabor muy suave.",
+    bloques: [
+      { titulo: "Origen y crianza", lineas: [
+        "Edad de sacrificio: menores de 10 meses.",
+        "Lactancia: leche materna durante al menos 7 meses.",
+        "Alimentación complementaria: forrajes, cereales, patatas, nabos y concentrados vegetales autorizados.",
+        "Modelo de granja: explotaciones familiares tradicionales de Galicia con vacas nodrizas."
+      ] },
+      { titulo: "Aspecto y propiedades", lineas: [
+        "Color: de rosa claro a rojo suave.",
+        "Textura y grano: músculo de grano fino, aspecto magro y consistencia muy firme.",
+        "Grasa: entre blanca nacarada y amarillo suave, de textura cremosa."
+      ] },
+      { titulo: "Identificación y etiquetado", lineas: [
+        "Contraetiqueta rosa con la palabra SUPREMA y los logos de la IGP y de la Unión Europea.",
+        "Puede incluir menciones si procede de raza Rubia Gallega o de ganadería con certificación ecológica (etiqueta verde)."
+      ] }
+    ]
+  }
+};
+
 var ruta = [];
+var sel = null;
+
+function itemsActuales() {
+  if (ruta.length !== 2) { return []; }
+  var sub = (DATOS[ruta[0]].sub || [])[ruta[1]];
+  return (sub && sub.items) || [];
+}
 
 function opciones() {
   if (ruta.length === 0) {
     return DATOS.map(function (c) { return c.nombre; });
   }
-  var cat = DATOS[ruta[0]];
   if (ruta.length === 1) {
-    return (cat.sub || []).map(function (s) { return s.nombre; });
+    return (DATOS[ruta[0]].sub || []).map(function (s) { return s.nombre; });
   }
-  if (ruta.length === 2) {
-    var sub = (cat.sub || [])[ruta[1]];
-    return ((sub && sub.items) || []).slice();
-  }
-  return [];
+  return itemsActuales().slice();
 }
 
 function textoRuta() {
   var partes = ["Carnicería"];
   if (ruta.length > 0) { partes.push(DATOS[ruta[0]].nombre); }
   if (ruta.length > 1) { partes.push(DATOS[ruta[0]].sub[ruta[1]].nombre); }
-  if (ruta.length > 2) { partes.push(DATOS[ruta[0]].sub[ruta[1]].items[ruta[2]]); }
+  if (ruta.length === 2 && sel !== null) { partes.push(itemsActuales()[sel]); }
   return partes.join(" › ");
+}
+
+function pintarFicha() {
+  var aside = document.getElementById("ficha");
+  if (ruta.length !== 2 || sel === null) {
+    aside.style.display = "none";
+    aside.innerHTML = "";
+    return;
+  }
+  var nombre = itemsActuales()[sel];
+  var f = FICHAS[nombre];
+  var html = "";
+  if (f && f.imagen) {
+    html += '<img src="' + f.imagen + '" alt="Etiqueta de ' + nombre + '">';
+  }
+  html += "<h2>" + nombre + "</h2>";
+  if (f) {
+    if (f.intro) { html += "<p>" + f.intro + "</p>"; }
+    (f.bloques || []).forEach(function (b) {
+      html += "<h3>" + b.titulo + "</h3><ul>";
+      b.lineas.forEach(function (l) { html += "<li>" + l + "</li>"; });
+      html += "</ul>";
+    });
+  } else {
+    html += "<p>Ficha en preparación. La iremos completando.</p>";
+  }
+  aside.innerHTML = html;
+  aside.style.display = "block";
 }
 
 function pintar() {
@@ -175,25 +291,34 @@ function pintar() {
   var atras = document.getElementById("atras");
   grid.innerHTML = "";
   document.getElementById("ruta").textContent = textoRuta();
-  atras.style.visibility = ruta.length > 0 ? "visible" : "hidden";
+  atras.style.visibility = (ruta.length > 0 || sel !== null) ? "visible" : "hidden";
   var lista = opciones();
   if (lista.length === 0) {
     aviso.textContent = "Esta sección todavía no tiene contenido. La iremos completando.";
-    return;
+  } else {
+    aviso.textContent = "";
+    lista.forEach(function (nombre, i) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "card" + (ruta.length === 2 && sel === i ? " sel" : "");
+      b.textContent = nombre;
+      b.addEventListener("click", function () {
+        if (ruta.length < 2) {
+          ruta.push(i);
+          sel = null;
+        } else {
+          sel = (sel === i) ? null : i;
+        }
+        pintar();
+      });
+      grid.appendChild(b);
+    });
   }
-  aviso.textContent = "";
-  lista.forEach(function (nombre, i) {
-    var b = document.createElement("button");
-    b.type = "button";
-    b.className = "card";
-    b.textContent = nombre;
-    b.addEventListener("click", function () { ruta.push(i); pintar(); });
-    grid.appendChild(b);
-  });
+  pintarFicha();
 }
 
 document.getElementById("atras").addEventListener("click", function () {
-  ruta.pop();
+  if (sel !== null) { sel = null; } else { ruta.pop(); }
   pintar();
 });
 
