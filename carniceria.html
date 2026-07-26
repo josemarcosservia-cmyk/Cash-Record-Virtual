@@ -19,20 +19,20 @@
     min-height: 100dvh;
   }
   header {
-    padding: 20px 20px 14px;
+    padding: 18px 20px 12px;
     border-bottom: 2px solid #ff5a1f;
   }
   header h1 {
     margin: 0;
-    font-size: 1.8em;
+    font-size: 1.75em;
     letter-spacing: .06em;
     text-transform: uppercase;
     color: #ff5a1f;
   }
   #ruta {
-    margin: 8px 0 0;
+    margin: 7px 0 0;
     color: #b9c2ba;
-    font-size: .88em;
+    font-size: .86em;
     letter-spacing: .1em;
     text-transform: uppercase;
   }
@@ -41,13 +41,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 22px 18px;
+    padding: 20px 18px;
   }
   .contenido {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 26px;
+    gap: 24px;
     width: 100%;
     max-width: 1180px;
   }
@@ -57,6 +57,7 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    min-width: 0;
   }
   .grid {
     display: flex;
@@ -73,9 +74,9 @@
     border: 2px solid #ff5a1f;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,.45);
-    padding: 20px 14px;
+    padding: 18px 14px;
     width: 200px;
-    min-height: 80px;
+    min-height: 76px;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: .03em;
@@ -87,51 +88,51 @@
   .aviso { margin: 0; color: #cfd6d0; max-width: 560px; line-height: 1.5; }
   .ficha {
     display: none;
-    flex: 0 0 330px;
-    width: 330px;
+    flex: 0 0 300px;
+    width: 300px;
     text-align: left;
     background: #2a332b;
     border: 2px solid #ff5a1f;
     border-radius: 14px;
     box-shadow: 0 6px 22px rgba(0,0,0,.5);
-    padding: 18px 18px 20px;
-    max-height: 72vh;
+    padding: 16px 16px 18px;
+    max-height: 62vh;
     overflow-y: auto;
   }
   .ficha img {
     display: block;
     width: 100%;
-    max-width: 250px;
-    margin: 0 auto 14px;
+    max-width: 240px;
+    margin: 0 auto 12px;
     border-radius: 10px;
     background: #ffffff;
   }
   .ficha h2 {
     margin: 0 0 8px;
-    font-size: 1.1em;
+    font-size: 1.05em;
     color: #ff5a1f;
     text-transform: uppercase;
     letter-spacing: .04em;
   }
   .ficha h3 {
-    margin: 16px 0 6px;
-    font-size: .82em;
+    margin: 14px 0 5px;
+    font-size: .8em;
     color: #ff5a1f;
     text-transform: uppercase;
     letter-spacing: .08em;
   }
-  .ficha p { margin: 0 0 8px; color: #cfd6d0; font-size: .9em; line-height: 1.55; }
-  .ficha ul { margin: 0; padding-left: 18px; color: #cfd6d0; font-size: .9em; line-height: 1.55; }
+  .ficha p { margin: 0 0 8px; color: #cfd6d0; font-size: .88em; line-height: 1.5; }
+  .ficha ul { margin: 0; padding-left: 18px; color: #cfd6d0; font-size: .88em; line-height: 1.5; }
   .ficha li { margin-bottom: 4px; }
   .acciones {
     display: flex;
     justify-content: center;
     gap: 14px;
-    padding: 0 18px 20px;
+    padding: 0 18px 18px;
   }
   .btn {
     display: inline-block;
-    padding: 11px 24px;
+    padding: 10px 22px;
     border: 2px solid #ff5a1f;
     border-radius: 10px;
     color: #ffffff;
@@ -142,16 +143,16 @@
     transition: background .2s, color .2s;
   }
   .btn:hover { background: #ff5a1f; color: #1c231d; }
-  footer { padding: 12px 20px; background: #14180f; color: #999999; font-size: .88em; }
+  footer { padding: 11px 20px; background: #14180f; color: #999999; font-size: .86em; }
 
-  @media (max-width: 960px) {
+  @media (max-width: 780px) {
     main { align-items: flex-start; }
     .contenido { flex-direction: column; align-items: center; }
     .ficha { flex: 0 0 auto; width: 100%; max-width: 560px; max-height: none; }
   }
   @media (max-width: 700px) {
     .card { width: calc(50% - 8px); padding: 16px 10px; font-size: .92em; }
-    header h1 { font-size: 1.45em; }
+    header h1 { font-size: 1.4em; }
   }
 </style>
 </head>
