@@ -1414,13 +1414,21 @@
     "orig": "VINO RIBEIRO PAZO DO MAR BCO.6/7"
    },
    {
-    "nom": "Dimia Blanco",
-    "bodega": "",
-    "uva": "",
+    "nom": "Dimia",
+    "bodega": "Marqués de Sanfiz (ViniGalicia - Méndez Rojo)",
+    "uva": "Treixadura (según ficha comercial) Algunas fuentes indican coupage de Treixadura, Palomino y Torrontés según añada y mercado.",
     "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "temp": "9-11 ºC",
+    "desc": "Fase visual\n\nColor verdoso alimonado, limpio y brillante.\n\nFase olfativa\n\nAroma intenso y elegante, con predominio de notas florales, recuerdos dulces y matices frutales muy frescos.\n\nFase gustativa\n\nVino ligero, fresco y muy equilibrado. Presenta una boca agradable, fácil de beber, con buena armonía y un final largo y persistente.",
+    "mar": "Mariscos Pescados blancos Arroces Ensaladas Quesos suaves Carnes blancas Aperitivos",
+    "cata": [
+     2,
+     4,
+     4,
+     1,
+     0,
+     3
+    ],
     "img": "img/dimia-blanco.webp",
     "bot": "",
     "copa": "",
