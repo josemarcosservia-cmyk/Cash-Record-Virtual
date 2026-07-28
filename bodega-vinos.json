@@ -1702,13 +1702,21 @@
     "orig": "V.DO RIBEIRO CASAL ARMAN 1,5L C/"
    },
    {
-    "nom": "Blanco Vilerma",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Vilerma",
+    "bodega": "Vilerma (Finca A Vilerma)",
+    "uva": "Treixadura (predominante) Godello Albariño Loureira Lado Torrontés",
+    "subzona": "Leiro, Valle del Avia (Ourense)",
+    "temp": "10-12 ºC",
+    "desc": "Fase visual\n\nColor amarillo pálido con reflejos verdosos, limpio y brillante.\n\nFase olfativa\n\nNariz elegante y compleja, con aromas de fruta blanca (pera, manzana y melón), notas florales, recuerdos cítricos y ligeros matices vegetales y herbáceos. Con unos años en botella gana complejidad y profundidad aromática.\n\nFase gustativa\n\nSeco, suave y equilibrado. Presenta una entrada fresca, buena amplitud en boca y una textura agradable. Destaca por su finura, elegancia y un final persistente, largo y lleno de matices frutales y minerales.",
+    "mar": "Mariscos gallegos Pescados blancos Pescados al horno Arroces Pulpo Cocina atlántica Quesos suaves",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     0,
+     5
+    ],
     "img": "img/blanco-vilerma.webp",
     "bot": "",
     "copa": "",
