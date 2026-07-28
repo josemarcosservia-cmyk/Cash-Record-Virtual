@@ -1548,13 +1548,21 @@
     "orig": "V.BCO. RIBEIRO MARIETA 0,75 L C/"
    },
    {
-    "nom": "Blanco 7 Cupos",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "7 Cupos",
+    "bodega": "Casal de Armán",
+    "uva": "Treixadura (principal) Godello Albariño Loureira Caíño Blanco Torrontés",
+    "subzona": "Ribadavia (Valle del Avia, Ourense)",
+    "temp": "10-12 ºC",
+    "desc": "Fase visual\n\nColor amarillo pajizo brillante, limpio y luminoso.\n\nFase olfativa\n\nAromas intensos y frescos, con predominio de frutas blancas y tropicales. Destacan notas de mango, piña, frutas maduras, matices cítricos y ligeros recuerdos florales y herbáceos.\n\nFase gustativa\n\nEntrada fresca y equilibrada, con buena acidez, paso amable y estructura ligera-media. Resulta muy fácil de beber, con gran expresión frutal y un final persistente y agradable.",
+    "mar": "Mariscos Pescados blancos Arroces Aperitivos Quesos suaves Cocina gallega tradicional",
+    "cata": [
+     3,
+     4,
+     4,
+     1,
+     0,
+     3
+    ],
     "img": "img/blanco-7-cupos.webp",
     "bot": "",
     "copa": "",
