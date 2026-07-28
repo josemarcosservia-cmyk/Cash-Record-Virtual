@@ -1640,20 +1640,6 @@
     "orig": "VVINO RIBEIRO TREIXADURA RAMON CASAR 75 CL"
    },
    {
-    "nom": "Ribero Duero Figuero",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
-    "img": "img/ribero-duero-figuero.webp",
-    "bot": "",
-    "copa": "",
-    "cod": "26506485",
-    "orig": "RIBERO DUERO FIGUERO 12 75 CL"
-   },
-   {
     "nom": "Casal Arman C/",
     "bodega": "",
     "uva": "",
@@ -4001,6 +3987,28 @@
     "copa": "",
     "cod": "",
     "orig": ""
+   },
+   {
+    "nom": "Figuero",
+    "bodega": "",
+    "uva": "Uvas: 100% Tinto Fino (Tempranillo)",
+    "subzona": "",
+    "temp": "16 ºC",
+    "desc": "Fase visual\n\nColor púrpura intenso, profundo, limpio y brillante. Capa alta y gran intensidad cromática.\n\nFase olfativa\n\nNariz muy expresiva, con aromas de fruta roja madura (fresa y zarzamora), notas de regaliz, flores azules y suaves tostados procedentes de la crianza. Con la aireación aparecen matices balsámicos, mentolados, pimienta blanca y fruta negra.\n\nFase gustativa\n\nEntrada sabrosa y equilibrada, con gran presencia de fruta, buena estructura y taninos finos. Persistente, fresco y voluminoso, con recuerdos balsámicos y minerales que aportan complejidad. Final largo y elegante.",
+    "mar": "Cordero asado Carnes rojas Caza menor Arroces de carne Embutidos Quesos semicurados",
+    "cata": [
+     5,
+     3,
+     4,
+     1,
+     4,
+     5
+    ],
+    "img": "img/figuero.webp",
+    "bot": "",
+    "copa": "",
+    "cod": "26506485",
+    "orig": "RIBERO DUERO FIGUERO 12 75 CL"
    }
   ]
  },
