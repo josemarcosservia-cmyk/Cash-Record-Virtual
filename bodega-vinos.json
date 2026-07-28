@@ -1478,13 +1478,21 @@
     "orig": "BCO DO RIBEIRO VIÑA COSTEIR 4BX"
    },
    {
-    "nom": "Terrada Blanco",
-    "bodega": "",
-    "uva": "",
+    "nom": "Terrada",
+    "bodega": "ViniGalicia · Lagar de Deuses · Méndez Rojo",
+    "uva": "Treixadura (predominante) Godello Albariño",
     "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "temp": "9-11 ºC",
+    "desc": "Fase visual\n\nColor amarillo pajizo con reflejos verdosos, limpio y brillante.\n\nFase olfativa\n\nAromas frescos y expresivos, con notas cítricas, fruta de hueso (melocotón y albaricoque) y delicados recuerdos de flores blancas.\n\nFase gustativa\n\nVino glicérico, fresco y equilibrado. Presenta buena amplitud en boca gracias a su ligera crianza sobre lías, manteniendo una marcada frescura y un final afrutado largo y agradable.",
+    "mar": "Mariscos Pescados blancos Pescados azules Arroces Ensaladas Pastas Carnes blancas Quesos suaves",
+    "cata": [
+     3,
+     4,
+     4,
+     1,
+     0,
+     3
+    ],
     "img": "img/terrada-blanco.webp",
     "bot": "",
     "copa": "",
