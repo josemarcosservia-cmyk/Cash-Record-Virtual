@@ -1534,13 +1534,21 @@
     "orig": "V.RIBEIRO EL GODELLO JUAN MIGUEZ"
    },
    {
-    "nom": "Blanco Marieta C/",
-    "bodega": "",
-    "uva": "",
+    "nom": "Marieta  Ribeiro",
+    "bodega": "Marieta (Grupo Martín Códax)",
+    "uva": "100% Palomino",
     "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "temp": "10-12 ºC",
+    "desc": "Fase visual\n\nColor amarillo pálido, limpio y brillante.\n\nFase olfativa\n\nAromáticamente destaca por su perfil floral, con notas de jazmín, gardenia y magnolio, acompañadas de aromas de pera, níspero y fruta blanca fresca.\n\nFase gustativa\n\nVino fresco, equilibrado y muy fácil de beber. Presenta una entrada suave, carácter frutal y jugoso, buena persistencia y un perfil amable que resulta muy atractivo para un amplio tipo de consumidor",
+    "mar": "Mariscos Pescados Arroces Ensaladas Cocina ligera Aperitivos Quesos suaves",
+    "cata": [
+     2,
+     3,
+     4,
+     2,
+     0,
+     3
+    ],
     "img": "img/blanco-marieta-c.webp",
     "bot": "",
     "copa": "",
