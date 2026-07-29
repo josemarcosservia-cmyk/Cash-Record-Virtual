@@ -399,13 +399,21 @@
     "orig": "VINO D.O. RIAS BAIXAS LA MAR 6/7"
    },
    {
-    "nom": "Coral Mar",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Coral Do Mar",
+    "bodega": "Veiga da Princesa · Grupo Pazo do Mar",
+    "uva": "100% Albariño",
+    "subzona": "Condado do Tea",
+    "temp": "10-12 ºC",
+    "desc": "Fase visual\n\nColor amarillo limón brillante con reflejos verdosos. Limpio y atractivo.\n\nFase olfativa\n\nNariz intensa y muy varietal, con predominio de frutas de hueso (melocotón y albaricoque), fruta blanca madura y delicadas notas florales atlánticas.\n\nFase gustativa\n\nFresco, equilibrado y muy expresivo. Presenta una estructura media, acidez moderada y una gran sensación frutal. El paso por boca es ligero y refrescante, con un final largo donde reaparecen las notas frutales características del Albariño.\nCoral do Mar es uno de los albariños elaborados por el Grupo Pazo do Mar a partir de viñedos propios situados en el Condado do Tea, dentro de la D.O. Rías Baixas. La finca cuenta con unas 18 hectáreas de Albariño sobre suelos graníticos, donde el clima atlántico y el sistema tradicional de parra favorecen una maduración óptima y una gran expresión aromática.\n\nLa filosofía de la bodega busca preservar al máximo el carácter varietal de la uva, manteniendo la frescura, la intensidad aromática y la personalidad atlántica que caracterizan a los mejores Albariños.",
+    "mar": "Mariscos gallegos Pescados blancos Ahumados Arroces marineros Sushi Ensaladas Aperitivos",
+    "cata": [
+     3,
+     4,
+     5,
+     1,
+     0,
+     4
+    ],
     "img": "img/coral-mar.webp",
     "bot": "",
     "copa": "",
