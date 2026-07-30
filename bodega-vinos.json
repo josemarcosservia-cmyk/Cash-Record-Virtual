@@ -611,13 +611,21 @@
     "orig": "V.BCO DO R.BAIXAS D.LUCI 0,75L C"
    },
    {
-    "nom": "Blanco Xión",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Xión",
+    "bodega": "Attis Bodegas y Viñedos",
+    "uva": "100% Albariño",
+    "subzona": "Val do Salnés",
+    "temp": "7 y 10 °C.",
+    "desc": "🏰 La bodega\n\nAttis Bodegas y Viñedos es una bodega familiar ubicada en Dena (Meaño), en el corazón del Valle del Salnés. Nace con la filosofía de elaborar vinos atlánticos de gran personalidad, respetando al máximo la variedad Albariño y el carácter de los suelos graníticos gallegos. Sus viñedos disfrutan de la influencia directa del océano Atlántico, aportando frescura, mineralidad y elegancia a sus vinos.\n\n🍇 Elaboración\n\nProcede de viñedos en emparrado tradicional sobre suelos graníticos areno-arcillosos. La vendimia es manual y seleccionada. La fermentación se realiza en depósitos de acero inoxidable con control de temperatura y posteriormente permanece varios meses sobre lías finas para ganar volumen y complejidad.\n\n👁️ Nota de Cata\nVista\n\nColor amarillo pajizo intenso con reflejos verdosos. Limpio, brillante y atractivo.\n\nNariz\n\nMuy aromático. Destacan notas de fruta blanca fresca (manzana, pera y melocotón) acompañadas de delicados recuerdos cítricos y matices florales que aportan frescura.\n\nBoca\n\nEntrada amplia y sabrosa. Acidez perfectamente integrada, paso fresco y equilibrado, con una gran persistencia aromática y un final largo y afrutado\n",
+    "mar": "Mariscos y moluscos Pescados blancos Sushi Conservas gourmet Arroces marineros Pulpo a la gallega",
+    "cata": [
+     3,
+     5,
+     5,
+     1,
+     0,
+     4
+    ],
     "img": "img/blanco-xion.webp",
     "bot": "",
     "copa": "",
