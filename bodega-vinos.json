@@ -357,13 +357,21 @@
     "orig": "VINO D.O.RIAS BAIXAS ALBA MARTIN"
    },
    {
-    "nom": "Finca Valiñas Mar Frade",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Finca Valiñas Mar Frades",
+    "bodega": "100% Albariño",
+    "uva": "100% Albariño",
+    "subzona": "Val do Salnés",
+    "temp": "10-12 ºC.",
+    "desc": "🏰 La bodega\n\nMar de Frades es una de las grandes referencias de Rías Baixas. Finca Valiñas es su vino de parcela más emblemático, elaborado exclusivamente con uvas procedentes de un viñedo propio de 2,2 hectáreas situado frente a la Ría de Arousa. Se trata de una producción limitada considerada uno de los grandes blancos de Galicia y de España.\n\n🍇 Elaboración\n\nLas uvas proceden de cepas viejas de Albariño cultivadas sobre suelos de granito y arenisca. La vendimia se realiza con una selección extremadamente rigurosa. Tras una larga maceración en frío y fermentación con levaduras autóctonas, el vino permanece largos periodos sobre sus lías y posteriormente continúa afinándose en botella antes de salir al mercado.\n\n👁️ Nota de Cata\nVista\n\nColor amarillo intenso con reflejos dorados. Limpio, brillante y con gran intensidad visual.\n\nNariz\n\nMuy compleja y elegante. Destacan notas de fruta madura, flores blancas, recuerdos balsámicos, cítricos, melocotón, matices ahumados y una marcada expresión salina atlántica.\n\nBoca\n\nPotente y estructurado. Cremoso, amplio, con gran volumen y profundidad. Aparecen recuerdos minerales, cítricos y salinos que conducen a un final largo, persistente y elegante.",
+    "mar": "Bogavante Centollo Vieiras Pescados grasos Rodaballo Lubina Sushi y sashimi Carnes blancas Cocina atlántica de alto nivel",
+    "cata": [
+     5,
+     4,
+     4,
+     1,
+     0,
+     5
+    ],
     "img": "img/finca-valinas-mar-frade.webp",
     "bot": "",
     "copa": "",
