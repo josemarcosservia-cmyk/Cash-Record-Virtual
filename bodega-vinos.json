@@ -511,18 +511,18 @@
    {
     "nom": "Espumoso Brut Mar de Frades",
     "bodega": "Bodega Mar de Frades",
-    "uva": "",
+    "uva": "100% Albariño",
     "subzona": "Val do Salnés",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "temp": "6-8 ºC.",
+    "desc": "🏰 La bodega\n\nMar de Frades es una de las bodegas más emblemáticas de Rías Baixas. Situada en pleno Atlántico gallego, ha sido pionera en la elaboración de vinos que reflejan el carácter salino, fresco y mineral de la variedad Albariño. Su icónica botella azul y la etiqueta termocrómica son ya símbolos de la marca.\n\n🍇 Elaboración\n\nMar de Frades Brut Nature es el primer espumoso 100% Albariño elaborado mediante método tradicional (champenoise) dentro de la D.O. Rías Baixas. Realiza una segunda fermentación en botella y una larga crianza sobre lías que aporta complejidad, finura y elegancia.\n\n👁️ Nota de Cata\nVista\n\nColor amarillo dorado con reflejos alimonados. Burbuja muy fina, abundante y persistente.\n\nNariz\n\nMuy elegante y compleja. Aparecen notas de frutas blancas, recuerdos cítricos, eucalipto, salinidad atlántica, pan tostado y cáscara de almendra procedentes de la crianza.\n\nBoca\n\nAmplio, cremoso y envolvente. Destaca la frescura del Albariño junto a una burbuja perfectamente integrada. Final largo, mineral, fresco y muy persistente",
+    "mar": "Ostras Bogavante Centollo Mariscos gallegos Tartar de atún Sushi Pescados blancos Cocina japonesa Aperitivos premium",
     "cata": [
-     3,
-     3,
-     3,
-     3,
-     3,
-     3
+     4,
+     5,
+     4,
+     0,
+     0,
+     5
     ],
     "img": "img/espumoso-brut-mar-de-frades.webp",
     "bot": "",
