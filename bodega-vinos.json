@@ -103,13 +103,21 @@
     "orig": "VINO D.O. RIAS BAIXAS ENXEBRE 6/"
    },
    {
-    "nom": "Albariño Abadia S. Campio",
+    "nom": "Abadia de San Campio",
     "bodega": "Bodegas Terras Gauda",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "Albariño 100% (subzona O Rosal, crianza sobre lías). Amarillo pálido. Nariz de cítricos maduros (pomelo, limón), fruta tropical y melocotón con toques florales. Boca vibrante y cremosa por la crianza sobre lías, acidez fresca y final largo.",
-    "mar": "",
+    "uva": "100% Albariño",
+    "subzona": "O Rosal",
+    "temp": "7-10 °C",
+    "desc": "Sobre la bodega\n\nBodegas Terras Gauda está situada en el Valle de O Rosal, una de las zonas más prestigiosas de las Rías Baixas. Es una de las bodegas gallegas con mayor reconocimiento nacional e internacional y destaca por su apuesta por la investigación, la recuperación de variedades autóctonas y la elaboración de vinos de marcada identidad atlántica.\n\nAbadía de San Campio fue el primer albariño elaborado por Terras Gauda y se ha convertido en uno de los monovarietales más conocidos de Galicia.\n\nElaboración\n\nLas uvas proceden de los viñedos de Goián, situados a unos 150 metros de altitud. Tras una maceración en frío de aproximadamente 6 horas, la fermentación se realiza a baja temperatura en depósitos de acero inoxidable utilizando levaduras seleccionadas de los propios viñedos. Posteriormente el vino se estabiliza y embotella conservando toda su frescura y potencial aromático.\n\nVista\n\nAmarillo pajizo brillante con reflejos verdosos. Limpio y luminoso.\n\nNariz\n\nMuy aromático, con predominio de frutas tropicales como piña y mango, acompañadas de manzana, pera, lima, pomelo y notas anisadas.\n\nBoca\n\nFresco, vivo y vibrante. Presenta una acidez atlántica muy bien integrada, buena amplitud y un final largo con recuerdos de fruta tropical.",
+    "mar": "Ostras Almejas Cangrejo Mariscos gallegos Pescados blancos Cocina asiática Sushi Arroces marineros Aperitivos de pescado y marisco",
+    "cata": [
+     3,
+     4,
+     5,
+     1,
+     0,
+     4
+    ],
     "img": "img/albarino-abadia-s-campio.webp",
     "bot": "",
     "copa": "",
