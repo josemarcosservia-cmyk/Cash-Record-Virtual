@@ -1032,13 +1032,21 @@
     "orig": "V.BCO.MONTERREI M.MOURA 0,75 L C"
    },
    {
-    "nom": "Godello Tirabeque",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Tirabeque",
+    "bodega": "Bodega Abeledos,",
+    "uva": "100% Godello",
+    "subzona": "Valle del Támega.",
+    "temp": "8 ºC - 10 ºC",
+    "desc": "Elaboración\n\nVendimia manual con selección de uva en viñedo. Fermentación en depósitos de acero inoxidable con control de temperatura y posterior trabajo sobre lías finas, aportando una textura más compleja y sedosa al vino.\n\nSobre la bodega\n\nBodega Abeledos es una explotación familiar ubicada en Monterrei. Gestiona directamente sus viñedos y producción, apostando por métodos respetuosos con el entorno y una elaboración orientada a expresar el carácter propio de la variedad Godello.\n\nNota de cata\nVista\n\nAmarillo pajizo brillante con reflejos verdosos y tonos amarillo limón. Limpio y luminoso.\n\nNariz\n\nIntensa y expresiva. Aparecen aromas de fruta blanca madura como manzana y pera, acompañados de notas cítricas, matices florales y recuerdos herbáceos de hinojo y boj.\n\nBoca\n\nFresco, equilibrado y sabroso. Buena estructura, textura sedosa aportada por el trabajo sobre lías y una acidez moderada muy bien integrada. Final agradable, persistente y limpio.",
+    "mar": "Mariscos gallegos Vieira Zamburiñas Pescados blancos Bacalao Carnes blancas Ensaladas Arroces de pescado",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     1,
+     4
+    ],
     "img": "img/godello-tirabeque.webp",
     "bot": "",
     "copa": "",
