@@ -2225,13 +2225,21 @@
     "orig": ""
    },
    {
-    "nom": "Godello C. Moreiras",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Casa Moreiras Godello",
+    "bodega": "Casa Moreiras",
+    "uva": "Godello 92% Treixadura 3% Albariño 5%",
+    "subzona": "Amandi, una de las áreas más prestigiosas de la Ribeira Sacra",
+    "temp": "10 ºC - 12 ºC",
+    "desc": "Elaboración\n\nProcede de viñedos de entre 20 y 40 años. Tras una selección de la uva, realiza prensado suave y fermentación en depósitos de acero inoxidable a baja temperatura para preservar toda la expresión aromática de las variedades.\n\nSobre la bodega\n\nCasa Moreiras Godello refleja el carácter atlántico de la Ribeira Sacra, combinando frescura, intensidad aromática y una marcada personalidad mineral derivada de sus suelos de pizarra.\n\nNota de cata\nVista\n\nColor amarillo pajizo pálido con reflejos verdosos y destellos acerados. Limpio y brillante.\n\nNariz\n\nAromática y elegante, con notas de pera, manzana verde, plátano, ciruela y pomelo, acompañadas por un delicado fondo floral y mineral.\n\nBoca\n\nFresco, envolvente y equilibrado. Presenta una acidez viva, excelente intensidad frutal, buena persistencia y un final largo con recuerdos cítricos y minerales",
+    "mar": "Mariscos Pescados blancos Arroces melosos Quesos suaves Ensaladas Cocina asiática Cocina gallega tradicional",
+    "cata": [
+     3,
+     4,
+     4,
+     1,
+     4,
+     4
+    ],
     "img": "img/godello-c-moreiras.webp",
     "bot": "",
     "copa": "",
