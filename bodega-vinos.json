@@ -950,13 +950,21 @@
     "orig": "V.MONTE.GODELLO Q.TAPIAS 6/75CL"
    },
    {
-    "nom": "Blanco P. Mariñan",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Pazo de Mariñan",
+    "bodega": "Adega Tapias Mariñán",
+    "uva": "85% Godello 10% Albariño 5% Treixadura",
+    "subzona": "Val de Monterrei (Verín)",
+    "temp": "8 ºC - 10 ºC",
+    "desc": "Elaboración\n\nMaceración en frío de las pastas con nieve carbónica y trabajo a bajas temperaturas sobre las lías en dulce, buscando preservar la expresión aromática de la fruta y aportar volumen y suavidad al vino.\n\nSobre la bodega\n\nTapias Mariñán elabora vinos de Monterrei combinando tradición familiar y técnicas de elaboración modernas. Sus vinos reflejan el carácter de la Galicia interior, manteniendo frescura, equilibrio y una marcada identidad varietal.\n\nNota de cata\nVista\n\nColor amarillo pálido con reflejos alimonados. Limpio, transparente, brillante y con buena lágrima.\n\nNariz\n\nIntensa y afrutada, con presencia de cítricos, frutas blancas, fruta de hueso y delicados matices florales.\n\nBoca\n\nAmplia, glicérica, fresca y suave. Vino equilibrado, redondo y ligeramente goloso, con estructura media y un postgusto largo y agradable.",
+    "mar": "Mariscos gallegos Pescados blancos al horno Arroces marineros Carnes blancas Ensaladas Quesos suaves Cocina ligera mediterránea",
+    "cata": [
+     4,
+     4,
+     4,
+     2,
+     1,
+     4
+    ],
     "img": "img/blanco-p-marinan.webp",
     "bot": "",
     "copa": "",
