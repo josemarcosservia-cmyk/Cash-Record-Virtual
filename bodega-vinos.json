@@ -4019,13 +4019,21 @@
     "orig": "V.R.DUERO PAGO CARRAOVEJAS  A.20"
    },
    {
-    "nom": "Emilio Mor",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Emilio Moro",
+    "bodega": "Bodegas Emilio Moro,",
+    "uva": "100% Tempranillo (Tinto Fino)",
+    "subzona": "Pesquera de Duero (Valladolid).",
+    "temp": "14 ºC - 16 ºC.",
+    "desc": "Elaboración\n\nElaborado con uvas procedentes de viñedos de entre 15 y 25 años. La fermentación se realiza en depósitos de acero inoxidable con control de temperatura y posteriormente el vino permanece 12 meses en barricas de roble francés y americano, buscando el equilibrio entre fruta y crianza.\n\nSobre la bodega\n\nEmilio Moro es el vino que lleva el nombre del fundador y representa la esencia de la casa. Desde 1998 se ha convertido en la referencia principal de la bodega y en uno de los Ribera del Duero más reconocidos del mercado español.\n\nNota de cata\nVista\n\nColor rojo picota intenso, capa alta, con reflejos violáceos y ribetes azulados. Limpio, brillante y de gran profundidad.\n\nNariz\n\nMuy expresiva y compleja. Predominan las frutas negras maduras como mora, ciruela e higo, acompañadas por notas especiadas de pimienta negra, regaliz, clavo, café tostado, vainilla, matices balsámicos y ligeros recuerdos minerales.\n\nBoca\n\nPotente, carnosa y envolvente. Presenta una excelente concentración frutal, gran estructura, taninos sedosos perfectamente integrados y una acidez equilibrada que aporta frescura. Final largo, elegante y persistente",
+    "mar": "Lechazo asado Chuletón de vaca Carnes rojas a la parrilla Caza mayor Hamburguesas gourmet Embutidos ibéricos Queso manchego Quesos semicurados",
+    "cata": [
+     5,
+     4,
+     5,
+     1,
+     4,
+     5
+    ],
     "img": "img/emilio-mor.webp",
     "bot": "",
     "copa": "",
