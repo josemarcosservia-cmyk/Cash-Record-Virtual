@@ -2388,50 +2388,6 @@
   "zona": "Rioja",
   "vinos": [
    {
-    "nom": "Faustino V Crianza",
-    "bodega": "Bodegas Faustino",
-    "uva": "Tempranillo 100%",
-    "subzona": "Rioja Alavesa",
-    "temp": "16-18 °C",
-    "desc": "Referencia histórica de La Rioja con 93 puntos James Suckling. Muy equilibrado, con fruta roja madura, notas tostadas de roble americano y un final largo y cálido. Acidez total de 5,7 g/l bien integrada.",
-    "mar": "Asados, carnes rojas, caza mayor",
-    "cata": [
-     3,
-     3,
-     3,
-     1,
-     3,
-     4
-    ],
-    "img": "img/faustino-v-crianza.webp",
-    "bot": "7,20 €",
-    "copa": "—",
-    "cod": "",
-    "orig": ""
-   },
-   {
-    "nom": "Viña Alberdi Crianza",
-    "bodega": "La Rioja Alta",
-    "uva": "Tempranillo 100%",
-    "subzona": "Rioja Alta",
-    "temp": "16-18 °C",
-    "desc": "Crianza elegante de La Rioja Alta. Alta intensidad aromática con notas de fresas silvestres, frambuesas, canela y vainilla. Cuerpo medio, acidez fresca, taninos suaves y redondeados. Final largo y balsámico.",
-    "mar": "Chuletón, setas, estofados de carne",
-    "cata": [
-     3,
-     3,
-     4,
-     1,
-     3,
-     4
-    ],
-    "img": "img/vina-alberdi-crianza.webp",
-    "bot": "10,00 €",
-    "copa": "—",
-    "cod": "",
-    "orig": ""
-   },
-   {
     "nom": "Diamante Blanco",
     "bodega": "",
     "uva": "",
@@ -2446,7 +2402,7 @@
     "orig": "VINO RIOJA DIAMANTE BCO.6/75CL"
    },
    {
-    "nom": "Tinto Azpilicueta Crianza",
+    "nom": "Azpilicueta Crianza",
     "bodega": "",
     "uva": "",
     "subzona": "",
