@@ -169,13 +169,21 @@
     "orig": "VINO D.O RIAS BAIXAS VIÑA ALMEIR"
    },
    {
-    "nom": "Albariño Señorio Rubios",
+    "nom": "Señorio Rubios",
     "bodega": "Bodega Señorío de Rubiós",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "Albariño 100% (subzona O Condado do Tea, Arbo). Floral, frutal y fresco, de alta intensidad con notas frutales y cítricas. Potente, sedoso y glicérico, con muy buena acidez.",
-    "mar": "",
+    "uva": "100% Albariño",
+    "subzona": "Condado do Tea",
+    "temp": "7 ºC - 10 ºC.",
+    "desc": "Albariño 100% (subzona O Condado do Tea, Arbo). Floral, frutal y fresco, de alta intensidad con notas frutales y cítricas. Potente, sedoso y glicérico, con muy buena acidez.\nElaboración\n\nElaborado a partir de una cuidada selección de las mejores parcelas de Albariño de la bodega. Tras el despalillado y prensado suave, la fermentación se realiza en depósitos de acero inoxidable a temperatura controlada (16 ºC) durante 15-20 días. Posteriormente permanece varios meses en depósito antes de su embotellado.\n\nSobre la bodega\n\nSituada en As Neves, en pleno Condado do Tea, Señorío de Rubiós trabaja con variedades autóctonas gallegas y viñedos de gran valor patrimonial. Su filosofía consiste en reflejar la identidad de esta subzona de Rías Baixas mediante vinos con personalidad, estructura y carácter atlántico.\n\nNota de cata\nVista\n\nColor amarillo pajizo brillante con reflejos verdosos. Limpio, brillante y atractivo.\n\nNariz\n\nAlta intensidad aromática. Destacan aromas de melocotón, albaricoque, fruta de hueso madura, flores blancas y sutiles notas minerales.\n\nBoca\n\nAmplio, potente y sedoso. Presenta una excelente estructura, sensación glicérica y una acidez perfectamente integrada que aporta frescura y equilibrio. Final largo y persistente.\n\nNota de servicio\nTemperatura de servicio: 7-10 ºC.\nTipo de copa: copa de vino blanco de tamaño medio.\nPotencial de guarda: 2-4 años.\nMomento óptimo de consumo: aperitivos, mariscos y pescados, donde muestra toda su expresión aromática.",
+    "mar": "Ostras y mariscos gallegos Vieira gratinada Pescados blancos al horno Pulpo a feira Arroces marineros Sushi y cocina japonesa Quesos suaves de cabra",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     1,
+     4
+    ],
     "img": "img/albarino-senorio-rubios.webp",
     "bot": "",
     "copa": "",
