@@ -1144,13 +1144,21 @@
     "orig": "V. MENCIA MONTERREI TIRABEQUE 6/"
    },
    {
-    "nom": "Mara Martin C/",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Mara Martin Magnum",
+    "bodega": "Martín Códax",
+    "uva": "100% Godello",
+    "subzona": "Val de Monterrei",
+    "temp": "10 ºC",
+    "desc": "Elaboración\n\nFermentación en depósitos de acero inoxidable con control de temperatura. Posteriormente permanece 3 meses sobre sus lías, aportando volumen, complejidad y una textura más envolvente en boca.\n\nSobre la bodega\n\nMara Martín es uno de los vinos más reconocidos de Monterrei dentro del grupo Martín Códax. Nace en un entorno de influencia atlántica y continental, con veranos cálidos e inviernos fríos que favorecen una maduración equilibrada de la variedad Godello.\n\nNota de cata\nVista\n\nColor amarillo pajizo brillante con reflejos verdosos. Limpio y luminoso.\n\nNariz\n\nIntensidad media-alta. Destacan aromas herbáceos de hinojo y anís, acompañados de manzana reineta, pera, membrillo, flores blancas y delicados matices cítricos.\n\nBoca\n\nFresco, envolvente y equilibrado. Buena estructura gracias al trabajo sobre lías, con una textura untuosa que llena el paladar. Final largo, persistente y con recuerdos cítricos y de fruta blanca",
+    "mar": "Vieira y zamburiñas Mariscos gallegos Pescados blancos Bacalao Arroces marineros Quesos suaves Cocina asiática Platos ligeros y de verduras",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     1,
+     4
+    ],
     "img": "img/mara-martin-c.webp",
     "bot": "",
     "copa": "",
