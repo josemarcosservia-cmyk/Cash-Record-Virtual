@@ -4525,13 +4525,21 @@
     "orig": "TTO DO R.DUERO CZA VALTRAVIESO C"
    },
    {
-    "nom": "Protos Magnum",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Protos joven Magnum",
+    "bodega": "Bodegas Protos",
+    "uva": "100% Tinta del País (Tempranillo)",
+    "subzona": "Peñafiel (Valladolid),",
+    "temp": "15 ºC - 16 ºC.",
+    "desc": "Elaboración\n\nVendimia manual en cajas de 20 kg y doble selección de racimos. Tras la fermentación realiza una crianza corta de 4 a 6 meses en barricas de roble, seguida de varios meses de afinamiento en botella. El formato Magnum (1,5 L) favorece una evolución más lenta y una mejor conservación de los aromas.\n\nSobre la bodega\n\nProtos Roble es uno de los vinos más vendidos y reconocidos de Ribera del Duero. Representa un estilo joven, frutal y accesible, manteniendo la identidad de la Tempranillo y un equilibrado aporte de barrica.\n\nNota de cata\nVista\n\nColor rojo cereza o picota con ribetes púrpura y violáceos. Limpio, brillante y muy atractivo visualmente.\n\nNariz\n\nFranca e intensa. Destacan aromas de fruta roja y negra madura, bayas rojas, cerezas y ciruelas, acompañados por sutiles notas especiadas, tostados suaves y recuerdos de vainilla procedentes de la barrica.\n\nBoca\n\nFresca, frutal y equilibrada. Presenta buena estructura, paso goloso, taninos suaves y una agradable sensación de frescura. Final persistente con predominio de la fruta madura y ligeros tostados.",
+    "mar": "Embutidos ibéricos Carnes a la brasa Chuletillas de cordero Ternera Arroces de carne Pasta Setas Quesos semicurados Aves y pollo asado",
+    "cata": [
+     3,
+     4,
+     5,
+     1,
+     3,
+     4
+    ],
     "img": "img/tinto-jvn-protos.webp",
     "bot": "",
     "copa": "",
