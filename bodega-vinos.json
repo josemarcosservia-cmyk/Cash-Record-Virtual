@@ -4591,13 +4591,21 @@
     "orig": "VINO DO.R.DUERO CONDE S.CRISTOBA"
    },
    {
-    "nom": "Sitial Robl",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Sitial Roble",
+    "bodega": "Sitial,",
+    "uva": "100% Tempranillo (Tinta del País).",
+    "subzona": "Ribera del Duero",
+    "temp": "15 ºC - 16 ºC",
+    "desc": "Elaboración\n\nVino tinto con paso por barrica de roble, elaborado para mantener el equilibrio entre fruta y madera, aportando estructura y complejidad sin perder la identidad varietal de la Tempranillo.\n\nSobre la bodega\n\nSitial Roble está orientado a ofrecer un perfil clásico de Ribera del Duero, con buena presencia de fruta madura, notas especiadas y una estructura amable que facilita su consumo en restauración y hostelería.\n\nNota de cata\nVista\n\nColor cereza intenso con reflejos granates y púrpura, de buena capa y aspecto limpio y brillante.\n\nNariz\n\nAromas de fruta madura con presencia de ciruela y frutos rojos, acompañados por notas especiadas, recuerdos de madera y suaves matices de roble.\n\nBoca\n\nEstructurada y equilibrada. Presenta buena acidez, cuerpo medio-alto y una persistencia notable. El final muestra recuerdos especiados y una textura envolvente.",
+    "mar": "Carnes rojas a la parrilla Arroces de carne Caza de pluma Quesos de oveja Quesos semicurados Embutidos ibéricos",
+    "cata": [
+     4,
+     3,
+     4,
+     1,
+     3,
+     3
+    ],
     "img": "img/sitial-robl.webp",
     "bot": "",
     "copa": "",
