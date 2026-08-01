@@ -5142,13 +5142,21 @@
     "orig": "CHAMPAGNE MOET CHANDON BRUT ROSE"
    },
    {
-    "nom": "Champ. Brut Ruinart Blanc",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Ruinart Blanc",
+    "bodega": "Maison Ruinart",
+    "uva": "100% Chardonnay.",
+    "subzona": "Selección de entre 25 y 30 crus de Chardonnay procedentes principalmente de la Côte des Blancs, Montagne de Reims, Sézannais y Vallée de la Vesle.",
+    "temp": "8 ºC - 10 ºC",
+    "desc": "Elaboración\n\nElaborado exclusivamente con Chardonnay. Incluye entre un 20% y un 30% de vinos de reserva, fermenta en depósitos de acero inoxidable y permanece entre 2 y 3 años de crianza en las cavas de Ruinart, desarrollando complejidad y finura aromática.\n\nSobre la bodega\n\nRuinart Blanc de Blancs es la cuvée emblemática de la casa y una de las máximas expresiones de la Chardonnay en Champagne. Destaca por su equilibrio entre tensión, frescura, mineralidad y elegancia.\n\nNota de cata\nVista\n\nColor amarillo pálido brillante con reflejos verde almendra y jade. Burbuja fina, persistente y elegante.\n\nNariz\n\nMuy intensa y refinada. Aparecen aromas de limón maduro, pera jugosa, melocotón blanco, piña, flores blancas y delicados recuerdos especiados de jengibre y pimienta rosa.\n\nBoca\n\nAmplia y envolvente, con magnífico equilibrio entre frescura y redondez. Destacan los cítricos maduros, la fruta tropical, notas minerales y una persistencia larga, fina y elegante",
+    "mar": "Ostras Mariscos Tartar de pescado Lubina o rodaballo Sushi y sashimi Foie gras Carpaccio de lubina con cítricos Quesos suaves",
+    "cata": [
+     4,
+     5,
+     4,
+     1,
+     0,
+     5
+    ],
     "img": "img/champ-brut-ruinart-blanc.webp",
     "bot": "",
     "copa": "",
