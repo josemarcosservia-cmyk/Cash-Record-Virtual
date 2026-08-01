@@ -4173,13 +4173,21 @@
     "orig": "VINO D.O. RIB DUERO LAMBUENA CR."
    },
    {
-    "nom": "Tinto Ribera Duero Avan CR",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Avan Crianza",
+    "bodega": "Bodegas y Viñedos Juan Manuel Burgos,",
+    "uva": "100% Tempranillo (Tinta Fina).",
+    "subzona": "Fuentelcésped (Burgos)",
+    "temp": "16 ºC - 18 ºC",
+    "desc": "Elaboración\n\nProcede de viñedos situados a más de 900 metros de altitud, sobre suelos calcáreos, arenosos y arcillosos. Fermenta en depósitos de acero inoxidable y posteriormente realiza una crianza de 12 meses en barricas de roble francés (algunas referencias indican una pequeña proporción de roble americano).\n\nSobre la bodega\n\nAvan representa la filosofía de Juan Manuel Burgos: elaborar vinos personales que reflejen el carácter de la fruta y del terruño de altura de la Ribera del Duero. Es una de las referencias más conocidas de la bodega y destaca por su equilibrio entre potencia y frescura.\n\nNota de cata\nVista\n\nColor rojo picota intenso, prácticamente opaco, con borde violáceo que evidencia su juventud y capacidad de evolución.\n\nNariz\n\nMuy intensa y expresiva. Predominan los aromas de frutas rojas maduras como fresa y frambuesa, acompañadas de ciruela negra, violetas, especias finas, grafito y elegantes notas de madera bien integrada.\n\nBoca\n\nSabrosa, fresca y equilibrada. Destaca la fruta madura, buena estructura, sensación refrescante y taninos bien integrados. Final persistente, elegante y muy agradable.",
+    "mar": "Embutidos ibéricos Cerdo asado Cordero asado Carnes rojas a la parrilla Quesos de cabra Pollo asado Arroces de carne Pescados asados",
+    "cata": [
+     4,
+     4,
+     5,
+     1,
+     4,
+     4
+    ],
     "img": "img/tinto-ribera-duero-avan-cr.webp",
     "bot": "",
     "copa": "",
