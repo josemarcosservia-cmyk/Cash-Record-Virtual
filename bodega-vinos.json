@@ -1038,13 +1038,21 @@
     "orig": "VINO GOD.O BCO MONTERREI GARGALO"
    },
    {
-    "nom": "Godello Terras Cigarr",
-    "bodega": "",
-    "uva": "",
+    "nom": "Terras Cigarron",
+    "bodega": "Martín Códax",
+    "uva": "100% Godello",
     "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "temp": "8 ºC - 10 ºC",
+    "desc": "Elaboración\n\nElaborado con uvas Godello seleccionadas de viñedos de Monterrei asentados sobre suelos arcillosos y pizarrosos. La vinificación está orientada a preservar la expresión varietal, combinando frescura, volumen y complejidad aromática.\n\nSobre la bodega\n\nTerras do Cigarrón nace como homenaje a una de las tradiciones más emblemáticas de Verín, el Entroido. Martín Códax busca reflejar en este vino el carácter singular de Monterrei, una denominación que destaca por la calidad de sus Godellos gracias a un clima más continental y soleado que el resto de Galicia.\n\nNota de cata\nVista\n\nColor amarillo pajizo con reflejos limón y destellos verdosos. Limpio, brillante y de gran luminosidad.\n\nNariz\n\nIntensa y expresiva, con aromas de pera, manzana golden, albaricoque, fruta tropical, notas cítricas de limón y lima, acompañadas de flores silvestres y delicados recuerdos minerales.\n\nBoca\n\nPotente, envolvente y estructurada. Presenta una textura grasa característica de la Godello, equilibrada por una acidez viva y refrescante. Final largo, sabroso y persistente con recuerdos afrutados y un elegante fondo mineral y salino.",
+    "mar": "Vieira y zamburiñas Ostras gallegas Mariscos finos Pulpo a feira Bacalao Rodaballo Arroces marineros Sushi Quesos gallegos cremosos",
+    "cata": [
+     4,
+     4,
+     5,
+     1,
+     1,
+     5
+    ],
     "img": "img/godello-terras-cigarr.webp",
     "bot": "",
     "copa": "",
