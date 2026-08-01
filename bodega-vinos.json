@@ -141,13 +141,21 @@
     "orig": "V.ALBARIÑO ABADIA S.CAMPIO 6/75C"
    },
    {
-    "nom": "Albariño P. Serantellos",
+    "nom": "Pazo de Serantellos",
     "bodega": "Bodega Condes de Albarei",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
+    "uva": "100% Albariño.",
+    "subzona": "Val do Salnés.",
+    "temp": "10 ºC - 12 ºC",
     "desc": "Albariño 100% (Val do Salnés; elaborado por Condes de Albarei). Amarillo pajizo con reflejos verdosos, limpio y brillante. Nariz de intensidad media con aromas florales, frutas blancas y toques cítricos/herbáceos. Boca fresca, ligeramente ácida, con final agradable y persistente.",
-    "mar": "",
+    "mar": "Ostras Mejillones Almejas y berberechos Pescados blancos Pulpo a feira Arroces marineros Pasta con marisco Sushi y cocina japonesa",
+    "cata": [
+     3,
+     4,
+     4,
+     1,
+     1,
+     4
+    ],
     "img": "img/albarino-p-serantellos.webp",
     "bot": "",
     "copa": "",
