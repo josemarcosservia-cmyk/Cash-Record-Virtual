@@ -972,13 +972,21 @@
     "orig": "V.BCO MONTERREI P.MARIÑAN 12/75C"
    },
    {
-    "nom": "Godello Crego & Monaguillo",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Crego & Monaguillo",
+    "bodega": "Crego e Monaguillo,",
+    "uva": "90% Godello 10% Treixadura",
+    "subzona": "Valle del Támega (Monterrei)",
+    "temp": "9 ºC - 12 ºC",
+    "desc": "Elaboración\n\nElaborado mediante maceración en frío de la Treixadura y un cuidadoso trabajo sobre la Godello. Fermentación en depósitos de acero inoxidable a temperatura controlada para preservar toda la intensidad aromática y la frescura varietal.\n\nSobre la bodega\n\nCrego e Monaguillo es una de las referencias históricas de la D.O. Monterrei. Sus vinos han recibido importantes reconocimientos, entre ellos el premio al Mejor Vino Blanco de Galicia en la XVIII Cata dos Viños de Galicia. La bodega está muy vinculada a la valorización de las variedades autóctonas Godello y Mencía.\n\nNota de cata\nVista\n\nColor amarillo pajizo con reflejos dorados y verdosos. Limpio, brillante y con buena lágrima.\n\nNariz\n\nIntensa y compleja. Destacan recuerdos cítricos de limón y azahar, frutas blancas como manzana, frutas tropicales como mango y piña, flores blancas y un delicado recuerdo de flor de hinojo.\n\nBoca\n\nAmplia, untuosa y estructurada. Presenta buena frescura, acidez perfectamente integrada y una textura ligeramente grasa que aporta volumen. Equilibrado entre sensaciones golosas y un elegante punto amargo. Final largo, afrutado y persistente",
+    "mar": "Ostras Vieiras Almejas Mariscos gallegos Pescados blancos Rodaballo Verduras y hortalizas Empanada gallega Arroces marineros",
+    "cata": [
+     4,
+     4,
+     5,
+     2,
+     1,
+     5
+    ],
     "img": "img/godello-crego-monaguillo.webp",
     "bot": "",
     "copa": "",
