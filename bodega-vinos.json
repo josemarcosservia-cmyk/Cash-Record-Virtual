@@ -4657,13 +4657,21 @@
     "orig": "V.TTO R.DUERO FINCA S.MARIA 6/75CL"
    },
    {
-    "nom": "8000 M. Burgos",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "8000 Marqués de Burgos",
+    "bodega": "Marqués de Burgos (Grupo LAN)",
+    "uva": "100% Tempranillo (Tinta del País).",
+    "subzona": "Viñedos situados en la denominada\"Milla de Oro\" de Ribera del Duero, procedentes de cuatro pequeñas parcelas de cepas viejas ubicadas entre 700 y 900 metros de altitud",
+    "temp": "17 ºC - 19 ºC.",
+    "desc": "Elaboración\n\nNace de una selección de 8.000 cepas viejas de producción muy limitada. La vendimia es manual y las uvas son seleccionadas racimo a racimo. Posteriormente realiza una crianza de 16 meses en barricas nuevas de roble francés de grano fino y un afinamiento mínimo de 12 meses en botella.\n\nSobre la bodega\n\n8000 Marqués de Burgos es una elaboración de carácter artesanal y producción muy reducida. Fue creado para mostrar la expresión más elegante y madura de los viñedos viejos de la Ribera del Duero, siendo una de las referencias premium de la bodega.\n\nNota de cata\nVista\n\nColor picota intenso, profundo y casi opaco, con gran concentración y brillantez.\n\nNariz\n\nMuy intensa y compleja. Aparecen aromas de fruta roja y negra madura (moras y arándanos), acompañados por notas de violeta, cacao, hierbabuena, monte bajo, pimienta, tostados, balsámicos y elegantes recuerdos mentolados.\n\nBoca\n\nGolosa, envolvente y potente. Destaca por sus taninos maduros y aterciopelados, gran concentración de fruta, excelente equilibrio y una persistencia muy larga. El final es profundo, elegante y lleno de personalidad.",
+    "mar": "Chuletón de vaca Carnes rojas a la brasa Cordero asado Carpaccios de carne Platos especiados Caza mayor Quesos curados",
+    "cata": [
+     5,
+     4,
+     5,
+     1,
+     5,
+     5
+    ],
     "img": "img/8000-m-burgos.webp",
     "bot": "",
     "copa": "",
