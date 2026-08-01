@@ -994,13 +994,21 @@
     "orig": "V.MONT.GODELLO CREGO&MONAGUILLO"
    },
    {
-    "nom": "Godello Cura Males",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Cura Males",
+    "bodega": "CuraMales",
+    "uva": "Godello Treixadura",
+    "subzona": "Val de Monterrei",
+    "temp": "8 ºC - 10 ºC",
+    "desc": "Elaboración\n\nElaborado a partir de las variedades autóctonas Godello y Treixadura, buscando expresar el carácter fresco y mineral característico de los blancos de Monterrei.\n\nSobre la bodega\n\nCuraMales forma parte de las bodegas de la D.O. Monterrei, una denominación gallega reconocida por la calidad de sus vinos blancos elaborados principalmente con Godello y Treixadura.\n\nNota de cata\nVista\n\nColor amarillo pajizo brillante con reflejos verdosos.\n\nNariz\n\nAromas de fruta blanca, manzana, pera y cítricos, acompañados de notas florales y recuerdos minerales propios de los blancos de Monterrei.\n\nBoca\n\nFresco y equilibrado, con buena acidez, textura amable y final persistente con recuerdos frutales y minerales.",
+    "mar": "Mariscos gallegos Ostras Vieiras Pescados blancos Bacalao Arroces marineros Sushi Quesos suaves",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     1,
+     4
+    ],
     "img": "img/godello-cura-males.webp",
     "bot": "",
     "copa": "",
