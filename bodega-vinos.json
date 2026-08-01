@@ -4107,13 +4107,21 @@
     "orig": "VINO RIBERA DUERO CEPA 21 6/75CL"
    },
    {
-    "nom": "Rib Duero Bosque Matasnos",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Bosque Matasnos",
+    "bodega": "Bosque de Matasnos",
+    "uva": "riedades 95% Tempranillo 5% Merlot",
+    "subzona": "Peñaranda de Duero (Burgos)",
+    "temp": "14 ºC - 16 ºC",
+    "desc": "Elaboración\n\nEl vino realiza fermentaciones largas a baja temperatura para favorecer la extracción aromática y la complejidad. Posteriormente envejece durante aproximadamente 12 meses en barricas nuevas de roble francés (90%) y americano (10%), afinándose después en botella.\n\nSobre la bodega\n\nBosque de Matasnos es un proyecto singular dentro de Ribera del Duero, desarrollado en una finca aislada rodeada de bosque mediterráneo. Su filosofía apuesta por producciones limitadas, sostenibilidad y vinos de montaña con una marcada personalidad, intensidad y frescura.\n\nNota de cata\nVista\n\nColor rojo picota intenso con irisaciones violáceas. Muy cubierto de capa, limpio y brillante.\n\nNariz\n\nCompleja y de gran intensidad. Destacan aromas de ciruela madura, fruta negra, cereza, vainilla, cacao, tabaco, especias finas, balsámicos, canela, caramelo y delicados recuerdos de panadería perfectamente integrados con la madera.\n\nBoca\n\nPotente, equilibrada y elegante. Predomina la fruta madura acompañada por una acidez muy bien integrada. Presenta volumen, textura sedosa, taninos dulces y maduros y un largo postgusto especiado y mineral.",
+    "mar": "Lechazo asado Cordero al horno Carnes rojas a la parrilla Solomillo de vacuno Guisos tradicionales Embutidos ibéricos Quesos curados Pescado azul",
+    "cata": [
+     5,
+     4,
+     5,
+     2,
+     5,
+     5
+    ],
     "img": "img/rib-duero-bosque-matasnos.webp",
     "bot": "",
     "copa": "",
