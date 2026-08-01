@@ -1104,13 +1104,21 @@
     "orig": "V. GODELLO MONTERREI TIRABEQUE 6"
    },
    {
-    "nom": "V Godello. Setembro",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Setembro",
+    "bodega": "Pazo de Valdeconde S.L.",
+    "uva": "Godello Treixadura Albariño",
+    "subzona": "Val de Monterrei",
+    "temp": "7 ºC - 10 ºC",
+    "desc": "Elaboración\n\nElaborado a partir de una cuidada selección de Godello, Treixadura y Albariño procedentes del Valle de Monterrei. La bodega trabaja para preservar la expresión del terroir, combinando tradición y tecnología moderna en una elaboración orientada a resaltar la frescura y complejidad aromática.\n\nSobre la bodega\n\nPazo de Valdeconde cuenta con viñedos propios que rodean la histórica finca \"A Cortiña\" y \"A Muradella\". Su filosofía se centra en producir vinos que reflejen la identidad del Valle de Monterrei, respetando el entorno y apostando por la máxima calidad de la uva.\n\nNota de cata\nVista\n\nColor amarillo pálido con reflejos verdosos. Limpio, brillante y con abundante lágrima.\n\nNariz\n\nIntensa y compleja. Destacan aromas cítricos, frutas tropicales como piña, frutas de hueso como melocotón y albaricoque, acompañados de delicadas flores blancas y ligeros matices minerales.\n\nBoca\n\nAmplia, grasa, untuosa y glicérica. Vino de buena estructura, sabroso y equilibrado, con un elegante punto amargo que aporta personalidad y un final largo y persistente.",
+    "mar": "Mariscos gallegos Ostras Vieiras Pescados blancos Sushi Arroces marineros Pastas Ensaladas Cocina asiática ligera",
+    "cata": [
+     4,
+     4,
+     5,
+     1,
+     1,
+     4
+    ],
     "img": "img/v-godello-setembro.webp",
     "bot": "",
     "copa": "",
