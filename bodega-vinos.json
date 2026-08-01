@@ -2445,13 +2445,21 @@
     "orig": "VINO RIBEIRA SACRA POBRE TOLO 6/"
    },
    {
-    "nom": "Godel. Regina Viarum",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Regina Viarum Godello",
+    "bodega": "Bodegas Regina Viarum",
+    "uva": "100% Godello",
+    "subzona": "Viñedos situados en las laderas del río Sil,",
+    "temp": "10 ºC - 12 ºC.",
+    "desc": "Elaboración\n\nVendimia manual y selección de la uva. Maceración en frío y fermentación controlada en depósitos de acero inoxidable y fudres de roble francés. Posteriormente realiza una crianza de entre 4 y 6 meses sobre lías, aportando complejidad, estructura y untuosidad.\n\nSobre la bodega\n\nRegina Viarum Godello es uno de los blancos de referencia de la Ribeira Sacra. Combina la frescura natural de la variedad con una crianza sobre lías que aporta volumen y complejidad, manteniendo intacta su expresión atlántica.\n\nNota de cata\nVista\n\nColor amarillo con reflejos dorados, brillante y de intensidad media-alta.\n\nNariz\n\nCompleja e intensa. Destacan aromas de pomelo, manzana reineta, pera madura y flores amarillas, acompañados de ligeros recuerdos tostados procedentes de la crianza sobre lías.\n\nBoca\n\nAmplia, sedosa y equilibrada. Presenta buena estructura, frescura, excelente volumen y una agradable sensación envolvente. Final largo con un elegante toque amargo característico de la variedad Godello.",
+    "mar": "Raya en caldeirada Mariscos Arroces marineros Pescados blancos Pollo a la plancha Quesos poco curados Cocina gallega tradicional",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     1,
+     4
+    ],
     "img": "img/godel-regina-viarum.webp",
     "bot": "",
     "copa": "",
