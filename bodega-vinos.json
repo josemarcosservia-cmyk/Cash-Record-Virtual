@@ -1192,13 +1192,21 @@
     "orig": "VINO MONTERREI LADAIRO TINTO 12/"
    },
    {
-    "nom": "Mencia Q. Tapias",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Quinta das Tapias",
+    "bodega": "Adega Tapias Mariñán",
+    "uva": "100% Mencía.",
+    "subzona": "Val de Monterrei",
+    "temp": "14 ºC - 16 ºC",
+    "desc": "Elaboración\n\nMaceración tradicional de las uvas despalilladas y suavemente estrujadas, trabajando prácticamente con la uva entera, en un proceso similar a una maceración carbónica. Esta técnica preserva la expresión más fresca y frutal de la variedad Mencía.\n\nSobre la bodega\n\nTapias Mariñán es una de las bodegas más representativas de Monterrei. Su filosofía se centra en elaborar vinos que reflejen el carácter de las variedades autóctonas gallegas, con especial atención a la frescura, la fruta y la tipicidad varietal.\n\nNota de cata\nVista\n\nColor rojo granate con ribete violáceo, capa media y buena lágrima.\n\nNariz\n\nMuy intensa y expresiva. Destacan aromas de frutos rojos maduros, mermelada de fresa, moras, cassis y frambuesa, acompañados de notas de cacao y chocolate.\n\nBoca\n\nDe estructura media, fresca y envolvente. Presenta taninos maduros y bien integrados, buena untuosidad y un carácter muy frutal. El final es largo, sabroso y persistente.",
+    "mar": "Entrecot y chuletón Cordero asado Embutidos ibéricos Empanada gallega de carne Setas a la plancha Quesos semicurados Cocina tradicional gallega Parrilladas de carne",
+    "cata": [
+     4,
+     3,
+     5,
+     2,
+     3,
+     4
+    ],
     "img": "img/mencia-q-tapias.webp",
     "bot": "",
     "copa": "",
