@@ -281,13 +281,21 @@
     "orig": "VINO R.BAIXAS VALDEMEIRA SELECCI"
    },
    {
-    "nom": ". Gundian",
+    "nom": "Gundian",
     "bodega": "Adega Valdés",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "Albariño 100% (subzona Ribeira do Ulla; crianza sobre lías finas). Amarillo pajizo con destellos verdosos, limpio y brillante. Nariz de intensidad alta, frutal y floral, con manzana y fruta de hueso (albaricoque). Boca fresca y golosa, envolvente y glicérica, con acidez equilibrada.",
-    "mar": "",
+    "uva": "100% Albariño.",
+    "subzona": "Val do Salnés",
+    "temp": "8 ºC - 10 ºC",
+    "desc": "Albariño 100% (subzona Ribeira do Ulla; crianza sobre lías finas). Amarillo pajizo con destellos verdosos, limpio y brillante. Nariz de intensidad alta, frutal y floral, con manzana y fruta de hueso (albaricoque). Boca fresca y golosa, envolvente y glicérica, con acidez equilibrada.\nElaboración\n\nElaborado a partir de uvas Albariño seleccionadas, fermentadas a temperatura controlada para preservar toda la expresión aromática de la variedad y mantener su frescura característica.\n\nSobre la bodega\n\nAdega Valdés es una bodega gallega dedicada a la elaboración de vinos de la D.O. Rías Baixas, destacando especialmente por su marca Gundián, referencia habitual dentro de los albariños jóvenes y frescos de la denominación.\n\nNota de cata\nVista\n\nColor amarillo pajizo con destellos verdosos. Limpio, brillante y atractivo.\n\nNariz\n\nAlta intensidad aromática con predominio de frutas blancas y de hueso. Destacan la manzana, pera y albaricoque, acompañadas de delicadas notas florales.\n\nBoca\n\nFresco, joven y muy equilibrado. Acidez bien integrada, textura envolvente y glicérica, con un perfil sabroso y amable. Final fresco y persistente.",
+    "mar": "Mejillones al vapor Ostras Navajas Pulpo a feira Pescados blancos Mariscos gallegos Arroces marineros Sushi Quesos frescos",
+    "cata": [
+     3,
+     4,
+     4,
+     1,
+     1,
+     4
+    ],
     "img": "img/gundian.webp",
     "bot": "",
     "copa": "",
