@@ -1126,13 +1126,21 @@
     "orig": "V GODELLO D.O.MONTERREI SETEMBRO"
    },
    {
-    "nom": ". Godello Viont",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Vionta",
+    "bodega": "Bodegas Vionta",
+    "uva": "100% Godello.",
+    "subzona": "Val de Monterrei.",
+    "temp": "8 ºC - 10 ºC",
+    "desc": "Elaboración\n\nVendimia manual con selección de uva. Tras el despalillado se realiza un prensado suave y fermentación en pequeños depósitos de acero inoxidable a temperatura controlada inferior a 15 ºC. Posteriormente permanece dos meses sobre sus lías finas, aportando complejidad y untuosidad.\n\nSobre la bodega\n\nVionta amplía su gama más allá del Albariño apostando por la Godello de Monterrei, una variedad que en esta denominación desarrolla gran intensidad aromática, estructura y equilibrio gracias a las condiciones climáticas del sur de Galicia.\n\nNota de cata\nVista\n\nColor amarillo brillante con reflejos verdosos. Limpio, luminoso y cristalino.\n\nNariz\n\nAlta intensidad aromática con predominio de flores blancas, pera, manzana y delicados matices cítricos. Perfil fresco y muy expresivo.\n\nBoca\n\nAmable, untuoso y equilibrado. Presenta buena estructura, frescura integrada y un marcado carácter frutal. Final persistente con excelente equilibrio entre acidez y volumen.",
+    "mar": "Mariscos gallegos Pescados blancos Ceviche de lubina Sushi de salmón Tacos de pescado Arroces marineros Quesos semicurados Burrata y ricotta",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     1,
+     4
+    ],
     "img": "img/godello-viont.webp",
     "bot": "",
     "copa": "",
