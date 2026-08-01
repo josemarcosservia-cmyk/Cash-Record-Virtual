@@ -1419,13 +1419,21 @@
     "orig": "V.GOD.D.O.VALDEORRAS J.REBOLLEDO"
    },
    {
-    "nom": "Godello Maruxa",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Maruxa Godello",
+    "bodega": "Virgen de Galir",
+    "uva": "100% Godello",
+    "subzona": "Val do Sil (Valdeorras)",
+    "temp": "8-10 ºC",
+    "desc": "Fase visual\n Color amarillo pajizo brillante con reflejos verdosos. Limpio, cristalino y de buena intensidad.\n\nFase olfativa\n Nariz intensa y muy expresiva. Destacan aromas de pera, manzana, melocotón blanco y cítricos, acompañados de notas florales y delicados recuerdos minerales propios de los suelos pizarrosos de Valdeorras.\n\nFase gustativa\n Entrada fresca y envolvente. Excelente equilibrio entre acidez y volumen en boca. Paso amplio, untuoso y elegante, con una marcada expresión frutal y mineral. Final largo, fresco y persistente.",
+    "mar": "Ideal con mariscos, pescados blancos, pulpo a la gallega, arroces, sushi, ceviches, quesos suaves y cocina atlántica.",
+    "cata": [
+     4,
+     4,
+     5,
+     1,
+     0,
+     4
+    ],
     "img": "img/godello-maruxa.webp",
     "bot": "",
     "copa": "",
