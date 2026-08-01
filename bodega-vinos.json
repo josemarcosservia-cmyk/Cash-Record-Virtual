@@ -383,13 +383,21 @@
     "orig": "V.ALBARIÑO R.BAIXAS BLC PACO&LOL"
    },
    {
-    "nom": "Albariño Alalba",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Alalba",
+    "bodega": "Martín Códax,",
+    "uva": "100% Albariño",
+    "subzona": "Viñedos situados en las zonas costeras de las Rías Baixas, bajo fuerte influencia del Atlántico",
+    "temp": "8 ºC - 10 ºC",
+    "desc": "Elaboración\n\nElaborado exclusivamente con uva Albariño seleccionada y fermentado en depósitos de acero inoxidable a temperatura controlada para preservar toda la expresión aromática de la variedad.\n\nSobre la bodega\n\nAlalba nace inspirado en los amaneceres atlánticos de Galicia. Su perfil busca la máxima expresión de frescura, salinidad y tipicidad varietal, ofreciendo un Albariño moderno, directo y muy gastronómico.\n\nNota de cata\nVista\n\nColor amarillo limón brillante con reflejos verdosos. Limpio y cristalino.\n\nNariz\n\nMuy aromático y fresco. Destacan notas cítricas de lima y mandarina, acompañadas por aromas florales de jazmín, azahar y flores blancas, junto con delicados recuerdos herbáceos y marinos.\n\nBoca\n\nFresco, envolvente y equilibrado. Presenta una acidez viva y refrescante, con gran expresión frutal y un final persistente donde aparecen recuerdos cítricos, minerales y salinos característicos del Albariño atlántico.",
+    "mar": "Mariscos gallegos Ostras y almejas Pulpo a feira Pescados blancos Sushi y cocina japonesa Arroces marineros Quesos frescos Cocina atlántica",
+    "cata": [
+     3,
+     5,
+     5,
+     1,
+     4,
+     4
+    ],
     "img": "img/albarino-alalba.webp",
     "bot": "",
     "copa": "",
