@@ -1655,13 +1655,21 @@
     "orig": "VINO D.O.VALD PAZO BUBELA MENCIA"
    },
    {
-    "nom": "Godello. Louro",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Louro Godello",
+    "bodega": "Rafael Palacios",
+    "uva": "92-95% Godello y pequeñas proporciones de variedades blancas autóctonas",
+    "subzona": "O Bolo (Valdeorras",
+    "temp": "10-12 ºC",
+    "desc": "Fase visual\n Color amarillo pajizo con reflejos dorados y verdosos. Brillante, limpio y de gran viveza.\n\nFase olfativa\n Nariz intensa y muy elegante. Destacan aromas de pera, manzana reineta, melocotón blanco y cítricos maduros, acompañados de notas florales, recuerdos herbáceos y una profunda mineralidad. La crianza sobre lías aporta matices de panadería fina y una gran complejidad aromática.\n\nFase gustativa\n Entrada amplia y sedosa. Boca con gran volumen y excelente equilibrio entre frescura y estructura. Su textura cremosa envuelve el paladar, mostrando una marcada personalidad mineral. Final muy largo, elegante y persistente, con recuerdos frutales y salinos.",
+    "mar": "Ideal con mariscos premium, ostras, bogavante, pescados grasos, rodaballo, cocina japonesa, arroces marineros y quesos de pasta blanda.",
+    "cata": [
+     5,
+     4,
+     4,
+     1,
+     0,
+     5
+    ],
     "img": "img/godello-louro.webp",
     "bot": "",
     "copa": "",
