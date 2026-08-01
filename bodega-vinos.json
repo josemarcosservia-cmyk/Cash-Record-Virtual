@@ -155,13 +155,21 @@
     "orig": "VINO ALBARIÑO P.SERANTELLOS 6/75"
    },
    {
-    "nom": "Viña Almeir",
+    "nom": "Viña Almeira",
     "bodega": "Rectoral do Umia (Bodegas Gallegas)",
-    "uva": "",
+    "uva": "100% Albariño",
     "subzona": "",
-    "temp": "",
-    "desc": "Albariño (Rectoral do Umia - Bodegas Gallegas). Amarillo claro con reflejos verdosos. Aroma ligero de fruta blanca, cítricos y un fondo salino/mineral. Boca ácida y refrescante, con toque marino que aporta complejidad.",
-    "mar": "",
+    "temp": "8 ºC - 10 ºC",
+    "desc": "Albariño (Rectoral do Umia - Bodegas Gallegas). Amarillo claro con reflejos verdosos. Aroma ligero de fruta blanca, cítricos y un fondo salino/mineral. Boca ácida y refrescante, con toque marino que aporta complejidad.\n",
+    "mar": "Mariscos gallegos Mejillones al vapor Almejas a la marinera Pescados blancos Sushi Arroces de marisco Quesos frescos",
+    "cata": [
+     3,
+     4,
+     4,
+     1,
+     1,
+     3
+    ],
     "img": "img/vina-almeir.webp",
     "bot": "",
     "copa": "",
