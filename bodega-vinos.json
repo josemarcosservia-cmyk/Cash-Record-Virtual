@@ -1060,13 +1060,21 @@
     "orig": "VINO GOD.MONTERREI TERRAS CIGARR"
    },
    {
-    "nom": "Blanco M. Moura",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Mara Moura",
+    "bodega": "Martín Códax",
+    "uva": "90% Godello 10% Treixadura",
+    "subzona": "Val de Monterrei.",
+    "temp": "10 ºC - 12 ºC.",
+    "desc": "Elaboración\n\nProcede de una selección de viñedos de altura sobre suelos de esquisto. Fermenta a baja temperatura y realiza bâtonnage dos veces por semana, manteniendo las lías en suspensión para aportar mayor complejidad, volumen y untuosidad al vino.\n\nSobre la bodega\n\nMara Moura representa una de las interpretaciones más sofisticadas de la Godello de Monterrei por parte de Martín Códax. El trabajo sobre lías y los viñedos de altura permiten obtener un vino con gran personalidad, marcado carácter mineral y excelente capacidad gastronómica.\n\nNota de cata\nVista\n\nColor amarillo pajizo con reflejos verdosos. Limpio, brillante y de gran luminosidad.\n\nNariz\n\nMuy expresiva, con aromas de flores blancas, fruta de pulpa blanca, notas balsámicas y una marcada mineralidad característica de los suelos de esquisto.\n\nBoca\n\nPotente y fresca. Excelente estructura y equilibrio, con recuerdos de fruta blanca y minerales. La crianza sobre lías aporta una textura untuosa, sedosa y envolvente. Final largo y elegante.",
+    "mar": "Vieira y zamburiñas Mariscos gallegos Rodaballo Merluza Arroces marineros Pastas Quesos blandos Cocina atlántica y mediterránea",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     1,
+     5
+    ],
     "img": "img/blanco-m-moura.webp",
     "bot": "",
     "copa": "",
