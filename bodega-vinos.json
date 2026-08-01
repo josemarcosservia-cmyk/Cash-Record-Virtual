@@ -1397,13 +1397,21 @@
     "orig": "VINO VALDEORRAS MOZA FRESCA BCO."
    },
    {
-    "nom": "Godello. J. Rebolledo",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Joaquin Rebolledo Godello",
+    "bodega": "Joaquín Rebolledo",
+    "uva": "100% Godello",
+    "subzona": "A Rúa (Valdeorras)",
+    "temp": "8-10 ºC",
+    "desc": "Fase visual\n Color amarillo pajizo brillante con reflejos verdosos. Limpio, cristalino y de intensidad media.\n\nFase olfativa\n Nariz intensa y elegante, con aromas de fruta blanca madura, pera, manzana y melocotón. Aparecen notas cítricas, recuerdos florales y un marcado carácter mineral propio de los suelos pizarrosos de Valdeorras.\n\nFase gustativa\n Entrada fresca y amplia. Destaca por su equilibrio entre volumen y acidez, mostrando una textura untuosa y agradable. Paso de boca largo, con gran expresión frutal y un final persistente con recuerdos minerales y cítricos.",
+    "mar": "Ideal con mariscos, pescados, pulpo, arroces, sushi, quesos suaves, cocina asiática y gastronomía atlántica.",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     0,
+     4
+    ],
     "img": "img/godello-j-rebolledo.webp",
     "bot": "",
     "copa": "",
