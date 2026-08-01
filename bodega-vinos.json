@@ -1441,13 +1441,21 @@
     "orig": "VINO VALDEORRAS GODELLO MARUXA 6"
    },
    {
-    "nom": "Godello Val Gali",
-    "bodega": "",
+    "nom": "Pagos Del Galir",
+    "bodega": "Virgen de Galir",
     "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "subzona": "Éntoma (Valdeorras)",
+    "temp": "10-12 ºC",
+    "desc": "Tipo: Blanco con crianza sobre lías\n\nNota de cata\n\nFase visual\n Color amarillo dorado pálido con reflejos verdosos. Brillante, limpio y de gran viveza.\n\nFase olfativa\n Nariz compleja y elegante. Destacan aromas de fruta de hueso madura, pera, manzana asada y cítricos, combinados con notas florales, recuerdos de hierbas aromáticas y una marcada mineralidad. La crianza sobre lías aporta matices de bollería fina y volumen aromático.\n\nFase gustativa\n Entrada amplia y envolvente. Boca con gran estructura, equilibrada por una acidez fresca y bien integrada. Destaca su carácter mineral, textura cremosa y una extraordinaria persistencia. Final largo, elegante y complejo.\n\n",
+    "mar": "Ideal con mariscos de alto nivel, pescados al horno, rodaballo, rape, arroces marineros, pulpo, cocina asiática, aves y quesos de media curación.",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     0,
+     5
+    ],
     "img": "img/godello-val-gali.webp",
     "bot": "",
     "copa": "",
