@@ -5209,12 +5209,20 @@
    },
    {
     "nom": "Moet Chandon Brut Rose",
-    "bodega": "Moët & Chandon,",
+    "bodega": "Moët & Chandon",
     "uva": "Pinot Noir: 40-50% Pinot Meunier: 30-40% Chardonnay: 10-20%  Con entre un 20% y un 30% de vinos de reserva para aportar complejidad y regularidad.",
-    "subzona": "",
+    "subzona": "Champagne (Francia).",
     "temp": "10 ºC - 12 ºC",
     "desc": "Elaboración\n\nElaborado mediante el método tradicional champenoise. La intensidad de Pinot Noir aporta estructura y fruta, Pinot Meunier redondez y Chardonnay elegancia. La incorporación de vinos de reserva garantiza su estilo constante y refinado.\n\nSobre la bodega\n\nRosé Impérial representa la interpretación más seductora y expresiva del estilo Moët & Chandon. Un champagne rosado conocido por su intensidad frutal, elegancia y versatilidad gastronómica.\n\nNota de cata\nVista\n\nColor rosa brillante con delicados reflejos ámbar. Burbuja fina, elegante y persistente.\n\nNariz\n\nBouquet intenso y muy atractivo con aromas de fresa silvestre, frambuesa, cereza, pétalos de rosa y un delicado toque especiado de pimienta.\n\nBoca\n\nExpresiva, fresca y envolvente. Destacan los frutos rojos, grosella, frambuesa y fresa madura, acompañados por notas de melocotón y un elegante fondo mentolado. Equilibrada, persistente y muy refinada",
     "mar": "Atún rojo Salmón Marisco Sushi Pato Carnes blancas Foie Postres de frutos rojos",
+    "cata": [
+     4,
+     4,
+     5,
+     2,
+     0,
+     5
+    ],
     "img": "",
     "bot": "",
     "copa": "",
