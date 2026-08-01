@@ -369,13 +369,21 @@
     "orig": "V.R.BAIXAS O ROSAL QUINTA COUSELO 75 CL"
    },
    {
-    "nom": "Albariño Blanco Paco & Lol",
+    "nom": "Paco & Lola",
     "bodega": "Bodega Paco & Lola",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "Albariño 100% (Val do Salnés, sobre lías finas). Amarillo pajizo con reflejos verdosos, limpio y brillante. Nariz intensa: fruta blanca y tropical (manzana, pera, piña, lichi), cítricos, hierbas aromáticas y flores blancas. Boca fresca, golosa, frutal, equilibrada y persistente.",
-    "mar": "",
+    "uva": "100% Albariño",
+    "subzona": "Val do Salnés",
+    "temp": "8 ºC - 10 ºC",
+    "desc": "Elaboración\n\nElaborado a partir del mosto flor de uvas seleccionadas. La fermentación se realiza en depósitos de acero inoxidable a 16°C durante 21 días y posteriormente permanece un mínimo de 3 meses sobre sus lías finas, aportando volumen y complejidad.\n\nSobre la bodega\n\nPaco & Lola representa el estilo más moderno y desenfadado de los vinos de Rías Baixas. Su filosofía combina sostenibilidad, innovación y respeto por el carácter atlántico del Albariño.\n\nNota de cata\nVista\n\nColor amarillo pajizo con tonalidades verdosas. Limpio, brillante y muy atractivo.\n\nNariz\n\nIntensidad media-alta, con aromas de pomelo, limón, piña, lichi y frutas tropicales, acompañados por flores blancas, notas balsámicas y hierbas aromáticas.\n\nBoca\n\nFresco, goloso y muy frutal. Presenta excelente equilibrio entre acidez y volumen, con un paso elegante y un final persistente de marcado carácter atlántico.",
+    "mar": "Mariscos gallegos Ostras y almejas Sushi Arroces marineros Pescados blancos Pasta Carnes blancas Aperitivos",
+    "cata": [
+     3,
+     5,
+     5,
+     1,
+     4,
+     4
+    ],
     "img": "img/albarino-blanco-paco-lol.webp",
     "bot": "",
     "copa": "",
