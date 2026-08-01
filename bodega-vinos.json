@@ -1603,13 +1603,21 @@
     "orig": "VINO MENCIA VALDEORRAS AS CHAS 6"
    },
    {
-    "nom": "Godello Vald. Luar Sil",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Luar do Sil",
+    "bodega": "Pago de los Capellanes",
+    "uva": "100% Godello",
+    "subzona": "Val do Sil (Valdeorras)",
+    "temp": "8-10 ºC",
+    "desc": "Tipo: Blanco joven sobre lías\n\nNota de cata\n\nFase visual\n Color amarillo pajizo brillante con reflejos verdosos. Limpio, cristalino y de buena intensidad.\n\nFase olfativa\n Nariz elegante y compleja, donde aparecen aromas de fruta blanca madura como pera y manzana, notas de melocotón, cítricos frescos, flores blancas y sutiles recuerdos minerales. La crianza sobre lías aporta matices de panadería fina y mayor profundidad aromática.\n\nFase gustativa\n Entrada amplia, fresca y envolvente. Presenta una excelente combinación entre volumen y acidez, con textura cremosa y muy buena estructura. Paso de boca largo y equilibrado, con un final persistente donde reaparecen las notas frutales y minerales.",
+    "mar": "Ideal con mariscos, pescados nobles, pulpo a la gallega, arroces marineros, sushi, ceviches, aves y quesos de media curación.",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     0,
+     5
+    ],
     "img": "img/godello-vald-luar-sil.webp",
     "bot": "",
     "copa": "",
