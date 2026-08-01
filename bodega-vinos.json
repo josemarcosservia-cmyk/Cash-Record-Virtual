@@ -1575,13 +1575,21 @@
     "orig": "V.MENCIA D.O.VALDEOR. J.REBOLLED"
    },
    {
-    "nom": "Mencia Val Galir",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Pagos del Galir Mencia",
+    "bodega": "Virgen de Galir",
+    "uva": "100% Mencía",
+    "subzona": "Éntoma (Valdeorras)",
+    "temp": "15-17 ºC",
+    "desc": "Fase visual\n Color rojo cereza picota de capa media-alta, con reflejos violáceos y gran brillo. Limpio y atractivo.\n\nFase olfativa\n Nariz intensa y elegante. Destacan aromas de frutas rojas y negras maduras como mora, arándano y cereza, acompañados de notas florales, especias dulces, cacao, regaliz y finos tostados procedentes de la crianza en barrica.\n\nFase gustativa\n Entrada amplia y sedosa. Vino equilibrado, con buena estructura y taninos pulidos. La fruta se integra perfectamente con las notas de crianza, aportando complejidad y elegancia. Final largo, fresco y persistente con recuerdos minerales y especiados.",
+    "mar": "Ideal con carnes rojas, cordero, carnes a la brasa, caza menor, embutidos ibéricos, quesos curados y cocina tradicional gallega.",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     4,
+     5
+    ],
     "img": "img/mencia-val-galir.webp",
     "bot": "",
     "copa": "",
