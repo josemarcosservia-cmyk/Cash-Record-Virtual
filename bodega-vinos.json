@@ -3997,13 +3997,21 @@
     "orig": "V.R.DUERO M.CASTILLA ROBLE TTO.6"
    },
    {
-    "nom": "Pago Carraovejas a",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Pago Carraovejas ",
+    "bodega": "Pago de Carraovejas,",
+    "uva": "Tinto Fino (Tempranillo) Cabernet Sauvignon Merlot",
+    "subzona": "Peñafiel (Valladolid)",
+    "temp": "16 ºC - 18 ºC.",
+    "desc": "Elaboración\n\nLa fermentación se realiza por parcelas utilizando levaduras propias de la bodega. Posteriormente el vino permanece alrededor de 12 meses en barricas de roble francés y americano, completando después su afinamiento en botella para lograr una perfecta integración.\n\nSobre la bodega\n\nPago de Carraovejas es uno de los grandes iconos de Ribera del Duero. Su identidad gira en torno a la búsqueda del equilibrio, la elegancia y la expresión del valle de Carraovejas. Forma parte del grupo Alma Carraovejas, reconocido internacionalmente por la calidad de sus elaboraciones.\n\nNota de cata\nVista\n\nColor rojo púrpura intenso, de capa alta, con ribetes violáceos y aspecto limpio y brillante.\n\nNariz\n\nCompleja e intensa. Predominan los aromas de fruta negra madura y frutas del bosque, acompañados de notas balsámicas, cacao, vainilla, toffee, especias dulces, tostados y delicados recuerdos florales.\n\nBoca\n\nAmplia, untuosa y envolvente. Destaca por su equilibrio entre potencia y frescura, con taninos sedosos, excelente estructura y una gran persistencia. Final largo, elegante, cremoso y armonioso.",
+    "mar": "Lechazo asado Cochinillo Carrilleras de ternera Caza mayor Guisos tradicionales Solomillo de vacuno Quesos curados Cocina gastronómica",
+    "cata": [
+     5,
+     4,
+     5,
+     2,
+     5,
+     5
+    ],
     "img": "img/pago-carraovejas-a.webp",
     "bot": "",
     "copa": "",
