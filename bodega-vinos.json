@@ -972,20 +972,6 @@
     "orig": "V.BCO MONTERREI P.MARIÑAN 12/75C"
    },
    {
-    "nom": "Antonio Montero Autor",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
-    "img": "img/antonio-montero-autor.webp",
-    "bot": "",
-    "copa": "",
-    "cod": "20166450",
-    "orig": "VINO RIB.ANTONIO MONTERO AUTOR 6"
-   },
-   {
     "nom": "Godello Crego & Monaguillo",
     "bodega": "",
     "uva": "",
@@ -2054,6 +2040,28 @@
     "copa": "",
     "cod": "25213695",
     "orig": ""
+   },
+   {
+    "nom": "Antonio Montero Autor",
+    "bodega": "Antonio Montero,",
+    "uva": "Treixadura (80%) Torrontés (10%) Loureira (5%) Albariño (5%",
+    "subzona": "Castrelo de Miño (Ribeiro)",
+    "temp": "8 ºC - 10 ºC",
+    "desc": "Elaboración\n\nSelección manual de uva en mesa. Fermentación en depósitos de acero inoxidable a temperatura controlada para preservar toda la riqueza aromática de las variedades autóctonas y potenciar la complejidad del ensamblaje.\n\nSobre la bodega\n\nAntonio Montero Autor representa la gama más ambiciosa de la bodega. Es un vino concebido para expresar el potencial de las variedades tradicionales del Ribeiro, con una orientación claramente gastronómica y numerosas distinciones nacionales e internacionales, entre ellas Mejor Vino Blanco de Galicia y varias medallas en concursos de prestigio.\n\nNota de cata\nVista\n\nColor amarillo pajizo brillante con reflejos dorados y excelente limpidez.\n\nNariz\n\nCompleja e intensa. Destacan los aromas de fruta blanca madura, cítricos, flores blancas y elegantes matices minerales. Perfil aromático profundo y bien definido.\n\nBoca\n\nAmplio, untuoso y equilibrado. Presenta excelente volumen, marcada mineralidad y una estructura superior a la de un Ribeiro joven tradicional. Final largo, elegante y persistente.",
+    "mar": "Vieira y zamburiñas Mariscos gallegos Rodaballo Merluza de pincho Bacalao Arroces marineros Pulpo a la brasa Quesos gallegos semicurados Cocina atlántica de producto",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     1,
+     5
+    ],
+    "img": "img/antonio-montero-autor.webp",
+    "bot": "",
+    "copa": "",
+    "cod": "20166450",
+    "orig": "VINO RIB.ANTONIO MONTERO AUTOR 6"
    }
   ]
  },
