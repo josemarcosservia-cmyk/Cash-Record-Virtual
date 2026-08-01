@@ -4592,7 +4592,7 @@
    },
    {
     "nom": "Sitial Roble",
-    "bodega": "Sitial,",
+    "bodega": "Bodegas López Morenas",
     "uva": "100% Tempranillo (Tinta del País).",
     "subzona": "Ribera del Duero",
     "temp": "15 ºC - 16 ºC",
@@ -4613,13 +4613,21 @@
     "orig": "V.DO R.DUERO SITIAL ROBL.0,75L C"
    },
    {
-    "nom": "Sitial Crza",
-    "bodega": "",
+    "nom": "Sitial Crianza",
+    "bodega": "Bodegas López Morenas",
     "uva": "",
     "subzona": "",
     "temp": "",
     "desc": "",
     "mar": "",
+    "cata": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
     "img": "img/sitial-crza.webp",
     "bot": "",
     "copa": "",
