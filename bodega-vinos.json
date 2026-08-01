@@ -5014,28 +5014,6 @@
     "orig": ""
    },
    {
-    "nom": "Billecart-Salmon Blanc de Blancs",
-    "bodega": "Billecart-Salmon",
-    "uva": "Chardonnay 100%",
-    "subzona": "Côte des Blancs",
-    "temp": "6-8 °C",
-    "desc": "100% Chardonnay de Grand Cru y Premier Cru de elegancia suprema. Burbuja finísima, con notas de flores blancas, cítricos, mantequilla y una tensión mineral excepcional. Frescura y longitud extraordinarias.",
-    "mar": "Caviar, ostras finas, pescados nobles, tartar de atún",
-    "cata": [
-     2,
-     5,
-     4,
-     1,
-     1,
-     5
-    ],
-    "img": "img/billecart-salmon-blanc-de-blancs.webp",
-    "bot": "55,00 €",
-    "copa": "—",
-    "cod": "",
-    "orig": ""
-   },
-   {
     "nom": "Don Perignon",
     "bodega": "",
     "uva": "",
@@ -5062,20 +5040,6 @@
     "copa": "",
     "cod": "00564187",
     "orig": "CHAMPAG.POMMERY 0,75L C/6"
-   },
-   {
-    "nom": "Veuve Clicqu. Brut",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
-    "img": "img/veuve-clicqu-brut.webp",
-    "bot": "",
-    "copa": "",
-    "cod": "00587808",
-    "orig": "CHAMPAGNE VEUVE CLICQU.BRUT 6/75"
    },
    {
     "nom": "Moët & Chandon Impérial Brut",
@@ -5140,6 +5104,20 @@
     "copa": "",
     "cod": "20161931",
     "orig": "CHAMPAGNE BOLLINGER SP CUVEE 75 CL"
+   },
+   {
+    "nom": "Moet Chandon Brut Rose",
+    "bodega": "",
+    "uva": "",
+    "subzona": "",
+    "temp": "",
+    "desc": "",
+    "mar": "",
+    "img": "",
+    "bot": "",
+    "copa": "",
+    "cod": "",
+    "orig": ""
    }
   ]
  }
