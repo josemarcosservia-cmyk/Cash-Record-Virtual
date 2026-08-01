@@ -3822,12 +3822,20 @@
    },
    {
     "nom": "Pinna Fidelis Roble",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "bodega": "Bodegas Pinna Fidelis,",
+    "uva": "100% Tinta del País (Tempranillo)",
+    "subzona": "Peñafiel (Valladolid)",
+    "temp": "14 ºC - 16 ºC",
+    "desc": "Elaboración\n\nProcede de los mejores viñedos propios de la bodega. Tras una rigurosa vendimia manual parcela por parcela, el vino macera durante unos 25 días y posteriormente realiza una crianza de 6 meses en barricas de roble americano y francés, donde adquiere complejidad sin perder la expresión de la fruta.\n\nSobre la bodega\n\nPinna Fidelis nació en 2001 como homenaje a la localidad de Peñafiel. Su filosofía combina tradición y tecnología moderna para elaborar vinos que expresen el carácter de la Ribera del Duero, manteniendo el protagonismo de la Tinta del País.\n\nNota de cata\nVista\n\nColor rojo cereza muy cubierto, brillante y limpio, con reflejos violáceos en capa fina.\n\nNariz\n\nIntensa y expresiva. Destacan aromas de fresa, frambuesa y grosella, perfectamente integrados con recuerdos balsámicos, finos especiados, vainilla y ligeros tostados procedentes de la barrica.\n\nBoca\n\nAmplia, equilibrada y persistente. Presenta taninos redondos y maduros, buena estructura, frescura y una acidez perfectamente integrada que aporta longitud y elegancia.",
+    "mar": "Lechazo asado Carnes rojas a la parrilla Embutidos ibéricos Patés Ahumados Quesos semicurados Caza menor Hamburguesas gourmet",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     4,
+     4
+    ],
     "img": "img/pinna-fidelis-roble.webp",
     "bot": "",
     "copa": "",
@@ -4225,20 +4233,6 @@
     "copa": "",
     "cod": "26256024",
     "orig": "VINO D.O. R. DUERO PROTOS 27 6/7"
-   },
-   {
-    "nom": "Tinto Reserva Figuero15 0,75",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
-    "img": "img/tinto-reserva-figuero15-0-75.webp",
-    "bot": "",
-    "copa": "",
-    "cod": "26498501",
-    "orig": "TTO R.DUERO RVA FIGUERO15 0,75 C"
    },
    {
     "nom": "Tinto Arrocal Roble",
