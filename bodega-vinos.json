@@ -3511,7 +3511,7 @@
     "img": "img/protos-crianza.webp",
     "bot": "9,80 €",
     "copa": "—",
-    "cod": "",
+    "cod": "10140457",
     "orig": ""
    },
    {
@@ -3601,7 +3601,7 @@
     "orig": "V.RIB.DUERO A.TAMARON ROBLE TTO."
    },
    {
-    "nom": "Protos Rble. 12 Tinto",
+    "nom": "Protos Roble",
     "bodega": "",
     "uva": "",
     "subzona": "",
@@ -3893,20 +3893,6 @@
     "copa": "",
     "cod": "08521163",
     "orig": "VINO R.DUERO PESQUERA CR.21  6/7"
-   },
-   {
-    "nom": "Protos Cr. 11 Tinto",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
-    "img": "img/protos-cr-11-tinto.webp",
-    "bot": "",
-    "copa": "",
-    "cod": "10140457",
-    "orig": "V.R.DUERO PROTOS CR.11 TTO.6/75C"
    },
    {
     "nom": "M. Castilla Roble Tinto",
