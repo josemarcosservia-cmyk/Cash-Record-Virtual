@@ -295,13 +295,21 @@
     "orig": "VINO D.O.RIAS  BAIXAS GUNDIAN 6/"
    },
    {
-    "nom": "Albariño. Paco & Lol",
+    "nom": "Paco & Lola",
     "bodega": "Bodega Paco & Lola",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "Albariño 100% (Val do Salnés, sobre lías finas). Amarillo pajizo con reflejos verdosos, limpio y brillante. Nariz intensa: fruta blanca y tropical (manzana, pera, piña, lichi), cítricos, hierbas aromáticas y flores blancas. Boca fresca, golosa, frutal, equilibrada y persistente.",
-    "mar": "",
+    "uva": "100% Albariño",
+    "subzona": "Val do Salnés",
+    "temp": "8 ºC - 10 ºC",
+    "desc": "Albariño 100% (Val do Salnés, sobre lías finas). Amarillo pajizo con reflejos verdosos, limpio y brillante. Nariz intensa: fruta blanca y tropical (manzana, pera, piña, lichi), cítricos, hierbas aromáticas y flores blancas. Boca fresca, golosa, frutal, equilibrada y persistente.\nElaboración\n\nElaborado a partir del mosto flor de uvas Albariño seleccionadas procedentes de viñedos cultivados sobre suelos franco-arenosos de origen granítico. La fermentación se realiza en depósitos de acero inoxidable a temperatura controlada para preservar toda la intensidad aromática y frescura de la variedad.\n\nSobre la bodega\n\nPaco & Lola se encuentra en el corazón del Val do Salnés, la zona más emblemática para el cultivo del Albariño. La influencia del océano Atlántico, la ría de Arousa y los suelos graníticos aportan a sus vinos un perfil fresco, mineral y con una marcada personalidad atlántica.\n\nNota de cata\nVista\n\nColor amarillo limón brillante con reflejos verdosos. Limpio y muy luminoso.\n\nNariz\n\nMuy intensa y expresiva. Destacan aromas de manzana verde, pera, melocotón, limón, pomelo y notas florales, con recuerdos de albahaca y matices minerales.\n\nBoca\n\nFresco, sedoso y amplio. Presenta una acidez viva y equilibrada, acompañada de sabores de piña, mango, cítricos y fruta blanca. Final largo, sabroso y persistente con un elegante fondo mineral.",
+    "mar": "Ostras Mejillones Navajas Mariscos gallegos Pescados blancos Sushi y sashimi Arroces marineros Cocina asiática Pulpo a feira",
+    "cata": [
+     4,
+     4,
+     5,
+     1,
+     1,
+     4
+    ],
     "img": "img/albarino-paco-lol.webp",
     "bot": "",
     "copa": "",
