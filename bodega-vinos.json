@@ -2335,13 +2335,21 @@
     "orig": "VINO R.SACRA REGINA VIARUM TTO.6"
    },
    {
-    "nom": "Via Appia Tinto",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Vía Appia Mencía",
+    "bodega": "Regina Viarum",
+    "uva": "100% Mencía.",
+    "subzona": "Amandi,",
+    "temp": "14 ºC - 16 ºC",
+    "desc": "Elaboración\n\nFermentación natural en depósitos de acero inoxidable a temperatura controlada entre 19 y 21 ºC. Se realiza un descube temprano antes de finalizar completamente la fermentación para potenciar la fruta, la frescura y la vivacidad aromática del vino.\n\nSobre la bodega\n\nVía Appia toma su nombre de la histórica calzada romana y representa la versión más joven, fresca y desenfadada de la Mencía elaborada por Regina Viarum. Un vino pensado para mostrar toda la expresión frutal de la Ribeira Sacra.\n\nNota de cata\nVista\n\nColor rojo cereza o picota de capa media, con reflejos violáceos. Limpio y brillante.\n\nNariz\n\nFresca y afrutada. Predominan los aromas de cereza, frambuesa y otros frutos rojos frescos, acompañados por ligeros matices minerales.\n\nBoca\n\nEntrada suave, ligera y equilibrada. Paso ágil, tanino sedoso y agradable persistencia con recuerdos de fruta roja fresca.",
+    "mar": "Pulpo á feira Carne ao caldeiro Guisos de carne Guisos de pescado Embutidos Quesos semicurados",
+    "cata": [
+     3,
+     4,
+     5,
+     1,
+     2,
+     2
+    ],
     "img": "img/via-appia-tinto.webp",
     "bot": "",
     "copa": "",
