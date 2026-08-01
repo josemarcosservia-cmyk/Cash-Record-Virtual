@@ -1353,13 +1353,21 @@
     "orig": ""
    },
    {
-    "nom": "Godello Ruchel",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Ruchel Godello",
+    "bodega": "Bodegas Ruchel",
+    "uva": "100% Godello",
+    "subzona": "Valle de Monterrei",
+    "temp": "8-10 ºC",
+    "desc": "Fase visual\n Color amarillo pajizo brillante con reflejos verdosos. Limpio, cristalino y de intensidad media.\n\nFase olfativa\n Nariz fresca y expresiva, con aromas de fruta blanca como manzana y pera, notas cítricas, recuerdos de fruta de hueso y delicados matices florales y minerales característicos de la variedad Godello.\n\nFase gustativa\n Entrada fresca y equilibrada. Buena estructura, acidez bien integrada y paso de boca amplio y elegante. Final largo y agradable con recuerdos frutales y un ligero toque mineral.",
+    "mar": "Ideal con mariscos, pescados blancos, arroces, pulpo a la gallega, quesos suaves y cocina atlántica.",
+    "cata": [
+     3,
+     4,
+     4,
+     1,
+     0,
+     4
+    ],
     "img": "img/godello-ruchel.webp",
     "bot": "",
     "copa": "",
