@@ -1625,13 +1625,21 @@
     "orig": "VINO GODELLO VALD. LUAR DO SIL 6"
    },
    {
-    "nom": ". Vald Pazo Bubela Mencia",
+    "nom": "Pazo Bubela Mencia",
     "bodega": "",
     "uva": "",
     "subzona": "",
     "temp": "",
     "desc": "",
     "mar": "",
+    "cata": [
+     3,
+     4,
+     5,
+     1,
+     3,
+     3
+    ],
     "img": "img/vald-pazo-bubela-mencia.webp",
     "bot": "",
     "copa": "",
