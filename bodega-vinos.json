@@ -4129,13 +4129,21 @@
     "orig": "VINO RIB DUERO BOSQUE MATASNOS 0"
    },
    {
-    "nom": "Canonigos 16 Tinto",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Dehesa de los Canónigos",
+    "bodega": "Dehesa de los Canónigos",
+    "uva": "88% Tinto Fino (Tempranillo) 12% Cabernet Sauvignon",
+    "subzona": "Pesquera de Duero (Valladolid",
+    "temp": "16 ºC - 18 ºC.",
+    "desc": "Elaboración\n\nEl vino realiza una crianza de aproximadamente 15 meses en barricas de roble americano de grano fino y tostado medio, seguida de un afinamiento en botella que aporta complejidad y armonía al conjunto.\n\nSobre la bodega\n\nDehesa de los Canónigos es una referencia clásica de la Ribera del Duero. La finca debe su nombre al antiguo Cabildo de Canónigos de la Catedral de Valladolid, propietario original de estas tierras. Actualmente mantiene una filosofía basada en la elaboración de vinos elegantes, equilibrados y de gran personalidad.\n\nNota de cata\nVista\n\nColor cereza brillante con ribete rubí intenso. Capa media-alta, limpio y brillante.\n\nNariz\n\nIntensa y compleja. Destacan aromas de fruta negra madura, mora, ciruela, cacao, regaliz y chocolate, acompañados por elegantes notas tostadas procedentes de la crianza.\n\nBoca\n\nRedonda, equilibrada y estructurada. Excelente integración entre fruta y madera, con taninos maduros, sensación envolvente y un final largo y persistente con recuerdos especiados, cacao y regaliz.",
+    "mar": "Lechazo asado Carnes rojas a la parrilla Caza mayor y menor Estofados tradicionales Legumbres castellanas Jamón ibérico Quesos curados y semicurados",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     4,
+     5
+    ],
     "img": "img/canonigos-16-tinto.webp",
     "bot": "",
     "copa": "",
