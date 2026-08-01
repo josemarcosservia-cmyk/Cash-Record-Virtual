@@ -3953,13 +3953,21 @@
     "orig": "V.RIB.DUERO ARZUAGA CRIANZA 6/75"
    },
    {
-    "nom": "Pesquera CR",
+    "nom": "Pesquera Crianza",
     "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "uva": "100% Tempranillo (Tinto Fino)",
+    "subzona": "Pesquera de Duero (Valladolid).",
+    "temp": "16 ºC - 17 ºC",
+    "desc": "Elaboración\n\nVinificación tradicional con despalillado y maceración durante dos o tres semanas a temperatura controlada. Posteriormente realiza una crianza aproximada de 18 meses en barrica y un periodo adicional en botella antes de su comercialización, buscando la integración perfecta entre fruta y madera.\n\nSobre la bodega\n\nTinto Pesquera es el proyecto más emblemático de la Familia Fernández Rivera. Desde 1975 se ha convertido en uno de los vinos más representativos de España y en una referencia imprescindible para entender la evolución moderna de Ribera del Duero.\n\nNota de cata\nVista\n\nColor rojo picota intenso con reflejos granates y cardenalicios. Capa alta, limpio y brillante.\n\nNariz\n\nAromas intensos de fruta roja madura y fruta negra, con notas balsámicas, especiadas, regaliz, vainilla, cacao y elegantes recuerdos tostados perfectamente integrados con la madera.\n\nBoca\n\nFresca, elegante y sedosa. Presenta excelente equilibrio entre fruta, acidez y crianza. Los taninos son envolventes y persistentes, con un final largo, estructurado y muy elegante.",
+    "mar": "Lechazo asado Chuletillas al sarmiento Carne a la brasa Cochinillo Arroces con caza menor Carpaccio de vacuno Jamón ibérico Quesos curados",
+    "cata": [
+     5,
+     4,
+     5,
+     1,
+     4,
+     5
+    ],
     "img": "img/pesquera-cr.webp",
     "bot": "",
     "copa": "",
