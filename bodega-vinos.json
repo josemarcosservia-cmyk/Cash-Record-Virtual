@@ -1675,12 +1675,20 @@
    },
    {
     "nom": "Costeira Blanco",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "bodega": "Viña Costeira,",
+    "uva": "Treixadura Torrontés Albariño Godello Loureira Otras variedades autóctonas",
+    "subzona": "Viñedos distribuidos por los cuatro valles de la D.O. Ribeiro",
+    "temp": "8 ºC - 10 ºC.",
+    "desc": "Elaboración\n\nLas distintas variedades se fermentan por separado en depósitos de acero inoxidable a baja temperatura. Posteriormente se realiza el ensamblaje para conseguir un vino equilibrado, fresco y representativo del estilo tradicional del Ribeiro.\n\nSobre la bodega\n\nViña Costeira es uno de los vinos blancos gallegos más populares y vendidos. Su estilo fresco, aromático y equilibrado lo ha convertido en una referencia indispensable dentro de la denominación Ribeiro.\n\nNota de cata\nVista\n\nColor amarillo pajizo brillante con reflejos verdosos. Limpio y luminoso.\n\nNariz\n\nAromáticamente fino y elegante, con intensidad media-alta. Destacan notas de fruta tropical, fruta de hueso, manzana, cítricos y hierba fresca.\n\nBoca\n\nFresco, sabroso y equilibrado. Presenta una agradable acidez, buena intensidad frutal y un conjunto armonioso que resulta muy fácil y agradable de beber.",
+    "mar": "Mariscos Pescados blancos Moluscos y crustáceos Sushi Ensaladas Quesos gallegos tradicionales Aperitivos",
+    "cata": [
+     3,
+     4,
+     4,
+     1,
+     0,
+     3
+    ],
     "img": "img/costeira-blanco.webp",
     "bot": "",
     "copa": "",
@@ -1824,20 +1832,6 @@
     "copa": "",
     "cod": "19278845",
     "orig": "VINO RIBEIRO CASAL DE ARMAN 6/75"
-   },
-   {
-    "nom": "Blanco Viña Costeir 4bx",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
-    "img": "img/blanco-vina-costeir-4bx.webp",
-    "bot": "",
-    "copa": "",
-    "cod": "21773379",
-    "orig": "BCO DO RIBEIRO VIÑA COSTEIR 4BX"
    },
    {
     "nom": "Terrada",
