@@ -4615,18 +4615,18 @@
    {
     "nom": "Sitial Crianza",
     "bodega": "Bodegas López Morenas",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "uva": "100% Tempranillo (Tinta del País)",
+    "subzona": "Ribera del Duero. No se especifica una subzona concreta en las fichas técnicas consultadas",
+    "temp": "16 ºC",
+    "desc": "Elaboración\n\nElaborado con uvas Tempranillo seleccionadas y sometido a una crianza aproximada de 12 meses en barrica, buscando integrar la fruta madura con los aportes especiados y tostados de la madera.\n\nSobre la bodega\n\nSitial Crianza representa un estilo clásico de Ribera del Duero, con protagonismo de la fruta madura, buena estructura y una crianza orientada al equilibrio y la facilidad de consumo.\n\nNota de cata\nVista\n\nColor cereza intenso con matices granate, limpio y brillante, mostrando una evolución adecuada de la crianza.\n\nNariz\n\nAromas de frutas maduras, especialmente fruta negra, acompañadas por notas de especias, tostados y madera bien integrada.\n\nBoca\n\nEstructurado y potente, con buena amplitud, textura envolvente y un retrogusto especiado. Equilibrado, sabroso y persistente, mantiene una agradable armonía entre fruta y crianza.",
+    "mar": "Arroces de carne Carnes rojas a la parrilla Carnes rojas asadas Caza de pluma Quesos de oveja Quesos semicurados Patés",
     "cata": [
+     4,
      3,
-     3,
-     3,
-     3,
-     3,
-     3
+     4,
+     1,
+     4,
+     4
     ],
     "img": "img/sitial-crza.webp",
     "bot": "",
