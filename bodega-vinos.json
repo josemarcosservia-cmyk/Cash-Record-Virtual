@@ -4151,13 +4151,21 @@
     "orig": "V.R.DUERO CANONIGOS 16 TTO. 6/75"
    },
    {
-    "nom": "Rib Duero Lambuena Crianza",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Lambuena Crianza",
+    "bodega": "Bodegas Lambuena",
+    "uva": "100% Tinta del País (Tempranillo)",
+    "subzona": "Roa (Burgos)",
+    "temp": "16 ºC - 18 ºC.",
+    "desc": "Elaboración\n\nProcede de viñedos de más de 60 años, lo que aporta concentración y complejidad. Realiza una crianza de 12 meses en barricas de roble americano y francés y posteriormente permanece un mínimo de 8 a 12 meses en botella antes de su comercialización.\n\nSobre la bodega\n\nLambuena es una de las bodegas familiares más apreciadas de la Ribera burgalesa. Su filosofía combina tradición, viñedo viejo y una elaboración cuidada para obtener vinos equilibrados, gastronómicos y con excelente relación calidad-precio.\n\nNota de cata\nVista\n\nColor rojo picota con ribetes rubí, de capa alta, limpio y brillante.\n\nNariz\n\nCompleja e intensa. Destacan aromas de frutos negros maduros, mora y ciruela, acompañados de regaliz, toffee, especias, vainilla, notas tostadas y recuerdos minerales perfectamente integrados con la crianza.\n\nBoca\n\nAmplia, carnosa y equilibrada. Presenta buena estructura, taninos dulces y maduros, magnífica integración de la madera y un final largo y persistente con recuerdos de fruta negra, toffee y notas minerales.",
+    "mar": "Lechazo asado Cordero al horno Carnes rojas a la brasa Guisos tradicionales Embutidos ibéricos Quesos semicurados y curados Cocina castellana Platos de cuchara",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     4,
+     4
+    ],
     "img": "img/rib-duero-lambuena-crianza.webp",
     "bot": "",
     "copa": "",
