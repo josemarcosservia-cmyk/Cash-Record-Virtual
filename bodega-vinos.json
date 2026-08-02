@@ -1529,13 +1529,21 @@
     "orig": "VINO BCO.DO.VALD.GODEVAL 750ML C"
    },
    {
-    "nom": "Vin Blanco Godell Paco & Lola",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Paco & Lola Godello",
+    "bodega": "Paco & Lola",
+    "uva": "100% Godello",
+    "subzona": "Valdeorras",
+    "temp": "8-10 ºC",
+    "desc": "Fase visual\n Color amarillo pajizo brillante con reflejos verdosos. Limpio, cristalino y de intensidad media-alta.\n\nFase olfativa\n Nariz intensa y elegante, con aromas de fruta blanca madura como pera y manzana, notas de melocotón, recuerdos cítricos de pomelo y limón, acompañados de delicados matices florales y minerales.\n\nFase gustativa\n Entrada fresca y envolvente. Presenta una excelente acidez que aporta viveza y equilibrio. Boca amplia, con buena estructura y marcada expresión frutal. Final persistente, fresco y ligeramente mineral.",
+    "mar": "deal con mariscos, pescados blancos, pulpo a la gallega, arroces marineros, sushi, ceviches, quesos suaves y cocina atlántica.",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     0,
+     4
+    ],
     "img": "img/vin-blanco-godell-paco-lola.webp",
     "bot": "",
     "copa": "",
