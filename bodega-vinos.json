@@ -3508,13 +3508,21 @@
     "orig": "VINO RIOJA LAN RVA.TTO.6/75CL"
    },
    {
-    "nom": "M. Murrieta Res. Espec",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Marques de Murrieta Reserva",
+    "bodega": "Marqués de Murrieta",
+    "uva": "85-87% Tempranillo, 5-7% Mazuelo, 6% Graciano y 2% Garnacha",
+    "subzona": "Rioja Alta, Finca Ygay",
+    "temp": "16-18 ºC",
+    "desc": "Elaboración\n\nLas variedades fermentan por separado en depósitos de acero inoxidable con control de temperatura. El encubado tiene una duración aproximada de 8 a 10 días. Posteriormente realiza una crianza de entre 24 y 25 meses en barricas de roble americano antes de su afinamiento en botella.\n\nNota de cata\nFase visual\n\nColor rojo cereza intenso y brillante.\n\nFase olfativa\n\nPredominan los aromas de fruta roja madura, ciruela y cereza negra, acompañados de notas especiadas, regaliz, vainilla, flores, balsámicos y delicados recuerdos de chocolate.\n\nFase gustativa\n\nVino equilibrado, redondo y sedoso. Presenta una textura carnosa, taninos perfectamente integrados y una acidez que aporta frescura y recorrido. Final largo, elegante y persistente.",
+    "mar": "Carnes rojas, carnes blancas, cordero asado, quesos curados, jamón ibérico, pescados al horno y bacalao al pil-pil.",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     4,
+     5
+    ],
     "img": "img/m-murrieta-res-espec.webp",
     "bot": "",
     "copa": "",
