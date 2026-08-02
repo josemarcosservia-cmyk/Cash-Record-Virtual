@@ -3308,13 +3308,21 @@
     "orig": "MAGNUM RIOJA EL COTO CRIANZA 6/1"
    },
    {
-    "nom": "Eguren Ugarte Cri",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Eguren Ugarte Crianza",
+    "bodega": "Bodegas Eguren Ugarte",
+    "uva": "empranillo (mayoritaria) y Garnacha Tinta. Algunas fichas indican 80% Tempranillo y 20% Garnacha.",
+    "subzona": "Rioja Alavesa (Labastida, Páganos y Elciego)",
+    "temp": "16-17 ºC",
+    "desc": "Elaboración\n\nDespalillado y estrujado. Fermentación durante 10-15 días a temperatura controlada entre 25 y 28 ºC, seguida de maceración. Crianza de 15 meses en barricas de roble americano y francés y un mínimo de 6 meses de afinamiento en botella antes de su comercialización.\n\nNota de cata\nFase visual\n\nColor rojo cereza intenso, limpio y brillante.\n\nFase olfativa\n\nAromas expresivos de fruta roja y negra madura, destacando cereza, mora, grosella y arándano, acompañados por notas de vainilla, avellana y madera tostada procedentes de la crianza.\n\nFase gustativa\n\nEntrada fresca y equilibrada. En boca resulta sedoso, afrutado y redondo, con taninos maduros que aportan cuerpo y volumen. Destacan las notas de mora, cereza y un agradable recuerdo final de vainilla.",
+    "mar": "Carnes rojas, caza, pescado azul, quesos blandos y cocina tradicional.",
+    "cata": [
+     4,
+     3,
+     4,
+     1,
+     4,
+     4
+    ],
     "img": "img/eguren-ugarte-cri.webp",
     "bot": "",
     "copa": "",
