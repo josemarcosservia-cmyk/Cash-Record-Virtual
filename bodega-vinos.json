@@ -1771,13 +1771,21 @@
     "orig": "V.DO VALDEORRAS A COROA 75 CL C/"
    },
    {
-    "nom": ". Valde. O Luar Sil",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "O Luar Sil Magnum",
+    "bodega": "Pago de los Capellanes",
+    "uva": "100% Godello Blanco con crianza sobre lías",
+    "subzona": "Seadur, Larouco (Valdeorras)",
+    "temp": "10-12 ºC",
+    "desc": "Elaboración\n\nVendimia manual en cajas de 15 kg. Maceración en frío por debajo de 8 ºC, prensado suave y fermentación controlada en depósitos de acero inoxidable durante 14 días. Posteriormente permanece 6 meses sobre lías finas, realizando batonnage para ganar volumen, untuosidad y complejidad aromática.\n\nNota de cata\nFase visual\n\nColor limpio y brillante, con reflejos dorado-verdosos y ribetes glicéricos en copa.\n\nFase olfativa\n\nNariz fina y compleja, con tonos de flores blancas y silvestres, acompañados de aromas de fruta blanca fresca.\n\nFase gustativa\n\nGran equilibrio entre la fruta fresca y la madurez aportada por las lías finas. Vino agradable, suave, complejo y delicado, donde predominan las sensaciones frutales y minerales. Final largo y persistente.",
+    "mar": "Carnes blancas, cerdo a la parrilla, arroces caldosos, bacalao y pescado blanco.",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     0,
+     5
+    ],
     "img": "img/valde-o-luar-sil.webp",
     "bot": "",
     "copa": "",
