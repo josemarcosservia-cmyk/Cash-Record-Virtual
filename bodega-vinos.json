@@ -3428,13 +3428,21 @@
     "orig": "V.D.O.RIOJA TTO.GARNACHA LA MALD"
    },
    {
-    "nom": "Mirto C/estu",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Mirto ",
+    "bodega": "Bodegas Ramón Bilbao",
+    "uva": "100% Tempranillo",
+    "subzona": "Rioja Alta, con selección de cepas viejas procedentes de ocho municipios cercanos a Haro.",
+    "temp": "17-18 ºC",
+    "desc": "Elaborado únicamente en añadas excepcionales a partir de viñedos de más de 70 años. Tras una rigurosa selección de racimos, fermenta en pequeños tinos y realiza la fermentación maloláctica en barrica con batonnage. Posteriormente envejece entre 19 y 24 meses en barricas nuevas de roble francés Allier y se embotella sin clarificar ni filtrar.\n\nNota de cata\nFase visual\n\nProfundo color rojo rubí con matices púrpuras. Limpio, brillante y con abundante lágrima.\n\nFase olfativa\n\nIntensidad aromática muy alta y compleja. Destacan aromas de fruta negra madura, cereza, regaliz, notas balsámicas, clavo, nuez moscada, pimienta negra, ahumados, cedro, chocolate negro y café.\n\nFase gustativa\n\nPotente, jugoso y de gran longitud. Presenta taninos maduros, excelente equilibrio y una marcada complejidad. Aparecen recuerdos de arándanos, ciruelas, cacao, café y especias, con un final largo, elegante y persistente.",
+    "mar": "Hongos, trufas, carnes rojas, guisos de caza, barbacoas, quesos curados, quesos de pasta blanda y chocolate negro.",
+    "cata": [
+     5,
+     4,
+     5,
+     1,
+     5,
+     5
+    ],
     "img": "img/mirto-c-estu.webp",
     "bot": "",
     "copa": "",
