@@ -3756,13 +3756,21 @@
     "orig": "V.DOC RIOJA CZ H.ALFARO 0,75L C/"
    },
    {
-    "nom": "Doc CZ Malpuesto",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Malpuesto Crianza",
+    "bodega": "Bodegas Orben (Artevino Family Wineries)",
+    "uva": "100% Tempranillo",
+    "subzona": "Rioja Alavesa, Villabuena de Álava",
+    "temp": "16-18 ºC",
+    "desc": "laboración\n\nProcede de un viñedo único denominado Malpuesto, plantado alrededor de 1931. Vendimia manual en cajas de 15 kg, selección de racimos, fermentación en depósitos de acero inoxidable y crianza de 15 meses en barricas nuevas de roble francés.\n\nNota de cata\nFase visual\n\nIntenso color cereza brillante.\n\nFase olfativa\n\nAromas de fruta madura, negra y silvestre. Algunas fichas destacan además notas de regaliz, violetas, cacao y matices minerales.\n\nFase gustativa\n\nEstructurado y amplio, con un toque cremoso y terroso. Muy frutal, carnoso, persistente y complejo en el final.",
+    "mar": "Carnes rojas, chuletón, chuletillas a la brasa, caza, guisos tradicionales y quesos curados",
+    "cata": [
+     5,
+     4,
+     5,
+     1,
+     4,
+     5
+    ],
     "img": "img/doc-cz-malpuesto.webp",
     "bot": "",
     "copa": "",
