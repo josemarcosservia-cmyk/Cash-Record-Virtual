@@ -3592,13 +3592,21 @@
     "orig": "V.RIOJA ARNALTE RVA.12.TTO.6/75C"
    },
    {
-    "nom": "200monges Reserva",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "200 Monges Reserva",
+    "bodega": "Vinícola Real - 200 Monges",
+    "uva": "85% Tempranillo, 10% Graciano y 5% Mazuelo",
+    "subzona": "Rioja Alta (",
+    "temp": "16-18 ºC",
+    "desc": "Elaboración\n\nVendimia manual en cajas de 15 kg. Fermentación en tinas de madera Allier con temperatura controlada. Crianza mínima de 20 meses en barricas nuevas de roble francés y americano, seguida de afinamiento en botella durante al menos 16 meses antes de su comercialización.\n\nNota de cata\nFase visual\n\nAmplia capa de color rubí intenso y profundo, con tonalidad cereza y ligeros reflejos granates.\n\nFase olfativa\n\nNotas de frutas rojas maduras, cereza y frambuesa, acompañadas de tabaco, cedro, trufa, café y chocolate. Aroma limpio, intenso y muy complejo.\n\nFase gustativa\n\nBuen cuerpo, equilibrado y sabroso. Taninos nobles procedentes de la crianza en barrica, con notas de regaliz y una evolución elegante y persistente en boca.",
+    "mar": "Carnes rojas, cordero asado, caza mayor y menor, jamón ibérico, quesos curados, legumbres y cocina tradicional riojana.",
+    "cata": [
+     5,
+     4,
+     4,
+     1,
+     5,
+     5
+    ],
     "img": "img/200monges-reserva.webp",
     "bot": "",
     "copa": "",
