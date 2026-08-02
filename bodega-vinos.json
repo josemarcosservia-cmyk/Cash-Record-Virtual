@@ -1507,13 +1507,21 @@
     "orig": "V.GODELLO VALDEORRAS VERDES CAST"
    },
    {
-    "nom": "Blanco. Vald. Godeval",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Godeval",
+    "bodega": "Adegas Godeval",
+    "uva": "100% Godello",
+    "subzona": "O Barco de Valdeorras",
+    "temp": "8-10 ºC",
+    "desc": "Fase visual\n Color amarillo pajizo brillante con reflejos verdosos. Limpio, cristalino y de intensidad media.\n\nFase olfativa\n Nariz elegante y muy varietal. Destacan aromas de manzana verde, pera, melocotón blanco y cítricos, acompañados de notas florales y un sutil fondo mineral. Expresa fielmente el carácter de la Godello de Valdeorras.\n\nFase gustativa\n Entrada fresca y equilibrada. Boca amplia, con buena estructura, acidez viva y excelente integración de la fruta. Paso sedoso y elegante, con un final persistente donde reaparecen las notas frutales y minerales.",
+    "mar": "Ideal con mariscos, pescados blancos, pulpo a la gallega, arroces marineros, sushi, quesos suaves y cocina atlántica.",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     0,
+     4
+    ],
     "img": "img/blanco-vald-godeval.webp",
     "bot": "",
     "copa": "",
