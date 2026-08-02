@@ -1617,13 +1617,21 @@
     "orig": "V.BCO.VALDEORRAS VINAREDO 6/0,75"
    },
    {
-    "nom": "Mencia. J. Rebolled",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Joaquin Rebolledo Mencia",
+    "bodega": "Joaquín Rebolledo S.A.",
+    "uva": "100% Mencía",
+    "subzona": "A Rúa (Valdeorras)(ubicación de la bodega)",
+    "temp": "16-18 ºC",
+    "desc": "Nota de cata\nFase visual\n\nColor rojo cereza o picota cubierto, con bordes violáceos y ribete amoratado.\n\nFase olfativa\n\nAromas de cereza, mora y frambuesa, acompañados de notas minerales de tiza y pizarra, ligeros recuerdos balsámicos y toques especiados de cacao.\n\nFase gustativa\n\nVino fresco, sabroso y con buena untuosidad. Ligero, armónico y fácil de beber, con un final largo y afrutado",
+    "mar": "deal con gratinados, cocina italiana y mediterránea, estofados, carnes asadas, caza y bacalao en cualquiera de sus preparaciones.",
+    "cata": [
+     3,
+     4,
+     5,
+     1,
+     3,
+     4
+    ],
     "img": "img/mencia-j-rebolled.webp",
     "bot": "",
     "copa": "",
