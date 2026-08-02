@@ -1661,13 +1661,21 @@
     "orig": "V.VALDEORRAS MENCIA VAL DO GALIR"
    },
    {
-    "nom": "Mencia AS Chas",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "AS Chas Mencia",
+    "bodega": "Cooperativa Jesús Nazareno",
+    "uva": "100% Mencía",
+    "subzona": "O Barco de Valdeorras",
+    "temp": "14-16 ºC",
+    "desc": "Vendimia manual seleccionada. Fermentación en depósitos de acero inoxidable con control de temperatura.\n\nNota de cata\nFase visual\n\nColor rojo picota.\n\nFase olfativa\n\nAromas a frutas rojas y negras maduras con notas minerales.\n\nFase gustativa\n\nVino fresco, sabroso, delicado, intenso, afrutado y muy fácil de beber.",
+    "mar": "Carnes blancas y rojas, quesos curados, pescado azul, pasta y platos tradicionales.",
+    "cata": [
+     3,
+     3,
+     4,
+     1,
+     3,
+     3
+    ],
     "img": "img/mencia-as-chas.webp",
     "bot": "",
     "copa": "",
