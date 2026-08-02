@@ -3230,13 +3230,21 @@
     "orig": "V.RIOJA POMAL CRIANZA TTO.6/75CL"
    },
    {
-    "nom": "Muga Cr. 18 Tinto",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
+    "nom": "Muga Crianza",
+    "bodega": "Bodegas Muga",
+    "uva": "Tempranillo, Garnacha, Graciano y Mazuelo.",
+    "subzona": "Rioja Alta, a los pies de los Montes Obarenes y Sierra Cantabria.",
     "temp": "",
-    "desc": "",
-    "mar": "",
+    "desc": "Elaboración\n\nVendimia manual y fermentación en tinas de roble con control de temperatura. Crianza de 22 meses en barricas elaboradas en la tonelería propia de Muga (90% roble francés y 10% roble americano), seguida de un mínimo de 9 meses de afinamiento en botella.\n\nNota de cata\nFase visual\n\nColor rojo rubí brillante, de capa media y ribete granate.\n\nFase olfativa\n\nNariz intensa y compleja, con aromas de frutos del bosque (moras y arándanos), fruta roja madura, delicados recuerdos de sotobosque, especias dulces y una crianza perfectamente integrada.\n\nFase gustativa\n\nEn boca es largo, equilibrado y elegante. Presenta tanino firme pero sedoso, buena estructura, acidez perfectamente integrada y un final muy largo y frutal.",
+    "mar": "Chuleta de buey, carnes rojas, embutidos, guisos tradicionales, caza y arroces.",
+    "cata": [
+     4,
+     4,
+     5,
+     1,
+     4,
+     5
+    ],
     "img": "img/muga-cr-18-tinto.webp",
     "bot": "",
     "copa": "",
