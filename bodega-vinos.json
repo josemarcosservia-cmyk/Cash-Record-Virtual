@@ -1551,13 +1551,21 @@
     "orig": "VIN BCO GODELL PACO&LOLA 0,75L D.O VALDEORRAS"
    },
    {
-    "nom": "Godello Valdeo. Blanco Abad Summum",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Viña Abad Summum",
+    "bodega": "Bodegas Viña Abad",
+    "uva": "100% Godello sobre lías",
+    "subzona": "Valdeorras",
+    "temp": "10-12 ºC",
+    "desc": "Fase visual\n Color amarillo pajizo intenso con reflejos verdosos. Limpio, brillante y con buena densidad.\n\nFase olfativa\n Nariz elegante y compleja. Aromas de fruta blanca madura, pera, manzana y melocotón, acompañados de notas cítricas, flores blancas, hierbas aromáticas y una marcada mineralidad. La crianza sobre lías aporta sutiles recuerdos de panadería fina y mayor profundidad aromática.\n\nFase gustativa\n Entrada amplia y envolvente. Boca con gran volumen, fresca y equilibrada. La acidez sostiene perfectamente la estructura, aportando tensión y recorrido. Destaca su carácter mineral y una persistencia larga con recuerdos de fruta madura y cítricos.",
+    "mar": "Ideal con mariscos, bogavante, vieiras, pescados al horno, arroces marineros, cocina japonesa y quesos cremosos.",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     0,
+     5
+    ],
     "img": "img/godello-valdeo-blanco-abad-summum.webp",
     "bot": "",
     "copa": "",
