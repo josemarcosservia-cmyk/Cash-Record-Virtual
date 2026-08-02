@@ -3466,13 +3466,21 @@
     "orig": "V.RIOJA RAMON BILBAO R.12.TTO.6/"
    },
    {
-    "nom": "M. Riscal R. 15 Tinto",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Marques de Riscal Reserva",
+    "bodega": "Herederos del Marqués de Riscal",
+    "uva": "Tempranillo y Graciano",
+    "subzona": "Rioja Alavesa (Elciego y entorno)",
+    "temp": "16-18 ºC",
+    "desc": "Elaboración\n\nElaborado principalmente con uvas de viñas viejas de Tempranillo sobre suelos arcillo-calcáreos de Rioja Alavesa. Fermentación a temperatura controlada con maceración aproximada de 12 días. Posteriormente realiza una crianza de alrededor de 24 meses en barricas de roble americano y un mínimo de 12 meses de afinamiento en botella.\n\nNota de cata\nFase visual\n\nColor cereza intenso, bien cubierto y con muy escasos signos de evolución.\n\nFase olfativa\n\nNariz muy expresiva y compleja, con notas de regaliz, canela, pimienta negra y fruta madura. Aparecen además matices balsámicos y especiados perfectamente integrados con la crianza.\n\nFase gustativa\n\nFresco, envolvente y equilibrado. Presenta taninos pulidos y agradables, buena estructura y una gran facilidad de bebida. El final es largo, elegante y con delicados recuerdos balsámicos.",
+    "mar": "Jamón ibérico, quesos poco curados, legumbres, aves, carnes rojas, carnes a la parrilla, guisos tradicionales y asados.",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     4,
+     5
+    ],
     "img": "img/m-riscal-r-15-tinto.webp",
     "bot": "",
     "copa": "",
