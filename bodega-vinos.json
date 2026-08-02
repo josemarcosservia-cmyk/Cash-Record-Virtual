@@ -1595,13 +1595,21 @@
     "orig": "VINO VALDEORRAS MENCIÑO TTO.6/75"
    },
    {
-    "nom": "Blanco Vinaredo ,75",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Viñaredo",
+    "bodega": "Bodegas Santa Marta",
+    "uva": "100% Godello",
+    "subzona": "Córgomo, Vilamartín de Valdeorras (Ourense)",
+    "temp": "10-12 ºC",
+    "desc": "Elaboración\n\nProcede de viñedos propios y de viticultores de la zona de Valdeorras. Las cepas tienen una edad media de 25 años y se sitúan entre 400 y 600 metros de altitud. Vendimia manual, maceración pelicular en frío durante 10 horas y fermentación controlada a 15 ºC.\n\nNota de cata\nFase visual\n\nColor amarillo pajizo con tonalidades verdosas.\n\nFase olfativa\n\nAroma limpio y afrutado, destacando la manzana sobre notas de pomelo, piña y flor de tilo.\n\nFase gustativa\n\nEquilibrado, fresco y untuoso, con notable sabrosidad y persistencia.",
+    "mar": "encaja muy bien con mariscos, pescados blancos, pulpo a la gallega y quesos suaves.",
+    "cata": [
+     3,
+     4,
+     4,
+     1,
+     0,
+     4
+    ],
     "img": "img/blanco-vinaredo-75.webp",
     "bot": "",
     "copa": "",
