@@ -1485,13 +1485,21 @@
     "orig": "VINO GODELLO VALDEORRAS AS CHAS"
    },
    {
-    "nom": "Godello Verdes Cast",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Verdes Castros ",
+    "bodega": "Adega Pazo do Mar",
+    "uva": "100% Godello",
+    "subzona": "Valdeorras",
+    "temp": "8-10 ºC",
+    "desc": "Fase visual\n Color amarillo pajizo brillante con reflejos verdosos. Limpio, cristalino y de intensidad media.\n\nFase olfativa\n Nariz fresca y aromática, con predominio de frutas blancas como pera y manzana, acompañadas de notas cítricas, flores blancas y un sutil fondo mineral que aporta elegancia y tipicidad.\n\nFase gustativa\n Entrada fresca y equilibrada. Boca con buena amplitud, marcada por una acidez viva y una agradable expresión frutal. Resulta armonioso, con textura suave y un final limpio y persistente con recuerdos cítricos y minerales.",
+    "mar": "deal con mariscos, pescados blancos, pulpo a la gallega, arroces, ensaladas, sushi y quesos suaves.",
+    "cata": [
+     3,
+     4,
+     4,
+     1,
+     0,
+     3
+    ],
     "img": "img/godello-verdes-cast.webp",
     "bot": "",
     "copa": "",
