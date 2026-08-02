@@ -1878,13 +1878,21 @@
     "orig": "VINO RIBEIRO SOÑAL BCO 6/75CL"
    },
    {
-    "nom": "Reboreda Blanco",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Viña Reboreda",
+    "bodega": "Grupo Reboreda Morgadío (Bodegas Reboreda)",
+    "uva": "Palomino y Torrontés.",
+    "subzona": "Val do Miño (zona de Puga, Toén, Ourense)",
+    "temp": "8-10 ºC (",
+    "desc": "Elaboración\n\nLa bodega indica una elaboración tradicional en depósitos de acero inoxidable con fermentación controlada para preservar la frescura y el carácter varietal.\n\nNota de cata\nFase visual\n\nAmarillo melón, limpio y brillante.\n\nFase olfativa\n\nNotas herbáceas de manantial, fresco y cítrico, con recuerdos de compota.\n\nFase gustativa\n\nPaso dulce y cítrico que recuerda a la mandarina y al pomelo. Redondo, con final de fruta blanca como melón y manzana.",
+    "mar": "mariscos, pescados y aperitivos ligeros.",
+    "cata": [
+     2,
+     3,
+     4,
+     2,
+     0,
+     3
+    ],
     "img": "img/reboreda-blanco.webp",
     "bot": "",
     "copa": "",
