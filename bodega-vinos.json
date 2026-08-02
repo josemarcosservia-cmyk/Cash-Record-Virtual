@@ -3054,13 +3054,21 @@
     "orig": "VINO D.O.RIOJA PIEROLA CRZA 12/7"
    },
    {
-    "nom": "R. Bilbao Cri. Ed. Limit",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Ramon Bilbao edicion Limitada",
+    "bodega": "Bodegas Ramón Bilbao",
+    "uva": "100% Tempranillo",
+    "subzona": "Rioja Alta",
+    "temp": "16-18 ºC",
+    "desc": "Elaboración\n\nSelección manual de los mejores racimos. Fermentación artesanal en tinos de madera con levaduras autóctonas y temperatura controlada. Posteriormente realiza una crianza de 15 meses en barricas de roble francés y americano, seguida de 10 meses de afinamiento en botella.\n\nNota de cata\nFase visual\n\nColor rojo rubí intenso con reflejos granates. Limpio, brillante y con buena lágrima.\n\nFase olfativa\n\nPredominan los aromas de fruta negra madura como grosella, mora y ciruela, acompañados de regaliz, notas herbales y especiadas. La crianza aporta recuerdos de cacao, pimienta negra, clavo y madera noble.\n\nFase gustativa\n\nLargo, intenso y equilibrado. Tanino fino y redondo, con buena estructura y una retronasal compleja donde reaparecen las notas frutales y especiadas. Presenta un perfil elegante y con potencial de evolución.",
+    "mar": "Ternera, carnes rojas, ahumados, quesos blandos, risottos, cocina mexicana y cocina asiática especiada.",
+    "cata": [
+     4,
+     4,
+     5,
+     1,
+     4,
+     5
+    ],
     "img": "img/r-bilbao-cri-ed-limit.webp",
     "bot": "",
     "copa": "",
