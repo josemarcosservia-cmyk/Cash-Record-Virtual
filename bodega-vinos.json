@@ -3468,13 +3468,21 @@
     "orig": "V.RIOJA M.CACERES RESERVA TTO.6/"
    },
    {
-    "nom": "Ramon Bilbao R. 12. Tinto",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Ramon Bilbao Reserva",
+    "bodega": "Bodegas Ramón Bilbao",
+    "uva": "90% Tempranillo, 5% Graciano y 5% Mazuelo",
+    "subzona": "Rioja Alta",
+    "temp": "16-18 ºC",
+    "desc": "Elaboración\n\nProcedente de viñedos viejos de más de 40 años. Realiza maceraciones prefermentativas y fermentación en depósitos de acero inoxidable. Posteriormente envejece 20 meses en barricas de roble americano y completa su afinamiento con una larga estancia en botella.\n\nNota de cata\nFase visual\n\nColor rojo granate de intensidad media-alta, limpio, brillante y con buena lágrima.\n\nFase olfativa\n\nIntensa nariz con notas de fruta negra y fruta roja madura, acompañadas de regaliz, especias dulces, vainilla, bollería, cacao, toques mentolados y aromas de monte bajo.\n\nFase gustativa\n\nFresco, intenso y equilibrado. Presenta buena acidez, tanino maduro e integrado y una boca armoniosa donde reaparecen las notas de fruta roja y especias dulces. Final largo y elegante.",
+    "mar": "Carnes rojas, caza, quesos curados, embutidos, platos tradicionales riojanos y cocina especiada.",
+    "cata": [
+     4,
+     4,
+     4,
+     1,
+     4,
+     5
+    ],
     "img": "img/ramon-bilbao-r-12-tinto.webp",
     "bot": "",
     "copa": "",
