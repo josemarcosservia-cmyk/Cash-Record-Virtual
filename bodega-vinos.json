@@ -3274,13 +3274,21 @@
     "orig": "V.RIOJA DIN.VIVANCO CR.TTO.6/75C"
    },
    {
-    "nom": "Tinto Crianza Sierra Cantabria",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Sierra Cantabria Crianza",
+    "bodega": "Viñedos Sierra Cantabria",
+    "uva": "100% Tempranillo.",
+    "subzona": "Rioja Alavesa (San Vicente de la Sonsierra)",
+    "temp": "16-18 ºC.",
+    "desc": "Elaboración: Elaboración tradicional con despalillado completo y crianza de 14 meses en barricas de roble francés y americano.\n\nVista: Color rubí brillante, de intensidad media-alta, limpio y luminoso.\n\nNariz: Aromas de cereza negra, zarzamora y grosella, acompañados por notas especiadas y florales. La crianza aporta recuerdos de vainilla, cacao, tostados y ligeros matices lácteos.\n\nBoca: Equilibrado, amable, fresco y sabroso. Presenta taninos maduros y finos, buena integración de la madera y un perfil donde la fruta sigue siendo protagonista",
+    "mar": "Carnes rojas y blancas, asados, estofados, caza, quesos curados, legumbres y cocina tradicional.",
+    "cata": [
+     4,
+     3,
+     4,
+     2,
+     3,
+     4
+    ],
     "img": "img/tinto-crianza-sierra-cantabria.webp",
     "bot": "",
     "copa": "",
