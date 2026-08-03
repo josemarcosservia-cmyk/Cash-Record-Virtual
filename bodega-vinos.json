@@ -3252,13 +3252,21 @@
     "orig": "VINO RIOJA MUGA CR.18 TTO.6/75CL"
    },
    {
-    "nom": "Din. Vivanco Crianza Tinto",
-    "bodega": "",
-    "uva": "",
-    "subzona": "",
-    "temp": "",
-    "desc": "",
-    "mar": "",
+    "nom": "Dinastia Vivanco Crianza ",
+    "bodega": "Bodegas Vivanco",
+    "uva": "Tempranillo (mayoritaria), Graciano y Maturana Tinta.",
+    "subzona": "Rioja Alta (Briones)",
+    "temp": "16 °C.",
+    "desc": "Elaboración: Vendimia manual de viñedos situados principalmente en Briones. Fermentación en depósitos de acero inoxidable y crianza de 16 meses en barricas de roble francés y americano, seguida de un período de afinamiento en botella.\n\nNota de cata:\n\nVista: Color rojo cereza brillante con reflejos violáceos.\nNariz: Aromas intensos de fruta roja madura, cereza y frambuesa, acompañados de notas especiadas, regaliz, tostados y sutiles recuerdos ahumados procedentes de la crianza.\nBoca: Fresco, equilibrado y goloso, con taninos suaves bien integrados. Presenta buena persistencia y un final elegante que combina fruta y madera.",
+    "mar": "Carnes rojas y blancas, embutidos, caza, legumbres, arroces, pastas y cocina mediterránea",
+    "cata": [
+     3,
+     3,
+     4,
+     3,
+     2,
+     4
+    ],
     "img": "img/din-vivanco-crianza-tinto.webp",
     "bot": "",
     "copa": "",
