@@ -896,6 +896,14 @@
               }
         }, 500);
     });
+
+    // Auto-inicializar token de GitHub al cargar la página
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(() => {
+              // Reemplaza 'tu_token_aqui' con tu token real de GitHub
+              setGitHubToken('tu_token_aqui');
+        }, 1000);
+    });
   </script>
 </body>
 </html>
