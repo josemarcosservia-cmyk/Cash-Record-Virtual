@@ -3,327 +3,233 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Carnicería · Cash Record</title>
+<title>Carnicería · Registro de caja</title>
 <style>
-  * { box-sizing: border-box; }
-  html, body { height: 100%; }
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #1c231d;
-    color: #ffffff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    min-height: 100dvh;
-  }
-  header {
-    padding: 18px 20px 12px;
-    border-bottom: 2px solid #ff5a1f;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 1.75em;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-    color: #ff5a1f;
-  }
-  #ruta {
-    margin: 7px 0 0;
-    color: #b9c2ba;
-    font-size: .86em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
-  main {
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 18px;
-  }
-  .contenido {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 24px;
+*{box-sizing:border-box;}
+html, body{height: 100%;}
+body{
+margin: 0;
+font-family: 'Segoe UI',Arial,sans-serif;
+background: #1c231d;
+color: #ffffff;
+text-align:center;
+display:flex;
+flex-direction:column;
+min-height: 100vh;
+min-height: 100dvh;
+}
+header{
+padding: 18px 20px 12px;
+border-bottom: 2px solid#ff5a1f;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+header h1{
+margin: 0;
+font-size: 1.75em;
+letter-spacing: 0.06em;
+text-transform:uppercase;
+color: #ff5a1f;
+}
+header a{
+color: #ffffff;
+font-size: 0.85em;
+text-decoration:none;
+padding: 8px 14px;
+border: 1px solid #ff5a1f;
+border-radius: 4px;
+transition:all 0.3s;
+}
+header a:hover{
+background: #ff5a1f;
+color: #1c231d;
+}
+main{
+flex: 1 1auto;
+display:flex;
+align-items:center;
+justify-content:center;
+padding: 20px 18px;
+}
+.contenido{
+display:flex;
+align-items: flex-start;
+justify-content:center;
+gap: 24px;
+width: 100%;
+max-width: 1180px;
+flex-wrap: wrap;
+}
+.columna{
+flex: 1 1auto;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap: 16px;
+min-width: 0;
+}
+.ficha{
+display:flex;
+flex-direction:column;
+gap: 12px;
+width: 100%;
+max-width: 340px;
+padding: 16px;
+background: rgba(255,90,31,0.08);
+border: 1px solid #ff5a1f;
+border-radius: 12px;
+}
+.ficha h2{
+font-size: 1.25em;
+margin: 0;
+text-transform:uppercase;
+letter-spacing: 0.04em;
+color: #ff5a1f;
+}
+.ficha .cuerpo {
+font-size: 0.9em;
+line-height: 1.6;
+margin: 12px 0;
+}
+.ficha ul{
+list-style:none;
+padding: 0;
+margin: 8px 0;
+}
+.ficha li{
+padding: 4px 0 4px 16px;
+}
+.ficha li::before{
+content:"▪";
+margin-right: 8px;
+color: #ff5a1f;
+}
+.ficha img{
+width: 100%;
+height: auto;
+border-radius: 8px;
+margin: 12px 0;
+}
+.cargador {
+text-align: center;
+padding: 40px;
+color: #b9c2ba;
+}
+.detalles{
+font-size: 0.85em;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 8px;
+}
+.detalle{
+border-top: 1px solid rgba(255,90,31,0.2);
+padding: 8px 0;
+}
+.detalle-label{
+font-weight: bold;
+color: #ff5a1f;
+}
+@media (max-width: 820px) {
+  .contenido{
+    align-items:center;
     width: 100%;
-    max-width: 1180px;
   }
-  .columna {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    min-width: 0;
-  }
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
+  .columna{
     width: 100%;
-    max-width: 720px;
   }
-  .card {
-    font: inherit;
-    color: #ffffff;
-    background: #2a332b;
-    border: 2px solid #ff5a1f;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0,0,0,.45);
-    padding: 18px 14px;
-    width: 200px;
-    min-height: 76px;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: .03em;
-    font-size: 1em;
-    transition: transform .18s, background .18s, color .18s;
-  }
-  .card:hover { transform: translateY(-4px); background: #ff5a1f; color: #1c231d; }
-  .card.sel { background: #ff5a1f; color: #1c231d; }
-  .aviso { margin: 0; color: #cfd6d0; max-width: 560px; line-height: 1.5; }
-  .ficha {
-    display: none;
-    flex: 0 0 300px;
-    width: 300px;
-    text-align: left;
-    background: #2a332b;
-    border: 2px solid #ff5a1f;
-    border-radius: 14px;
-    box-shadow: 0 6px 22px rgba(0,0,0,.5);
-    padding: 16px 16px 18px;
-    max-height: 62vh;
-    overflow-y: auto;
-  }
-  .ficha img {
-    display: block;
-    width: 100%;
-    max-width: 240px;
-    margin: 0 auto 12px;
-    border-radius: 10px;
-    background: #ffffff;
-  }
-  .ficha h2 {
-    margin: 0 0 8px;
-    font-size: 1.05em;
-    color: #ff5a1f;
-    text-transform: uppercase;
-    letter-spacing: .04em;
-  }
-  .ficha h3 {
-    margin: 14px 0 5px;
-    font-size: .8em;
-    color: #ff5a1f;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-  }
-  .ficha p { margin: 0 0 8px; color: #cfd6d0; font-size: .88em; line-height: 1.5; }
-  .ficha ul { margin: 0; padding-left: 18px; color: #cfd6d0; font-size: .88em; line-height: 1.5; }
-  .ficha li { margin-bottom: 4px; }
-  .acciones {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    padding: 0 18px 18px;
-  }
-  .btn {
-    display: inline-block;
-    padding: 10px 22px;
-    border: 2px solid #ff5a1f;
-    border-radius: 10px;
-    color: #ffffff;
-    background: transparent;
-    font: inherit;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background .2s, color .2s;
-  }
-  .btn:hover { background: #ff5a1f; color: #1c231d; }
-  footer { padding: 11px 20px; background: #14180f; color: #999999; font-size: .86em; }
-
-  @media (max-width: 780px) {
-    main { align-items: flex-start; }
-    .contenido { flex-direction: column; align-items: center; }
-    .ficha { flex: 0 0 auto; width: 100%; max-width: 560px; max-height: none; }
-  }
-  @media (max-width: 700px) {
-    .card { width: calc(50% - 8px); padding: 16px 10px; font-size: .92em; }
-    header h1 { font-size: 1.4em; }
-  }
+}
 </style>
 </head>
 <body>
-  <header>
-    <h1>Carnicería</h1>
-    <p id="ruta">Cash Record Virtual</p>
-  </header>
+<header>
+<h1>🥩 Carnicería</h1>
+<a href="editor-carniceria.html">✏️ Editar Productos</a>
+</header>
 
-  <main>
-    <div class="contenido">
-      <div class="columna">
-        <div id="grid" class="grid"></div>
-        <p id="aviso" class="aviso"></p>
-      </div>
-      <aside id="ficha" class="ficha"></aside>
-    </div>
-  </main>
-
-  <nav class="acciones">
-    <button type="button" class="btn" id="atras">Atrás</button>
-    <a class="btn" href="index.html">Inicio</a>
-  </nav>
-
-  <footer>
-    &copy; 2026 Cash Record Virtual &mdash; Para ti, profesional
-  </footer>
+<main>
+<div class="contenido" id="contenido">
+<div class="cargador">📦 Cargando productos...</div>
+</div>
+</main>
 
 <script>
-var DATOS = [
-  { nombre: "Vacuno", sub: [
-      { nombre: "Ternera", items: ["Ternera Gallega Suprema", "Ternera Gallega", "Ternera Nacional", "Ternera Importación"] },
-      { nombre: "Vaca", items: ["Vaca Gallega", "Vaca Nacional", "Vaca Importación"] }
-  ] },
-  { nombre: "Aves", sub: [
-      { nombre: "Pollo", items: [] },
-      { nombre: "Pavo", items: [] }
-  ] },
-  { nombre: "Cerdo", sub: [
-      { nombre: "Cerdo Blanco", items: [] },
-      { nombre: "Cerdo Ibérico", items: [] },
-      { nombre: "Cerdo Duroc", items: [] }
-  ] },
-  { nombre: "Elaborados", sub: [
-      { nombre: "Hamburguesas", items: [] },
-      { nombre: "Carne Picada", items: [] },
-      { nombre: "Albóndigas", items: [] },
-      { nombre: "Raxo", items: [] },
-      { nombre: "Chorizos", items: [] }
-  ] },
-  { nombre: "Salado", sub: [] },
-  { nombre: "Curado", sub: [] }
-];
-
-var FICHAS = {
-  "Ternera Gallega Suprema": {
-    imagen: "img/ternera-gallega-suprema.png",
-    intro: "Carne certificada por la IGP Ternera Gallega procedente de animales menores de 10 meses criados en explotaciones tradicionales con vacas madres. La lactancia materna mínima de 7 meses le aporta una terneza extrema, mucha jugosidad y un sabor muy suave.",
-    bloques: [
-      { titulo: "Origen y crianza", lineas: [
-        "Edad de sacrificio: menores de 10 meses.",
-        "Lactancia: leche materna durante al menos 7 meses.",
-        "Alimentación complementaria: forrajes, cereales, patatas, nabos y concentrados vegetales autorizados.",
-        "Modelo de granja: explotaciones familiares tradicionales de Galicia con vacas nodrizas."
-      ] },
-      { titulo: "Aspecto y propiedades", lineas: [
-        "Color: de rosa claro a rojo suave.",
-        "Textura y grano: músculo de grano fino, aspecto magro y consistencia muy firme.",
-        "Grasa: entre blanca nacarada y amarillo suave, de textura cremosa."
-      ] },
-      { titulo: "Identificación y etiquetado", lineas: [
-        "Contraetiqueta rosa con la palabra SUPREMA y los logos de la IGP y de la Unión Europea.",
-        "Puede incluir menciones si procede de raza Rubia Gallega o de ganadería con certificación ecológica (etiqueta verde)."
-      ] }
-    ]
+async function cargarProductos() {
+  try {
+    let datosJson = localStorage.getItem('carniceria_data');
+    
+    if (!datosJson) {
+      const respuesta = await fetch('https://api.github.com/repos/josemarcosservia-cmyk/Cash-Record-Virtual/contents/carniceria-productos.json');
+      const datos = await respuesta.json();
+      datosJson = atob(datos.content);
+      localStorage.setItem('carniceria_data', datosJson);
+    }
+    
+    const productos = JSON.parse(datosJson);
+    renderizarProductos(productos);
+  } catch (error) {
+    console.error('Error:', error);
+    document.getElementById('contenido').innerHTML = '<div class="cargador">❌ Error al cargar productos</div>';
   }
-};
-
-var ruta = [];
-var sel = null;
-
-function itemsActuales() {
-  if (ruta.length !== 2) { return []; }
-  var sub = (DATOS[ruta[0]].sub || [])[ruta[1]];
-  return (sub && sub.items) || [];
 }
 
-function opciones() {
-  if (ruta.length === 0) {
-    return DATOS.map(function (c) { return c.nombre; });
-  }
-  if (ruta.length === 1) {
-    return (DATOS[ruta[0]].sub || []).map(function (s) { return s.nombre; });
-  }
-  return itemsActuales().slice();
-}
-
-function textoRuta() {
-  var partes = ["Carnicería"];
-  if (ruta.length > 0) { partes.push(DATOS[ruta[0]].nombre); }
-  if (ruta.length > 1) { partes.push(DATOS[ruta[0]].sub[ruta[1]].nombre); }
-  if (ruta.length === 2 && sel !== null) { partes.push(itemsActuales()[sel]); }
-  return partes.join(" › ");
-}
-
-function pintarFicha() {
-  var aside = document.getElementById("ficha");
-  if (ruta.length !== 2 || sel === null) {
-    aside.style.display = "none";
-    aside.innerHTML = "";
+function renderizarProductos(productos) {
+  if (!Array.isArray(productos) || productos.length === 0) {
+    document.getElementById('contenido').innerHTML = '<div class="cargador">No hay productos disponibles</div>';
     return;
   }
-  var nombre = itemsActuales()[sel];
-  var f = FICHAS[nombre];
-  var html = "";
-  if (f && f.imagen) {
-    html += '<img src="' + f.imagen + '" alt="Etiqueta de ' + nombre + '">';
-  }
-  html += "<h2>" + nombre + "</h2>";
-  if (f) {
-    if (f.intro) { html += "<p>" + f.intro + "</p>"; }
-    (f.bloques || []).forEach(function (b) {
-      html += "<h3>" + b.titulo + "</h3><ul>";
-      b.lineas.forEach(function (l) { html += "<li>" + l + "</li>"; });
-      html += "</ul>";
-    });
-  } else {
-    html += "<p>Ficha en preparación. La iremos completando.</p>";
-  }
-  aside.innerHTML = html;
-  aside.style.display = "block";
+  
+  let html = '';
+  
+  productos.forEach(producto => {
+    html += `
+      <div class="ficha">
+        <h2>${escaparHtml(producto.nombre)}</h2>
+        <div class="cuerpo">${escaparHtml(producto.descripción || '')}</div>
+        
+        <div class="detalles">
+          <div class="detalle"><span class="detalle-label">Código:</span><br>${escaparHtml(producto.código)}</div>
+          <div class="detalle"><span class="detalle-label">Categoría:</span><br>${escaparHtml(producto.categoría)}</div>
+          <div class="detalle"><span class="detalle-label">Origen:</span><br>${escaparHtml(producto.origen)}</div>
+          <div class="detalle"><span class="detalle-label">Formato:</span><br>${escaparHtml(producto.formato)}</div>
+        </div>
+        
+        ${producto.imagen ? `<img src="${escaparHtml(producto.imagen)}" alt="${escaparHtml(producto.nombre)}" style="max-width:100%; height:auto;">` : ''}
+        
+        ${producto.trazabilidad ? `<div style="font-size:0.8em; color:#b9c2ba; margin-top:8px;"><em>Trazabilidad: ${escaparHtml(producto.trazabilidad)}</em></div>` : ''}
+      </div>
+    `;
+  });
+  
+  document.getElementById('contenido').innerHTML = html;
 }
 
-function pintar() {
-  var grid = document.getElementById("grid");
-  var aviso = document.getElementById("aviso");
-  var atras = document.getElementById("atras");
-  grid.innerHTML = "";
-  document.getElementById("ruta").textContent = textoRuta();
-  atras.style.visibility = (ruta.length > 0 || sel !== null) ? "visible" : "hidden";
-  var lista = opciones();
-  if (lista.length === 0) {
-    aviso.textContent = "Esta sección todavía no tiene contenido. La iremos completando.";
-  } else {
-    aviso.textContent = "";
-    lista.forEach(function (nombre, i) {
-      var b = document.createElement("button");
-      b.type = "button";
-      b.className = "card" + (ruta.length === 2 && sel === i ? " sel" : "");
-      b.textContent = nombre;
-      b.addEventListener("click", function () {
-        if (ruta.length < 2) {
-          ruta.push(i);
-          sel = null;
-        } else {
-          sel = (sel === i) ? null : i;
-        }
-        pintar();
-      });
-      grid.appendChild(b);
-    });
-  }
-  pintarFicha();
+function escaparHtml(texto) {
+  const mapa = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;'
+  };
+  return String(texto || '').replace(/[&<>"']/g, m => mapa[m]);
 }
 
-document.getElementById("atras").addEventListener("click", function () {
-  if (sel !== null) { sel = null; } else { ruta.pop(); }
-  pintar();
+window.addEventListener('storage', function(evento) {
+  if (evento.key === 'carniceria_data') {
+    cargarProductos();
+  }
 });
 
-pintar();
+cargarProductos();
+
+setInterval(() => {
+  const datosGuardados = localStorage.getItem('carniceria_data');
+  if (datosGuardados) {
+    cargarProductos();
+  }
+}, 5000);
 </script>
+
 </body>
 </html>
