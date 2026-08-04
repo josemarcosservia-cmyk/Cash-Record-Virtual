@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editor Carnicería | Cash Record Virtual</title>
+  <style>
+    :root {
+      --cash-orange: #f26a21;
+      --cash-orange-dark: #c64d10;
+      --dark: #1f1f1f;
+      --soft-dark: #343434;
+      --light: #fff7f0;
+      --white: #ffffff;
+      --gray: #eeeeee;
+      --border: #dddddd;
+      --danger: #c62828;
+      --success: #1b7f3a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--cash-orange), var(--cash-orange-dark));
+      color: var(--white);
+      padding: 22px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.7rem;
+      letter-spacing: 0.2px;
+    }
+
+    header p {
+      margin: 6px 0 0;
+      opacity: 0.92;
+      font-size: 0.95rem;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .container {
+      width: min(1400px, calc(100% - 28px));
+      margin: 20px auto 40px;
+      display: grid;
+      grid-template-columns: 390px 1fr;
+      gap: 20px;
+    }
+
+    .panel {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .panel h2 {
+      margin: 0 0 14px;
+      color: var(--cash-orange-dark);
+      font-size: 1.25rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin: 12px 0 5px;
+      font-size: 0.9rem;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 11px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      background: #fff;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--cash-orange);
+      box-shadow: 0 0 0 3px rgba(242, 106, 33, 0.12);
+    }
+
+    textarea {
+      min-height: 92px;
+      resize: vertical;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .checkbox-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 13px 0;
+      font-weight: 700;
+    }
+
+    .checkbox-line input {
+      width: auto;
+    }
+
+    button, .file-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 15px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: transform 0.12s ease, opacity 0.12s ease, background 0.12s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    button:hover, .file-btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
+
+    .btn-primary {
+      background: var(--cash-orange);
+      color: var(--white);
+    }
+
+    .btn-dark {
+      background: var(--dark);
+      color: var(--white);
+    }
+
+    .btn-light {
+      background: var(--white);
+      color: var(--cash-orange-dark);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--cash-orange-dark);
+      border: 1px solid var(--cash-orange);
+    }
+
+    .btn-danger {
+      background: var(--danger);
+      color: var(--white);
+    }
+
+    .btn-success {
+      background: var(--success);
+      color: var(--white);
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .hidden-file {
+      display: none;
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .summary {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .pill {
+      background: #fff2e9;
+      color: var(--cash-orange-dark);
+      border: 1px solid #ffd3bb;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .table-wrap {
+      overflow: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      max-height: 660px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+      background: var(--white);
+    }
+
+    th, td {
+      padding: 11px 10px;
+      border-bottom: 1px solid var(--gray);
+      text-align: left;
+      vertical-align: top;
+      font-size: 0.9rem;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      background: var(--soft-dark);
+      color: var(--white);
+      z-index: 1;
+    }
+
+    tr:hover td {
+      background: #fffaf6;
+    }
+
+    .product-name {
+      font-weight: 800;
+      color: var(--dark);
+    }
+
+    .small {
+      font-size: 0.78rem;
+      color: #666;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f5f5f5;
+      border-radius: 999px;
+      padding: 4px 7px;
+      font-size: 0.78rem;
+      margin-top: 3px;
+    }
+
+    .table-actions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .table-actions button {
+      padding: 7px 10px;
+      font-size: 0.78rem;
+    }
+
+    .json-output {
+      width: 100%;
+      min-height: 240px;
+      margin-top: 14px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.82rem;
+      background: #151515;
+      color: #f7f7f7;
+      border: 0;
+      display: none;
+    }
+
+    .status {
+      margin-top: 12px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .status.ok {
+      color: var(--success);
+    }
+
+    .status.warn {
+      color: var(--cash-orange-dark);
+    }
+
+    .status.error {
+      color: var(--danger);
+    }
+
+    @media (max-width: 980px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .filters {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Editor de Carnicería</h1>
+      <p>Gestiona los productos de carnicería y exporta el archivo <strong>carniceria-productos.json</strong>.</p>
+    </div>
+    <div class="top-actions">
+      <button class="btn-light" onclick="cargarJsonBase()">Cargar JSON del repositorio</button>
+      <label class="file-btn btn-light" for="importFile">Importar JSON</label>
+      <input id="importFile" class="hidden-file" type="file" accept="application/json,.json" />
+      <button class="btn-dark" onclick="descargarJson()">Descargar JSON</button>
+      <button class="btn-success" onclick="copiarJson()">Copiar JSON</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2 id="formTitle">Nuevo producto</h2>
+      <form id="productForm">
+        <input type="hidden" id="editIndex" value="" />
+
+        <div class="row">
+          <div>
+            <label for="id">ID</label>
+            <input id="id" type="number" min="1" placeholder="Auto" />
+          </div>
+          <div>
+            <label for="codigo">Código</label>
+            <input id="codigo" type="text" placeholder="VAC001" />
+          </div>
+        </div>
+
+        <label for="nombre">Nombre del producto</label>
+        <input id="nombre" type="text" placeholder="Brazuelo de Ternera Gallega" required />
+
+        <div class="row">
+          <div>
+            <label for="categoria">Categoría</label>
+            <select id="categoria">
+              <option value="Vacuno">Vacuno</option>
+              <option value="Ternera Gallega">Ternera Gallega</option>
+              <option value="Prados">Prados</option>
+              <option value="Cerdo">Cerdo</option>
+              <option value="Ibérico">Ibérico</option>
+              <option value="Pollo">Pollo</option>
+              <option value="Pavo">Pavo</option>
+              <option value="Cordero">Cordero</option>
+              <option value="Elaborados">Elaborados</option>
+              <option value="Hamburguesas">Hamburguesas</option>
+              <option value="Brochetas">Brochetas</option>
+              <option value="Congelados">Congelados</option>
+            </select>
+          </div>
+          <div>
+            <label for="subcategoria">Subcategoría</label>
+            <input id="subcategoria" type="text" placeholder="Ternera Gallega, Brochetas..." />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="origen">Origen</label>
+            <input id="origen" type="text" placeholder="Galicia, España..." />
+          </div>
+          <div>
+            <label for="trazabilidad">Trazabilidad</label>
+            <input id="trazabilidad" type="text" placeholder="IGP, Origen Nacional..." />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="formato">Formato</label>
+            <input id="formato" type="text" placeholder="Kg, Unidad, Caja..." />
+          </div>
+          <div>
+            <label for="peso_aprox">Peso aproximado</label>
+            <input id="peso_aprox" type="text" placeholder="Variable, 180 g, 2 kg..." />
+          </div>
+        </div>
+
+        <label for="imagen">Imagen</label>
+        <input id="imagen" type="text" placeholder="img/brazuelo-ternera-gallega.webp" />
+
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" placeholder="Descripción comercial del corte, usos recomendados, preparación..."></textarea>
+
+        <label class="checkbox-line">
+          <input id="destacado" type="checkbox" /> Producto destacado
+        </label>
+
+        <div class="form-actions">
+          <button class="btn-primary" type="submit">Guardar producto</button>
+          <button class="btn-outline" type="button" onclick="limpiarFormulario()">Nuevo</button>
+          <button class="btn-danger" type="button" onclick="vaciarListado()">Vaciar listado</button>
+        </div>
+
+        <div id="status" class="status warn">Listo para editar productos.</div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Listado de productos</h2>
+
+      <div class="filters">
+        <input id="search" type="search" placeholder="Buscar por nombre, código, origen..." />
+        <select id="filterCategory">
+          <option value="">Todas las categorías</option>
+        </select>
+        <select id="filterDestacado">
+          <option value="">Todos</option>
+          <option value="true">Destacados</option>
+          <option value="false">No destacados</option>
+        </select>
+      </div>
+
+      <div class="summary">
+        <span class="pill" id="totalProducts">0 productos</span>
+        <span class="pill" id="totalFeatured">0 destacados</span>
+        <span class="pill" id="totalCategories">0 categorías</span>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Código</th>
+              <th>Producto</th>
+              <th>Categoría</th>
+              <th>Origen / Trazabilidad</th>
+              <th>Formato</th>
+              <th>Imagen</th>
+              <th>Dest.</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="productTable"></tbody>
+        </table>
+      </div>
+
+      <textarea id="jsonOutput" class="json-output" readonly></textarea>
+    </section>
+  </main>
+
+  <script>
+    const STORAGE_KEY = 'cash_record_carniceria_productos';
+    let productos = [];
+
+    const demoProductos = [
+      {
+        id: 1,
+        codigo: 'VAC001',
+        nombre: 'Brazuelo de Ternera Gallega',
+        categoria: 'Vacuno',
+        subcategoria: 'Ternera Gallega',
+        origen: 'Galicia',
+        trazabilidad: 'IGP Ternera Gallega',
+        formato: 'Kg',
+        peso_aprox: 'Variable',
+        descripcion: 'Pieza ideal para guisos, estofados y cocidos.',
+        imagen: 'img/brazuelo-ternera-gallega.webp',
+        destacado: true
+      },
+      {
+        id: 2,
+        codigo: 'VAC002',
+        nombre: 'Aguja de Ternera Gallega',
+        categoria: 'Vacuno',
+        subcategoria: 'Ternera Gallega',
+        origen: 'Galicia',
+        trazabilidad: 'IGP Ternera Gallega',
+        formato: 'Kg',
+        peso_aprox: 'Variable',
+        descripcion: 'Carne melosa recomendada para asados, guisos y elaboraciones de cocina tradicional.',
+        imagen: 'img/aguja-ternera-gallega.webp',
+        destacado: false
+      },
+      {
+        id: 3,
+        codigo: 'POL001',
+        nombre: 'Brocheta de Pollo',
+        categoria: 'Elaborados',
+        subcategoria: 'Brochetas',
+        origen: 'España',
+        trazabilidad: 'Origen Nacional',
+        formato: 'Unidad',
+        peso_aprox: '180 g',
+        descripcion: 'Brocheta de pollo preparada para plancha, parrilla o servicio en menú.',
+        imagen: 'img/brocheta-pollo.webp',
+        destacado: true
+      }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const guardado = localStorage.getItem(STORAGE_KEY);
+      productos = guardado ? JSON.parse(guardado) : [...demoProductos];
+      renderizar();
+      actualizarJsonOutput();
+    });
+
+    document.getElementById('productForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      guardarProducto();
+    });
+
+    document.getElementById('importFile').addEventListener('change', importarJson);
+    document.getElementById('search').addEventListener('input', renderizarTabla);
+    document.getElementById('filterCategory').addEventListener('change', renderizarTabla);
+    document.getElementById('filterDestacado').addEventListener('change', renderizarTabla);
+
+    async function cargarJsonBase() {
+      try {
+        const respuesta = await fetch('carniceria-productos.json', { cache: 'no-store' });
+        if (!respuesta.ok) throw new Error('No se pudo cargar carniceria-productos.json');
+        const datos = await respuesta.json();
+        productos = normalizarProductos(datos);
+        persistir();
+        renderizar();
+        setStatus('JSON cargado correctamente desde el repositorio.', 'ok');
+      } catch (error) {
+        setStatus('No se pudo cargar el JSON del repositorio. Si estás en local, usa Importar JSON.', 'error');
+      }
+    }
+
+    function guardarProducto() {
+      const editIndex = document.getElementById('editIndex').value;
+      const producto = {
+        id: Number(document.getElementById('id').value) || siguienteId(),
+        codigo: valor('codigo'),
+        nombre: valor('nombre'),
+        categoria: valor('categoria'),
+        subcategoria: valor('subcategoria'),
+        origen: valor('origen'),
+        trazabilidad: valor('trazabilidad'),
+        formato: valor('formato'),
+        peso_aprox: valor('peso_aprox'),
+        descripcion: valor('descripcion'),
+        imagen: valor('imagen'),
+        destacado: document.getElementById('destacado').checked
+      };
+
+      if (!producto.nombre) {
+        setStatus('El nombre del producto es obligatorio.', 'error');
+        return;
+      }
+
+      if (editIndex === '') {
+        productos.push(producto);
+        setStatus('Producto añadido correctamente.', 'ok');
+      } else {
+        productos[Number(editIndex)] = producto;
+        setStatus('Producto actualizado correctamente.', 'ok');
+      }
+
+      productos.sort((a, b) => Number(a.id || 0) - Number(b.id || 0));
+      persistir();
+      limpiarFormulario();
+      renderizar();
+    }
+
+    function editarProducto(index) {
+      const p = productos[index];
+      document.getElementById('formTitle').textContent = 'Editar producto';
+      document.getElementById('editIndex').value = index;
+      setCampo('id', p.id);
+      setCampo('codigo', p.codigo);
+      setCampo('nombre', p.nombre);
+      setCampo('categoria', p.categoria || 'Vacuno');
+      setCampo('subcategoria', p.subcategoria);
+      setCampo('origen', p.origen);
+      setCampo('trazabilidad', p.trazabilidad);
+      setCampo('formato', p.formato);
+      setCampo('peso_aprox', p.peso_aprox);
+      setCampo('imagen', p.imagen);
+      setCampo('descripcion', p.descripcion);
+      document.getElementById('destacado').checked = Boolean(p.destacado);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function duplicarProducto(index) {
+      const copia = { ...productos[index], id: siguienteId(), codigo: productos[index].codigo ? productos[index].codigo + '-COPIA' : '' };
+      productos.push(copia);
+      persistir();
+      renderizar();
+      setStatus('Producto duplicado. Puedes editarlo para cambiar datos.', 'ok');
+    }
+
+    function eliminarProducto(index) {
+      if (!confirm('¿Quieres eliminar este producto?')) return;
+      productos.splice(index, 1);
+      persistir();
+      renderizar();
+      setStatus('Producto eliminado.', 'ok');
+    }
+
+    function limpiarFormulario() {
+      document.getElementById('formTitle').textContent = 'Nuevo producto';
+      document.getElementById('productForm').reset();
+      document.getElementById('editIndex').value = '';
+      document.getElementById('id').value = siguienteId();
+    }
+
+    function vaciarListado() {
+      if (!confirm('Esto vaciará todos los productos del editor. ¿Continuar?')) return;
+      productos = [];
+      persistir();
+      limpiarFormulario();
+      renderizar();
+      setStatus('Listado vacío.', 'warn');
+    }
+
+    function renderizar() {
+      renderizarFiltros();
+      renderizarTabla();
+      actualizarResumen();
+      actualizarJsonOutput();
+    }
+
+    function renderizarFiltros() {
+      const select = document.getElementById('filterCategory');
+      const actual = select.value;
+      const categorias = [...new Set(productos.map(p => p.categoria).filter(Boolean))].sort();
+      select.innerHTML = '<option value="">Todas las categorías</option>' + categorias.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+      select.value = actual;
+    }
+
+    function renderizarTabla() {
+      const tbody = document.getElementById('productTable');
+      const texto = document.getElementById('search').value.toLowerCase().trim();
+      const categoria = document.getElementById('filterCategory').value;
+      const destacado = document.getElementById('filterDestacado').value;
+
+      const filtrados = productos
+        .map((producto, index) => ({ producto, index }))
+        .filter(({ producto }) => {
+          const coincideTexto = !texto || JSON.stringify(producto).toLowerCase().includes(texto);
+          const coincideCategoria = !categoria || producto.categoria === categoria;
+          const coincideDestacado = destacado === '' || String(Boolean(producto.destacado)) === destacado;
+          return coincideTexto && coincideCategoria && coincideDestacado;
+        });
+
+      tbody.innerHTML = filtrados.map(({ producto: p, index }) => `
+        <tr>
+          <td>${escapeHtml(p.id || '')}</td>
+          <td>${escapeHtml(p.codigo || '')}</td>
+          <td>
+            <div class="product-name">${escapeHtml(p.nombre || '')}</div>
+            <div class="small">${escapeHtml(p.descripcion || '')}</div>
+          </td>
+          <td>
+            ${escapeHtml(p.categoria || '')}<br>
+            <span class="tag">${escapeHtml(p.subcategoria || 'Sin subcategoría')}</span>
+          </td>
+          <td>
+            ${escapeHtml(p.origen || '')}<br>
+            <span class="small">${escapeHtml(p.trazabilidad || '')}</span>
+          </td>
+          <td>
+            ${escapeHtml(p.formato || '')}<br>
+            <span class="small">${escapeHtml(p.peso_aprox || '')}</span>
+          </td>
+          <td class="small">${escapeHtml(p.imagen || '')}</td>
+          <td>${p.destacado ? 'Sí' : 'No'}</td>
+          <td>
+            <div class="table-actions">
+              <button class="btn-primary" onclick="editarProducto(${index})">Editar</button>
+              <button class="btn-outline" onclick="duplicarProducto(${index})">Duplicar</button>
+              <button class="btn-danger" onclick="eliminarProducto(${index})">Borrar</button>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+
+      actualizarJsonOutput();
+    }
+
+    function actualizarResumen() {
+      const categorias = new Set(productos.map(p => p.categoria).filter(Boolean));
+      const destacados = productos.filter(p => p.destacado).length;
+      document.getElementById('totalProducts').textContent = `${productos.length} productos`;
+      document.getElementById('totalFeatured').textContent = `${destacados} destacados`;
+      document.getElementById('totalCategories').textContent = `${categorias.size} categorías`;
+    }
+
+    function actualizarJsonOutput() {
+      const area = document.getElementById('jsonOutput');
+      area.value = JSON.stringify(productos, null, 2);
+    }
+
+    function importarJson(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const datos = JSON.parse(e.target.result);
+          productos = normalizarProductos(datos);
+          persistir();
+          renderizar();
+          setStatus('JSON importado correctamente.', 'ok');
+        } catch (error) {
+          setStatus('El archivo no es un JSON válido.', 'error');
+        }
+      };
+      reader.readAsText(file, 'UTF-8');
+      event.target.value = '';
+    }
+
+    function descargarJson() {
+      const blob = new Blob([JSON.stringify(productos, null, 2)], { type: 'application/json;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const enlace = document.createElement('a');
+      enlace.href = url;
+      enlace.download = 'carniceria-productos.json';
+      document.body.appendChild(enlace);
+      enlace.click();
+      enlace.remove();
+      URL.revokeObjectURL(url);
+      setStatus('Archivo carniceria-productos.json descargado.', 'ok');
+    }
+
+    async function copiarJson() {
+      const texto = JSON.stringify(productos, null, 2);
+      try {
+        await navigator.clipboard.writeText(texto);
+        setStatus('JSON copiado al portapapeles.', 'ok');
+      } catch (error) {
+        const area = document.getElementById('jsonOutput');
+        area.style.display = 'block';
+        area.select();
+        document.execCommand('copy');
+        setStatus('JSON mostrado para copiar manualmente.', 'warn');
+      }
+    }
+
+    function normalizarProductos(datos) {
+      if (!Array.isArray(datos)) throw new Error('El JSON debe ser un array de productos');
+      return datos.map((p, i) => ({
+        id: Number(p.id) || i + 1,
+        codigo: p.codigo || '',
+        nombre: p.nombre || '',
+        categoria: p.categoria || '',
+        subcategoria: p.subcategoria || '',
+        origen: p.origen || '',
+        trazabilidad: p.trazabilidad || '',
+        formato: p.formato || '',
+        peso_aprox: p.peso_aprox || '',
+        descripcion: p.descripcion || '',
+        imagen: p.imagen || '',
+        destacado: Boolean(p.destacado)
+      }));
+    }
+
+    function siguienteId() {
+      return productos.length ? Math.max(...productos.map(p => Number(p.id) || 0)) + 1 : 1;
+    }
+
+    function persistir() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(productos));
+      actualizarJsonOutput();
+      actualizarResumen();
+    }
+
+    function valor(id) {
+      return document.getElementById(id).value.trim();
+    }
+
+    function setCampo(id, value) {
+      document.getElementById(id).value = value || '';
+    }
+
+    function setStatus(texto, tipo) {
+      const status = document.getElementById('status');
+      status.textContent = texto;
+      status.className = `status ${tipo}`;
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+  </script>
+</body>
+</html>
