@@ -806,6 +806,96 @@
         .replaceAll('"', '&quot;')
         .replaceAll("'", '&#039;');
     }
+
+    // GitHub API Integration
+    const GITHUB_TOKEN_KEY = 'github_token_carniceria';
+    const GITHUB_REPO = 'josemarcosservia-cmyk/Cash-Record-Virtual';
+    const GITHUB_FILE = 'carniceria-productos.json';
+
+    function setGitHubToken(token) {
+        localStorage.setItem(GITHUB_TOKEN_KEY, token);
+        setStatus('Token de GitHub guardado. Ya puedes sincronizar cambios.', 'ok');
+    }
+
+    function getGitHubToken() {
+        return localStorage.getItem(GITHUB_TOKEN_KEY);
+    }
+
+    async function guardarEnGitHub() {
+        const token = getGitHubToken();
+        if (!token) {
+              setStatus('Necesitas configurar un token de GitHub. Abre la consola y ejecuta: setGitHubToken("tu_token")', 'error');
+              return;
+        }
+
+        try {
+              const contenido = JSON.stringify(productos, null, 2);
+              const contenidoBase64 = btoa(unescape(encodeURIComponent(contenido)));
+
+              // Primero obtenemos el SHA del archivo actual
+              const urlGet = `https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE}`;
+              const resGet = await fetch(urlGet, {
+                      headers: {
+                                'Authorization': `token ${token}`,
+                                'Accept': 'application/vnd.github.v3+json'
+                      }
+              });
+
+              let sha = null;
+              if (resGet.ok) {
+                      const data = await resGet.json();
+                      sha = data.sha;
+              }
+
+              // Ahora actualizamos el archivo
+              const urlPut = `https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE}`;
+              const mensaje = `Actualizar carniceria-productos.json - ${new Date().toLocaleString('es-ES')}`;
+
+              const body = {
+                      message: mensaje,
+                      content: contenidoBase64,
+                      branch: 'main'
+              };
+
+              if (sha) {
+                      body.sha = sha;
+              }
+
+              const resPut = await fetch(urlPut, {
+                      method: 'PUT',
+                      headers: {
+                                'Authorization': `token ${token}`,
+                                'Accept': 'application/vnd.github.v3+json',
+                                'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify(body)
+              });
+
+              if (resPut.ok) {
+                      setStatus('✓ Cambios guardados en GitHub correctamente.', 'ok');
+              } else {
+                      const error = await resPut.json();
+                      setStatus('Error al guardar en GitHub: ' + error.message, 'error');
+              }
+        } catch (error) {
+              setStatus('Error de conexión con GitHub: ' + error.message, 'error');
+        }
+    }
+
+    // Agregar botón de sincronización en el formulario
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(() => {
+              const accionesDiv = document.querySelector('.acciones-principales');
+              if (accionesDiv) {
+                      const btnGitHub = document.createElement('button');
+                      btnGitHub.type = 'button';
+                      btnGitHub.className = 'btn-primary';
+                      btnGitHub.textContent = '☁ Sincronizar con GitHub';
+                      btnGitHub.onclick = guardarEnGitHub;
+                      accionesDiv.appendChild(btnGitHub);
+              }
+        }, 500);
+    });
   </script>
 </body>
 </html>
