@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Carnicería - Registro de caja</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #1c231d;
+      color: #ffffff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+    header {
+      padding: 18px 20px 12px;
+      border-bottom: 2px solid #ff5a1f;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.75em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #ff5a1f;
+    }
+    header a {
+      color: #ffffff;
+      font-size: 0.85em;
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid #ff5a1f;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    header a:hover { background: #ff5a1f; color: #1c231d; }
+    main {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 18px;
+    }
+    .contenido {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 24px;
+      width: 100%;
+      max-width: 1200px;
+      flex-wrap: wrap;
+    }
+    .nivel {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 200px;
+      max-width: 250px;
+    }
+    .nivel h3 {
+      color: #ff5a1f;
+      border-bottom: 2px solid #ff5a1f;
+      padding-bottom: 8px;
+      margin: 0;
+      font-size: 0.95em;
+      text-transform: uppercase;
+    }
+    .item {
+      padding: 12px 14px;
+      background: rgba(255, 90, 31, 0.1);
+      border: 1px solid #ff5a1f;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-align: left;
+      font-size: 0.9em;
+    }
+    .item:hover {
+      background: rgba(255, 90, 31, 0.2);
+      transform: translateY(-2px);
+    }
+    .item.active {
+      background: #ff5a1f;
+      color: #1c231d;
+      font-weight: 600;
+    }
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      width: 100%;
+    }
+    .producto {
+      padding: 14px;
+      background: rgba(255, 90, 31, 0.05);
+      border: 1px solid #ff5a1f;
+      border-radius: 8px;
+      text-align: left;
+      transition: all 0.3s;
+    }
+    .producto:hover {
+      background: rgba(255, 90, 31, 0.15);
+      transform: translateY(-4px);
+    }
+    .producto img {
+      width: 100%;
+      height: 130px;
+      object-fit: contain;
+      background: #12160f;
+      border-radius: 6px;
+      margin-bottom: 8px;
+    }
+    .producto h4 {
+      margin: 0 0 6px 0;
+      color: #ff5a1f;
+      font-size: 0.95em;
+    }
+    .producto p {
+      margin: 4px 0;
+      font-size: 0.85em;
+      color: #c0b8a0;
+    }
+    .categoria-destacada {
+      background: rgba(255, 90, 31, 0.3);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.75em;
+      display: inline-block;
+      margin-top: 6px;
+    }
+    footer {
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.3);
+      border-top: 1px solid #ff5a1f;
+      font-size: 0.85em;
+      color: #999;
+    }
+    .volver {
+      padding: 8px 16px;
+      background: #ff5a1f;
+      color: #1c231d;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 12px;
+      transition: all 0.3s;
+    }
+    .volver:hover {
+      background: #ff7a3f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Carnicería</h1>
+    <a href="index.html">Menú</a>
+  </header>
+
+  <main>
+    <div class="contenido" id="contenido">
+      <!-- Los niveles se cargarán dinámicamente desde JavaScript -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Cash Record Virtual - Sección Carnicería</p>
+  </footer>
+
+  <script>
+    // Estado de navegación
+    let estadoActual = { categoria: null, subcategoria: null };
+    let productosData = [];
+
+    // Cargar datos del JSON (esquema del editor: campos con tilde)
+    async function cargarProductos() {
+      try {
+        const response = await fetch('carniceria-productos.json');
+        productosData = await response.json();
+        mostrarCategorias();
+      } catch (error) {
+        console.error('Error cargando productos:', error);
+        document.getElementById('contenido').innerHTML = '<p>Error cargando datos</p>';
+      }
+    }
+
+    // Obtener categorías únicas
+    function obtenerCategorias() {
+      return [...new Set(productosData.map(p => p.categoría))].filter(Boolean);
+    }
+
+    // Obtener subcategorías de una categoría
+    function obtenerSubcategorias(categoria) {
+      return [...new Set(productosData
+        .filter(p => p.categoría === categoria)
+        .map(p => p.subcategoría))].filter(Boolean);
+    }
+
+    // Obtener productos de una subcategoría
+    function obtenerProductos(categoria, subcategoria) {
+      return productosData.filter(p =>
+        p.categoría === categoria &&
+        p.subcategoría === subcategoria
+      );
+    }
+
+    // Mostrar categorías principales
+    function mostrarCategorias() {
+      const contenido = document.getElementById('contenido');
+      const categorias = obtenerCategorias();
+      contenido.innerHTML = '<div class="nivel"><h3>Categorías</h3></div>';
+      const nivel = contenido.querySelector('.nivel');
+      categorias.forEach(cat => {
+        const item = document.createElement('div');
+        item.className = 'item';
+        item.textContent = cat;
+        item.onclick = () => seleccionarCategoria(cat);
+        nivel.appendChild(item);
+      });
+    }
+
+    // Seleccionar categoría y mostrar subcategorías
+    function seleccionarCategoria(categoria) {
+      estadoActual.categoria = categoria;
+      estadoActual.subcategoria = null;
+      const contenido = document.getElementById('contenido');
+      const subcategorias = obtenerSubcategorias(categoria);
+      contenido.innerHTML = `
+        <div class="nivel">
+          <h3>Categorías</h3>
+          <button class="volver" onclick="mostrarCategorias()">&lt; Volver</button>
+          <div style="margin-top: 12px;">${obtenerCategorias().map(cat =>
+            `<div class="item ${cat === categoria ? 'active' : ''}" onclick="seleccionarCategoria('${cat}')">${cat}</div>`
+          ).join('')}</div>
+        </div>
+        <div class="nivel">
+          <h3>${categoria}</h3>
+          ${subcategorias.map(sub =>
+            `<div class="item" onclick="seleccionarSubcategoria('${categoria}', '${sub}')">${sub}</div>`
+          ).join('')}
+        </div>
+      `;
+    }
+
+    // Seleccionar subcategoría y mostrar productos
+    function seleccionarSubcategoria(categoria, subcategoria) {
+      estadoActual.categoria = categoria;
+      estadoActual.subcategoria = subcategoria;
+      const contenido = document.getElementById('contenido');
+      const productos = obtenerProductos(categoria, subcategoria);
+      const subcategorias = obtenerSubcategorias(categoria);
+
+      let productosHTML = '<div class="productos">';
+      productos.forEach(prod => {
+        productosHTML += `
+          <div class="producto">
+            ${prod.imagen ? `<img src="${prod.imagen}" alt="${prod.nombre || ''}" onerror="this.style.display='none'">` : ''}
+            <h4>${prod.nombre || ''}</h4>
+            ${prod.variante ? `<p><strong>Variante:</strong> ${prod.variante}</p>` : ''}
+            <p><strong>Código:</strong> ${prod.código || ''}</p>
+            <p><strong>Formato:</strong> ${prod.formato || ''}${prod.peso_aprox ? ' · ' + prod.peso_aprox : ''}</p>
+            <p><strong>Origen:</strong> ${prod.origen || ''}</p>
+            <p><strong>Trazabilidad:</strong> ${prod.trazabilidad || ''}</p>
+            <p><strong>Descripción:</strong> ${prod.descripción || ''}</p>
+            ${prod.destacado ? '<span class="categoria-destacada">Destacado</span>' : ''}
+          </div>
+        `;
+      });
+      productosHTML += '</div>';
+
+      contenido.innerHTML = `
+        <div class="nivel">
+          <h3>Categorías</h3>
+          <button class="volver" onclick="mostrarCategorias()">&lt; Menú Principal</button>
+          <div style="margin-top: 12px;">${obtenerCategorias().map(cat =>
+            `<div class="item ${cat === categoria ? 'active' : ''}" onclick="seleccionarCategoria('${cat}')">${cat}</div>`
+          ).join('')}</div>
+        </div>
+        <div class="nivel">
+          <h3>${categoria}</h3>
+          <button class="volver" onclick="seleccionarCategoria('${categoria}')">&lt; Volver</button>
+          <div style="margin-top: 12px;">${subcategorias.map(sub =>
+            `<div class="item ${sub === subcategoria ? 'active' : ''}" onclick="seleccionarSubcategoria('${categoria}', '${sub}')">${sub}</div>`
+          ).join('')}</div>
+        </div>
+      `;
+      contenido.innerHTML += '<div style="width: 100%;">' + productosHTML + '</div>';
+    }
+
+    // Inicializar al cargar la página
+    document.addEventListener('DOMContentLoaded', cargarProductos);
+  </script>
+</body>
+</html>
