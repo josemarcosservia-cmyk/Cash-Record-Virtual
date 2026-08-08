@@ -423,7 +423,7 @@ function cargarDelRepo() {
   fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`)
     .then(r => r.json())
     .then(d => {
-      const txt = atob(d.content);
+      const txt = decodeURIComponent(escape(atob(d.content)));
       localStorage.setItem('carniceria_data', txt);
       localStorage.removeItem('carniceria_draft');
       BASE_TXT = txt;
@@ -449,7 +449,7 @@ function guardarEnGH() {
     .then(meta => fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`, {
       method:'PUT',
       headers:{'Authorization':`token ${token}`,'Content-Type':'application/json'},
-      body:JSON.stringify({message:'📝 Actualizar carniceria-productos.json desde editor',content:btoa(DATA),sha:meta.sha})
+      body:JSON.stringify({message:'📝 Actualizar carniceria-productos.json desde editor',content:btoa(unescape(encodeURIComponent(DATA))),sha:meta.sha})
     }))
     .then(r => {if (!r.ok) throw new Error(r.status); BASE_TXT = DATA; localStorage.removeItem('carniceria_draft'); setStatus('✅ Guardado en GitHub'); renderLista();})
     .catch(e => setStatus('❌ Error: '+e.message));
