@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Editor de productos · Carnicería Cash Record</title>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor de productos · Carnicería Cash Record</title>
+  <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#12100c;color:#e8e0cd;font:14px/1.5 system-ui,"Segoe UI",Roboto,sans-serif;height:100vh;display:flex;flex-direction:column;overflow:hidden}
+body{background:#12100c;color:#e8e0cd;font:14px/1.5 system-ui,"Segoe UI",Robot,sans-serif;height:100vh;display:flex;flex-direction:column;overflow:hidden}
 header{background:#1b1710;border-bottom:1px solid #3a3020;padding:10px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 header h1{font-size:17px;color:#d9b96a;font-weight:600;white-space:nowrap}
 .tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
@@ -14,144 +14,502 @@ button,.btn{background:#2a2318;color:#e8e0cd;border:1px solid #4a3d28;border-rad
 button:hover,.btn:hover{background:#3a3020}
 button.primary{background:#7a5c1e;border-color:#c9a24b;color:#fff2d0}
 button.danger{background:#5a1f1f;border-color:#8a3a3a}
-#estado{font-size:12px;color:#9c9078;margin-left:auto}
-main{flex:1;display:flex;min-height:0}
+#status{font-size:12px;color:#9c9078;margin-left:auto}
+main{flex:1;display:flex;height:auto}
 aside{width:320px;border-right:1px solid #3a3020;display:flex;flex-direction:column;background:#171309}
-aside.filtros{padding:10px;display:flex;flex-direction:column;gap:7px;border-bottom:1px solid #3a3020}
+aside.filters{padding:10px;display:flex;flex-direction:column;gap:7px;border-bottom:1px solid #3a3020}
 select,input[type=text],input[type=number],textarea{background:#0e0c08;color:#e8e0cd;border:1px solid #4a3d28;border-radius:6px;padding:6px 8px;font:inherit;width:100%}
 textarea{resize:vertical;min-height:86px;line-height:1.55}
-label.chk{font-size:12px;color:#b8ab90;display:flex;align-items:center;gap:6px;cursor:pointer}
-label.chk input{width:auto}
-#lista{flex:1;overflow:auto}
+label.check{font-size:12px;color:#b8ab90;display:flex;align-items:center;gap:6px;cursor:pointer}
+label.check input{width:auto}
+#list{flex:1;overflow:auto}
 .item{padding:7px 10px;border-bottom:1px solid #241d13;cursor:pointer;display:flex;gap:8px;align-items:center}
 .item:hover{background:#221b11}
 .item.sel{background:#3a2d16;border-left:3px solid #d9b96a;padding-left:7px}
-.item .nombre{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.item .sub{font-size:10px;color:#8a7c60}
-.punto{width:8px;height:8px;border-radius:50%;flex:none;background:#3f7a3f}
-.punto.cat{background:#c98b2b}
-.punto.dup{background:#c2453f}
-.listfoot{padding:8px;display:flex;gap:6px;border-top:1px solid #3a3020}
-.listfoot button{flex:1;padding:6px 4px;font-size:12px}
+.item.name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item.sub{font-size:10px;color:#8a7c60}
+.dot{width:8px;height:8px;border-radius:50%;flex:none;background:#3f7a3f}
+.dot.cat{background:#c98b2b}
+.dot.dup{background:#c2453f}
+.footer{padding:8px;display:flex;gap:6px;border-top:1px solid #3a3020}
+.footer button{flex:1;padding:6px 4px;font-size:12px}
 section.form{flex:1;overflow:auto;padding:16px 20px}
-.vacio{color:#7c7157;padding:40px;text-align:center}
-.red{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px 16px;margin-bottom:14px}
+.empty{color:#7c7157;padding:40px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px 16px;margin-bottom:14px}
 .f{display:flex;flex-direction:column;gap:4px}
 .f>label{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:#a2967a}
-.ancho{grid-column:1/-1}
+.wide{grid-column:1/-1}
 fieldset{border:1px solid #3a3020;border-radius:8px;padding:12px 14px;margin-bottom:14px}
 legend{color:#d9b96a;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:0 6px}
 .imgprev{display:flex;gap:12px;align-items:center}
 .imgprev img{width:70px;height:110px;object-fit:contain;background:#0b0906;border:1px solid #3a3020;border-radius:6px}
-.aviso{font-size:12px;color:#9c9078}
+.note{font-size:12px;color:#9c9078}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:50}
-.modal.en{display:flex}
-.caja{background:#1b1710;border:1px solid #4a3d28;border-radius:10px;padding:20px;width:min(580px,92vw);display:flex;flex-direction:column;gap:10px}
-.caja h2{font-size:15px;color:#d9b96a}
-.caja p{font-size:12.5px;color:#a2967a;line-height:1.55}
-.caja ol{font-size:12.5px;color:#a2967a;padding-left:18px;line-height:1.7}
-.caja .fila{display:flex;gap:8px;justify-content:flex-end;margin-top:4px}
-button.pend{background:#8a2a1c;border-color:#e0523f;color:#ffe3dc;font-weight:600}
+.modal.on{display:flex}
+.box{background:#1b1710;border:1px solid #4a3d28;border-radius:10px;padding:20px;width:min(580px,92vw);display:flex;flex-direction:column;gap:10px}
+.box h2{font-size:15px;color:#d9b96a}
+.box p{font-size:12.5px;color:#a2967a;line-height:1.55}
+.box ol{font-size:12.5px;color:#a2967a;padding-left:18px;line-height:1.7}
+.box.row{display:flex;gap:8px;justify-content:flex-end;margin-top:4px}
+button.pending{background:#8a2a1c;border-color:#e0523f;color:#ffe3dc;font-weight:600}
 button.ok{background:#254d24;border-color:#4f9a4c;color:#d8f0d6}
 input[type=password]{background:#0e0c08;color:#e8e0cd;border:1px solid #4a3d28;border-radius:6px;padding:6px 8px;font:inherit;width:100%}
-</style>
+  </style>
 </head>
 <body>
-<header>
-<h1>🥩 Editor de Carnicería</h1>
-<div class="tools">
-<button id="btnRecargar">🔄 Recargar del repositorio</button>
-<label class="btn">📂 Abrir JSON<input type="file" id="fileIn" accept=".json,application/json" hidden></label>
-<button id="btnGuardar" class="primary">💾 Guardar en GitHub</button>
-<button id="btnEditarGH">✏️ Editar en GitHub</button>
-<button id="btnDescargar">⬇️ Descargar JSON</button>
-<button id="btnCopiar">📋 Copiar JSON</button>
-<button id="btnToken">🔐 Conexión</button>
-<button id="btnBorrador">🗑️ Descartar borrador</button>
-<div id="estado"></div>
-</div>
-</header>
-<main>
-<aside>
-<div class="filtros">
-<select id="selZona">
-<option value="">Todas las categorías</option>
-<option value="Vacuno">Vacuno</option>
-<option value="Cerdo">Cerdo</option>
-<option value="Aves">Aves</option>
-<option value="Elaborados">Elaborados</option>
-</select>
-<input type="text" id="buscar" placeholder="Buscar por nombre o código">
-<label class="chk"><input type="checkbox" id="soloInc"> Solo incompletos</label>
-<label class="chk"><input type="checkbox" id="soloDup"> Solo posibles duplicados</label>
-</div>
-<div id="lista"></div>
-<div class="listfoot">
-<button id="btnNuevo">➕ Producto</button>
-<button id="btnDup">📑 Duplicar</button>
-<button id="btnBorrar" class="danger">🗑️ Borrar</button>
-</div>
-</aside>
-<section class="form"></section>
-</main>
-<div id="modal" class="modal">
-<div class="caja">
-<h2>Conexión con GitHub</h2>
-<p>Para escribir directamente en carniceria-productos.json necesitas un token personal de GitHub. Se guarda en tu navegador, nunca se envía a servidores.</p>
-<ol>
-<li>En GitHub: foto de perfil → Settings → Developer settings → Personal access tokens → Fine-grained tokens</li>
-<li>Repository access: Only select repositories → Elige Cash-Record-Virtual</li>
-<li>Permissions → Repository permissions → Contents: Read and write</li>
-<li>Genera el token, cópialo y pégalo aquí</li>
-</ol>
-<input type="password" id="inToken" placeholder="github_pat_...">
-<div class="fila">
-<button id="btnBorrarToken" class="danger">Borrar token</button>
-<button id="btnCerrarModal">Cancelar</button>
-<button id="btnGuardarToken" class="primary">Guardar</button>
-</div>
-</div>
-</div>
-<script>
-var REPO='josemarcosservia-cmyk/Cash-Record-Virtual';
-var RUTA='carniceria-productos.json';
-var BASE_TXT=null;
-function $(id){return document.getElementById(id)}
-function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
-function estado(s){$('estado').textContent=s}
-function norm(s){return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^\w]/g,'')}
-function incompleto(p){return !p.nombre||!p.código||!p.categoría||!p.origen||!p.descripción}
-function detectarDuplicados(){var DATA=JSON.parse(localStorage.getItem('carniceria_data')||'null');window.dups=[];if(!DATA)return;for(var i=0;i<DATA.length;i++){for(var j=i+1;j<DATA.length;j++){if(norm(DATA[i].nombre)===norm(DATA[j].nombre)){window.dups.push(DATA[i].id);window.dups.push(DATA[j].id)}}}}
-function renderLista(){var lista=$('lista');var DATA=JSON.parse(localStorage.getItem('carniceria_data')||'null');if(!DATA)return;var SEL=parseInt(sessionStorage.getItem('carniceria_sel')||'0');var html='';var zona=$('selZona').value;var busca=norm($('buscar').value);var soloInc=$('soloInc').checked;var soloDup=$('soloDup').checked;detectarDuplicados();for(var i=0;i<DATA.length;i++){var p=DATA[i];if(zona&&p.categoría!==zona)continue;if(busca&&norm(p.nombre).indexOf(busca)<0&&norm(p.código||'').indexOf(busca)<0)continue;if(soloInc&&!incompleto(p))continue;if(soloDup&&window.dups.indexOf(p.id)<0)continue;var punto='<span class="punto '+(window.dups.indexOf(p.id)>=0?'dup':incompleto(p)?'cat':'')+' "></span>';var sel=SEL===p.id?' sel':'';html+='<div class="item '+sel+'" onclick="seleccionar('+p.id+')">'+punto+'<div><div class="nombre">'+esc(p.nombre)+'</div><div class="sub">'+esc(p.código)+' · '+esc(p.categoría)+'</div></div></div>'}lista.innerHTML=html}
-function renderForm(){var sect=$('form')||document.querySelector('section.form');var SEL=parseInt(sessionStorage.getItem('carniceria_sel')||'0');if(!SEL){sect.innerHTML='<div class="vacio">Selecciona un producto en la lista.</div>';return}var DATA=JSON.parse(localStorage.getItem('carniceria_data')||'null');if(!DATA)return;var p=null;for(var i=0;i<DATA.length;i++){if(DATA[i].id===SEL){p=DATA[i];break}}if(!p)return;var html='<div class="red"><div class="f"><label>ID</label><input type="number" value="'+(p.id||'')+'" readonly style="opacity:0.6;"></div><div class="f"><label>Código</label><input type="text" value="'+esc(p.código||'')+'" onchange="actualizar('+SEL+',\'código\',this.value)"></div><div class="f"><label>Nombre</label><input type="text" value="'+esc(p.nombre||'')+'" onchange="actualizar('+SEL+',\'nombre\',this.value)"></div><div class="f"><label>Categoría</label><select onchange="actualizar('+SEL+',\'categoría\',this.value)"><option></option><option '+((p.categoría||'')==='Vacuno'?'selected':'')+'>Vacuno</option><option '+((p.categoría||'')==='Cerdo'?'selected':'')+'>Cerdo</option><option '+((p.categoría||'')==='Aves'?'selected':'')+'>Aves</option><option '+((p.categoría||'')==='Elaborados'?'selected':'')+'>Elaborados</option></select></div><div class="f"><label>Subcategoría</label><input type="text" value="'+esc(p.subcategoría||'')+'" onchange="actualizar('+SEL+',\'subcategoría\',this.value)"></div><div class="f"><label>Origen</label><input type="text" value="'+esc(p.origen||'')+'" onchange="actualizar('+SEL+',\'origen\',this.value)"></div><div class="f"><label>Trazabilidad</label><input type="text" value="'+esc(p.trazabilidad||'')+'" onchange="actualizar('+SEL+',\'trazabilidad\',this.value)"></div><div class="f"><label>Formato</label><input type="text" value="'+esc(p.formato||'')+'" onchange="actualizar('+SEL+',\'formato\',this.value)"></div><div class="f"><label>Peso Aprox</label><input type="text" value="'+esc(p.peso_aprox||'')+'" onchange="actualizar('+SEL+',\'peso_aprox\',this.value)"></div><div class="f ancho"><label>Descripción</label><textarea onchange="actualizar('+SEL+',\'descripción\',this.value)">'+esc(p.descripción||'')+'</textarea></div><div class="f"><label>URL Imagen</label><input type="text" value="'+esc(p.imagen||'')+'" onchange="actualizar('+SEL+',\'imagen\',this.value)"></div><div class="f"><label><input type="checkbox" '+(p.destacado?'checked':'')+' onchange="actualizar('+SEL+',\'destacado\',this.checked)"> Destacado</label></div></div>';sect.innerHTML=html}
-function seleccionar(id){sessionStorage.setItem('carniceria_sel',id);renderLista();renderForm()}
-function actualizar(id,campo,valor){var DATA=JSON.parse(localStorage.getItem('carniceria_data')||'null');if(!DATA)return;for(var i=0;i<DATA.length;i++){if(DATA[i].id===id){DATA[i][campo]=valor;localStorage.setItem('carniceria_data',JSON.stringify(DATA));localStorage.setItem('carniceria_borrador',JSON.stringify(DATA));estado('✏️ Cambios sin guardar');renderLista();renderForm();break}}}
-function nuevoProducto(){var DATA=JSON.parse(localStorage.getItem('carniceria_data')||'null');if(!DATA)return;var maxId=0;for(var i=0;i<DATA.length;i++){if(DATA[i].id>maxId)maxId=DATA[i].id}var nuevo={id:maxId+1,código:'',nombre:'',categoría:'',subcategoría:'',origen:'',trazabilidad:'',formato:'kg',peso_aprox:'',descripción:'',imagen:'',destacado:false};DATA.push(nuevo);localStorage.setItem('carniceria_data',JSON.stringify(DATA));localStorage.setItem('carniceria_borrador',JSON.stringify(DATA));seleccionar(nuevo.id);estado('✏️ Nuevo producto')}
-function duplicarProducto(){var SEL=parseInt(sessionStorage.getItem('carniceria_sel')||'0');var DATA=JSON.parse(localStorage.getItem('carniceria_data')||'null');if(!DATA||!SEL)return;var orig=null;for(var i=0;i<DATA.length;i++){if(DATA[i].id===SEL){orig=DATA[i];break}}if(!orig)return;var maxId=0;for(var i=0;i<DATA.length;i++){if(DATA[i].id>maxId)maxId=DATA[i].id}var copia=JSON.parse(JSON.stringify(orig));copia.id=maxId+1;copia.código=orig.código+'-COPIA';DATA.push(copia);localStorage.setItem('carniceria_data',JSON.stringify(DATA));localStorage.setItem('carniceria_borrador',JSON.stringify(DATA));seleccionar(copia.id);estado('✏️ Producto duplicado')}
-function borrarProducto(){var SEL=parseInt(sessionStorage.getItem('carniceria_sel')||'0');if(!SEL||!confirm('¿Borrar este producto?'))return;var DATA=JSON.parse(localStorage.getItem('carniceria_data')||'null');if(!DATA)return;DATA=DATA.filter(function(p){return p.id!==SEL});localStorage.setItem('carniceria_data',JSON.stringify(DATA));localStorage.setItem('carniceria_borrador',JSON.stringify(DATA));sessionStorage.removeItem('carniceria_sel');renderLista();renderForm();estado('✏️ Producto borrado')}
-function cargarDelRepo(){estado('⏳ Cargando...');fetch('https://api.github.com/repos/'+REPO+'/contents/'+RUTA).then(function(r){return r.json()}).then(function(d){var txt=atob(d.content);localStorage.setItem('carniceria_data',txt);localStorage.removeItem('carniceria_borrador');BASE_TXT=txt;renderLista();renderForm();estado('✅ Datos cargados')}).catch(function(e){estado('❌ Error: '+e.message)})}
-function guardarEnGH(){var DATA=localStorage.getItem('carniceria_data');var token=localStorage.getItem('gh_token');if(!token){estado('❌ Necesitas token');$('modal').classList.add('en');return}if(DATA===BASE_TXT){estado('✅ Sin cambios');return}estado('⏳ Guardando...');fetch('https://api.github.com/repos/'+REPO+'/contents/'+RUTA,{headers:{'Authorization':'token '+token}}).then(function(r){return r.json()}).then(function(meta){return fetch('https://api.github.com/repos/'+REPO+'/contents/'+RUTA,{method:'PUT',headers:{'Authorization':'token '+token,'Content-Type':'application/json'},body:JSON.stringify({message:'📝 Actualizar carniceria-productos.json desde editor',content:btoa(DATA),sha:meta.sha})})}).then(function(r){if(!r.ok)throw new Error(r.status);BASE_TXT=DATA;localStorage.removeItem('carniceria_borrador');estado('✅ Guardado en GitHub');renderLista()}).catch(function(e){estado('❌ Error: '+e.message)})}
-document.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&e.key==='s'){e.preventDefault();guardarEnGH()}});
-$('btnRecargar').onclick=cargarDelRepo;
-$('btnGuardar').onclick=guardarEnGH;
-$('btnDescargar').onclick=function(){var link=document.createElement('a');link.href='data:application/json,'+encodeURIComponent(localStorage.getItem('carniceria_data')||'[]');link.download='carniceria-productos.json';link.click()};
-$('btnCopiar').onclick=function(){navigator.clipboard.writeText(localStorage.getItem('carniceria_data')||'[]');estado('✅ Copiado')};
-$('btnEditarGH').onclick=function(){window.open('https://github.com/'+REPO+'/edit/main/'+RUTA)};
-$('btnNuevo').onclick=nuevoProducto;
-$('btnDup').onclick=duplicarProducto;
-$('btnBorrar').onclick=borrarProducto;
-$('btnToken').onclick=function(){$('modal').classList.add('en')};
-$('btnCerrarModal').onclick=function(){$('modal').classList.remove('en')};
-$('btnGuardarToken').onclick=function(){var t=$('inToken').value.trim();if(t){localStorage.setItem('gh_token',t);$('inToken').value='';$('modal').classList.remove('en');estado('✅ Token guardado')}};
-$('btnBorrarToken').onclick=function(){localStorage.removeItem('gh_token');$('inToken').value='';estado('✅ Token eliminado')};
-$('btnBorrador').onclick=function(){if(confirm('¿Descartar cambios?')){cargarDelRepo()}};
-$('fileIn').onchange=function(e){var file=e.target.files[0];if(!file)return;var reader=new FileReader();reader.onload=function(evt){localStorage.setItem('carniceria_data',evt.target.result);renderLista();renderForm();estado('✅ JSON cargado')};reader.readAsText(file)};
-$('selZona').onchange=renderLista;
-$('buscar').onchange=renderLista;
-$('buscar').oninput=renderLista;
-$('soloInc').onchange=renderLista;
-$('soloDup').onchange=renderLista;
+  <header>
+    <h1>🥩 Editor de Carnicería</h1>
+    <div class="tools">
+      <button id="btnReload">🔄 Recargar</button>
+      <label class="btn">📂 Abrir JSON<input type="file" id="fileIn" accept=".json,application/json" hidden></label>
+      <button id="btnSave" class="primary">💾 Guardar</button>
+      <button id="btnEditGH">✏️ Editar en GH</button>
+      <button id="btnDownload">⬇️ Descargar</button>
+      <button id="btnCopy">📋 Copiar</button>
+      <button id="btnCategories" class="primary">📂 Categorías</button>
+      <button id="btnToken">🔐 Token</button>
+      <button id="btnDraft">🗑️ Descartar</button>
+      <div id="status"></div>
+    </div>
+  </header>
+  <main>
+    <aside>
+      <div class="filters">
+        <select id="selCategory">
+          <option value="">Todas las categorías</option>
+        </select>
+        <input type="text" id="search" placeholder="Buscar por nombre o código">
+        <label class="check"><input type="checkbox" id="onlyInc">Solo incompletos</label>
+        <label class="check"><input type="checkbox" id="onlyDup">Solo duplicados</label>
+      </div>
+      <div id="list"></div>
+      <div class="footer">
+        <button id="btnNew">➕ Producto</button>
+        <button id="btnDup">📑 Duplicador</button>
+        <button id="btnDelete" class="danger">🗑️ Borrar</button>
+      </div>
+    </aside>
+    <section class="form"></section>
+  </main>
+
+  <div id="modalCat" class="modal">
+    <div class="box">
+      <h2>Gestionar Categorías</h2>
+      <div id="catContainer" style="max-height:400px;overflow:auto;border:1px solid #3a3020;border-radius:6px;padding:10px;"></div>
+      <div class="box row">
+        <button id="btnCatClose">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="box">
+      <h2>Conexión con GitHub</h2>
+      <p>Para escribir directamente en carniceria-productos.json necesitas un token personal de GitHub.</p>
+      <ol>
+        <li>En GitHub: foto de perfil → Settings → Developer settings → Personal access tokens</li>
+        <li>Acceso al repositorio: Solo repositorios seleccionados → Elige Cash-Record-Virtual</li>
+        <li>Permisos → Contenido: Lectura y escritura</li>
+        <li>Copia y pega el token aquí</li>
+      </ol>
+      <input type="password" id="inToken" placeholder="github_pat_...">
+      <div class="box row">
+        <button id="btnDelToken" class="danger">Borrar</button>
+        <button id="btnCloseModal">Cancelar</button>
+        <button id="btnSaveToken" class="primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+const REPO = 'josemarcosservia-cmyk/Cash-Record-Virtual';
+const FILE = 'carniceria-productos.json';
+let BASE_TXT = null;
+let CATEGORIES_DATA = {};
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+function setStatus(msg) { $('status').textContent = msg; }
+function norm(s) { return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+
+function isIncomplete(p) {
+  return !p.nombre || !p.código || !p.categoría || !p.subcategoría || !p.variante;
+}
+
+function detectDups() {
+  const DATA = JSON.parse(localStorage.getItem('carniceria_data') || 'null');
+  if (!DATA) return window.dups = [];
+  window.dups = [];
+  for (let i = 0; i < DATA.length; i++) {
+    for (let j = i+1; j < DATA.length; j++) {
+      if (norm(DATA[i].nombre) === norm(DATA[j].nombre)) {
+        window.dups.push(DATA[i].id);
+        window.dups.push(DATA[j].id);
+      }
+    }
+  }
+}
+
+function loadCategories() {
+  CATEGORIES_DATA = JSON.parse(localStorage.getItem('carniceria_categories') || '{}');
+  if (Object.keys(CATEGORIES_DATA).length === 0) {
+    CATEGORIES_DATA = {
+      'Vacuno': {'Cortes': {'Asado':1,'Tapa de asado':1}},
+      'Cerdo': {'Cortes': {'Pata':1}},
+      'Aves': {'Pollo': {'Pechuga':1}},
+      'Elaborados': {'Procesados': {'Jamón':1}}
+    };
+  }
+  saveCategories();
+}
+
+function saveCategories() {
+  localStorage.setItem('carniceria_categories', JSON.stringify(CATEGORIES_DATA));
+}
+function renderCategoryList() {
+  const container = $('catContainer');
+  let html = '';
+  
+  for (const cat in CATEGORIES_DATA) {
+    html += `<div style="margin-bottom:15px;padding:10px;background:#0e0c08;border-radius:6px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <strong style="color:#d9b96a;">${esc(cat)}</strong>
+        <button class="btnEditCat" data-cat="${esc(cat)}" style="padding:2px 6px;font-size:10px;">✏️</button>
+      </div>`;
+    
+    for (const subcat in CATEGORIES_DATA[cat]) {
+      html += `<div style="margin-left:10px;margin-bottom:8px;padding:8px;background:#1a1512;border-radius:4px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;">
+          <span style="color:#c9a24b;">${esc(subcat)}</span>
+          <button class="btnEditSubcat" data-cat="${esc(cat)}" data-subcat="${esc(subcat)}" style="padding:2px 6px;font-size:10px;">✏️</button>
+        </div>`;
+      
+      const variants = CATEGORIES_DATA[cat][subcat];
+      for (const variant in variants) {
+        html += `<div style="margin-left:10px;padding:4px;color:#a2967a;font-size:11px;display:flex;justify-content:space-between;">
+          <span>• ${esc(variant)}</span>
+          <button class="btnDelVariant" data-cat="${esc(cat)}" data-subcat="${esc(subcat)}" data-variant="${esc(variant)}" style="padding:1px 4px;font-size:9px;background:#5a1f1f;border-color:#8a3a3a;color:#ffe3dc;">✕</button>
+        </div>`;
+      }
+      html += `<button class="btnAddVariant" data-cat="${esc(cat)}" data-subcat="${esc(subcat)}" style="padding:3px 6px;font-size:10px;margin-top:5px;">+ Variante</button></div>`;
+    }
+    html += `<button class="btnAddSubcat" data-cat="${esc(cat)}" style="padding:3px 6px;font-size:10px;margin-top:5px;">+ Subcategoría</button></div>`;
+  }
+  html += `<button id="btnAddCat" style="padding:6px 12px;margin-top:10px;width:100%;">+ Nueva Categoría</button>`;
+  container.innerHTML = html;
+  
+  document.querySelectorAll('.btnEditCat').forEach(btn => {
+    btn.onclick = () => editCategory(btn.dataset.cat);
+  });
+  document.querySelectorAll('.btnEditSubcat').forEach(btn => {
+    btn.onclick = () => editSubcategory(btn.dataset.cat, btn.dataset.subcat);
+  });
+  document.querySelectorAll('.btnAddVariant').forEach(btn => {
+    btn.onclick = () => addVariant(btn.dataset.cat, btn.dataset.subcat);
+  });
+  document.querySelectorAll('.btnDelVariant').forEach(btn => {
+    btn.onclick = () => {
+      const {cat, subcat, variant} = btn.dataset;
+      delete CATEGORIES_DATA[cat][subcat][variant];
+      if (Object.keys(CATEGORIES_DATA[cat][subcat]).length === 0) {
+        delete CATEGORIES_DATA[cat][subcat];
+        if (Object.keys(CATEGORIES_DATA[cat]).length === 0) delete CATEGORIES_DATA[cat];
+      }
+      saveCategories();
+      renderCategoryList();
+      updateCategorySelects();
+    };
+  });
+  document.querySelectorAll('.btnAddSubcat').forEach(btn => {
+    btn.onclick = () => addSubcategory(btn.dataset.cat);
+  });
+  $('btnAddCat').onclick = addCategory;
+}
+
+function editCategory(cat) {
+  const newName = prompt('Nuevo nombre para la categoría:', cat);
+  if (newName && newName !== cat) {
+    CATEGORIES_DATA[newName] = CATEGORIES_DATA[cat];
+    delete CATEGORIES_DATA[cat];
+    saveCategories();
+    renderCategoryList();
+    updateCategorySelects();
+  }
+}
+
+function addSubcategory(cat) {
+  const name = prompt('Nombre de la nueva subcategoría:');
+  if (name) {
+    CATEGORIES_DATA[cat][name] = {};
+    saveCategories();
+    renderCategoryList();
+  }
+}
+
+function editSubcategory(cat, subcat) {
+  const newName = prompt('Nuevo nombre para la subcategoría:', subcat);
+  if (newName && newName !== subcat) {
+    CATEGORIES_DATA[cat][newName] = CATEGORIES_DATA[cat][subcat];
+    delete CATEGORIES_DATA[cat][subcat];
+    saveCategories();
+    renderCategoryList();
+    updateCategorySelects();
+  }
+}
+
+function addVariant(cat, subcat) {
+  const name = prompt('Nombre de la nueva variante:');
+  if (name) {
+    CATEGORIES_DATA[cat][subcat][name] = 1;
+    saveCategories();
+    renderCategoryList();
+    updateCategorySelects();
+  }
+}
+
+function addCategory() {
+  const name = prompt('Nombre de la nueva categoría:');
+  if (name) {
+    CATEGORIES_DATA[name] = {};
+    saveCategories();
+    renderCategoryList();
+  }
+}
+
+function updateCategorySelects() {
+  const selCategory = $('selCategory');
+  const cats = Object.keys(CATEGORIES_DATA);
+  selCategory.innerHTML = '<option value="">Todas las categorías</option>' + 
+    cats.map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join('');
+  renderLista();
+}
+  function renderLista() {
+  const lista = $('list');
+  const DATA = JSON.parse(localStorage.getItem('carniceria_data') || 'null');
+  if (!DATA) { lista.innerHTML = '<div class="empty">Cargar datos primero</div>'; return; }
+  
+  const SEL = parseInt(sessionStorage.getItem('carniceria_sel') || '0');
+  let html = '';
+  const zona = $('selCategory').value;
+  const busca = norm($('search').value);
+  const soloInc = $('onlyInc').checked;
+  const soloDup = $('onlyDup').checked;
+  
+  detectDups();
+  
+  for (const p of DATA) {
+    if (zona && p.categoría !== zona) continue;
+    if (busca && norm(p.nombre).indexOf(busca) < 0 && norm(p.código).indexOf(busca) < 0) continue;
+    if (soloInc && !isIncomplete(p)) continue;
+    if (soloDup && window.dups.indexOf(p.id) < 0) continue;
+    
+    const punto = `<span class="dot ${window.dups.indexOf(p.id) >= 0 ? 'dup' : isIncomplete(p) ? 'cat' : ''}" ></span>`;
+    const sel = SEL === p.id ? ' sel' : '';
+    html += `<div class="item${sel}" onclick="seleccionar(${p.id})">
+      ${punto}
+      <div><div class="name">${esc(p.nombre)}</div><div class="sub">${esc(p.código)} · ${esc(p.categoría)}</div></div>
+    </div>`;
+  }
+  
+  lista.innerHTML = html;
+}
+
+function renderForm() {
+  const sect = document.querySelector('section.form');
+  const SEL = parseInt(sessionStorage.getItem('carniceria_sel') || '0');
+  if (!SEL) { sect.innerHTML = '<div class="empty">Selecciona un producto</div>'; return; }
+  
+  const DATA = JSON.parse(localStorage.getItem('carniceria_data') || 'null');
+  if (!DATA) return;
+  
+  let prod = null;
+  for (const p of DATA) if (p.id === SEL) { prod = p; break; }
+  if (!prod) return;
+  
+  const cats = Object.keys(CATEGORIES_DATA);
+  const subcats = prod.categoría && CATEGORIES_DATA[prod.categoría] ? Object.keys(CATEGORIES_DATA[prod.categoría]) : [];
+  const variants = prod.categoría && prod.subcategoría && CATEGORIES_DATA[prod.categoría] && CATEGORIES_DATA[prod.categoría][prod.subcategoría] ? Object.keys(CATEGORIES_DATA[prod.categoría][prod.subcategoría]) : [];
+  
+  let html = `<div class="grid">
+    <div class="f"><label>ID</label><input type="number" value="${prod.id}" readonly style="opacity:0.6;"></div>
+    <div class="f"><label>Código</label><input type="text" value="${esc(prod.código)}" onchange="actualizar(${SEL},'código',this.value)"></div>
+    <div class="f"><label>Nombre</label><input type="text" value="${esc(prod.nombre)}" onchange="actualizar(${SEL},'nombre',this.value)"></div>
+    <div class="f"><label>Categoría *</label><select onchange="actualizar(${SEL},'categoría',this.value);renderForm();">
+      <option></option>${cats.map(c => `<option ${prod.categoría === c ? 'selected' : ''}>${esc(c)}</option>`).join('')}</select></div>
+    <div class="f"><label>Subcategoría *</label><select onchange="actualizar(${SEL},'subcategoría',this.value);renderForm();">
+      <option></option>${subcats.map(s => `<option ${prod.subcategoría === s ? 'selected' : ''}>${esc(s)}</option>`).join('')}</select></div>
+    <div class="f"><label>Variante *</label><select onchange="actualizar(${SEL},'variante',this.value);">
+      <option></option>${variants.map(v => `<option ${prod.variante === v ? 'selected' : ''}>${esc(v)}</option>`).join('')}</select></div>
+    <div class="f"><label>Origen</label><input type="text" value="${esc(prod.origen)}" onchange="actualizar(${SEL},'origen',this.value)"></div>
+    <div class="f"><label>Trazabilidad</label><input type="text" value="${esc(prod.trazabilidad)}" onchange="actualizar(${SEL},'trazabilidad',this.value)"></div>
+    <div class="f"><label>Formato</label><input type="text" value="${esc(prod.formato)}" onchange="actualizar(${SEL},'formato',this.value)"></div>
+    <div class="f"><label>Peso Aprox</label><input type="text" value="${esc(prod.peso_aprox)}" onchange="actualizar(${SEL},'peso_aprox',this.value)"></div>
+    <div class="f wide"><label>Descripción</label><textarea onchange="actualizar(${SEL},'descripción',this.value)">${esc(prod.descripción)}</textarea></div>
+    <div class="f"><label>URL Imagen</label><input type="text" value="${esc(prod.imagen)}" onchange="actualizar(${SEL},'imagen',this.value)"></div>
+    <div class="f"><label><input type="checkbox" ${prod.destacado ? 'checked' : ''} onchange="actualizar(${SEL},'destacado',this.checked)"> Destacado</label></div>
+  </div>`;
+  
+  sect.innerHTML = html;
+}
+
+function seleccionar(id) {
+  sessionStorage.setItem('carniceria_sel', id);
+  renderLista();
+  renderForm();
+}
+
+function actualizar(id, campo, valor) {
+  const DATA = JSON.parse(localStorage.getItem('carniceria_data') || 'null');
+  if (!DATA) return;
+  for (const p of DATA) {
+    if (p.id === id) {
+      p[campo] = valor;
+      localStorage.setItem('carniceria_data', JSON.stringify(DATA));
+      localStorage.setItem('carniceria_draft', JSON.stringify(DATA));
+      setStatus('✏️ Cambios sin guardar');
+      renderLista();
+      renderForm();
+      break;
+    }
+  }
+}
+
+function nuevoProducto() {
+  const DATA = JSON.parse(localStorage.getItem('carniceria_data') || 'null');
+  if (!DATA) return;
+  const maxId = Math.max(...DATA.map(p => p.id), 0);
+  const nuevo = { id:maxId+1, código:'', nombre:'', categoría:'', subcategoría:'', variante:'', origen:'', trazabilidad:'', formato:'kg', peso_aprox:'', descripción:'', imagen:'', destacado:false };
+  DATA.push(nuevo);
+  localStorage.setItem('carniceria_data', JSON.stringify(DATA));
+  localStorage.setItem('carniceria_draft', JSON.stringify(DATA));
+  seleccionar(nuevo.id);
+  setStatus('✏️ Nuevo producto');
+}
+
+function duplicarProducto() {
+  const SEL = parseInt(sessionStorage.getItem('carniceria_sel') || '0');
+  const DATA = JSON.parse(localStorage.getItem('carniceria_data') || 'null');
+  if (!DATA || !SEL) return;
+  let orig = null;
+  for (const p of DATA) if (p.id === SEL) { orig = p; break; }
+  if (!orig) return;
+  const maxId = Math.max(...DATA.map(p => p.id), 0);
+  const copia = JSON.parse(JSON.stringify(orig));
+  copia.id = maxId + 1;
+  copia.código = orig.código + '-COPIA';
+  DATA.push(copia);
+  localStorage.setItem('carniceria_data', JSON.stringify(DATA));
+  localStorage.setItem('carniceria_draft', JSON.stringify(DATA));
+  seleccionar(copia.id);
+  setStatus('✏️ Producto duplicado');
+}
+
+function borrarProducto() {
+  const SEL = parseInt(sessionStorage.getItem('carniceria_sel') || '0');
+  if (!SEL || !confirm('¿Borrar este producto?')) return;
+  const DATA = JSON.parse(localStorage.getItem('carniceria_data') || 'null');
+  if (!DATA) return;
+  const nuevaData = DATA.filter(p => p.id !== SEL);
+  localStorage.setItem('carniceria_data', JSON.stringify(nuevaData));
+  localStorage.setItem('carniceria_draft', JSON.stringify(nuevaData));
+  sessionStorage.removeItem('carniceria_sel');
+  renderLista();
+  renderForm();
+  setStatus('✏️ Producto borrado');
+}
+function cargarDelRepo() {
+  setStatus('⏳ Cargando...');
+  fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`)
+    .then(r => r.json())
+    .then(d => {
+      const txt = atob(d.content);
+      localStorage.setItem('carniceria_data', txt);
+      localStorage.removeItem('carniceria_draft');
+      BASE_TXT = txt;
+      renderLista();
+      renderForm();
+      setStatus('✅ Datos cargados');
+    })
+    .catch(e => setStatus('❌ Error: '+e.message));
+}
+
+function guardarEnGH() {
+  const DATA = localStorage.getItem('carniceria_data');
+  const token = localStorage.getItem('gh_token');
+  if (!token) {
+    setStatus('❌ Necesitas token');
+    $('modal').classList.add('on');
+    return;
+  }
+  if (DATA === BASE_TXT) { setStatus('✅ Sin cambios'); return; }
+  setStatus('⏳ Guardando...');
+  fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`, {headers:{'Authorization':`token ${token}`}})
+    .then(r => r.json())
+    .then(meta => fetch(`https://api.github.com/repos/${REPO}/contents/${FILE}`, {
+      method:'PUT',
+      headers:{'Authorization':`token ${token}`,'Content-Type':'application/json'},
+      body:JSON.stringify({message:'📝 Actualizar carniceria-productos.json desde editor',content:btoa(DATA),sha:meta.sha})
+    }))
+    .then(r => {if (!r.ok) throw new Error(r.status); BASE_TXT = DATA; localStorage.removeItem('carniceria_draft'); setStatus('✅ Guardado en GitHub'); renderLista();})
+    .catch(e => setStatus('❌ Error: '+e.message));
+}
+
+document.addEventListener('keydown', e => {if ((e.ctrlKey || e.metaKey) && e.key === 's') { e.preventDefault(); guardarEnGH(); }});
+
+$('btnReload').onclick = cargarDelRepo;
+$('btnSave').onclick = guardarEnGH;
+$('btnDownload').onclick = () => {
+  const link = document.createElement('a');
+  link.href = 'data:application/json,' + encodeURIComponent(localStorage.getItem('carniceria_data') || '[]');
+  link.download = 'carniceria-productos.json';
+  link.click();
+};
+$('btnCopy').onclick = () => {
+  navigator.clipboard.writeText(localStorage.getItem('carniceria_data') || '[]');
+  setStatus('✅ Copiado');
+};
+$('btnEditGH').onclick = () => window.open(`https://github.com/${REPO}/edit/main/${FILE}`);
+$('btnNew').onclick = nuevoProducto;
+$('btnDup').onclick = duplicarProducto;
+$('btnDelete').onclick = borrarProducto;
+$('btnToken').onclick = () => $('modal').classList.add('on');
+$('btnCloseModal').onclick = () => $('modal').classList.remove('on');
+$('btnSaveToken').onclick = () => {
+  const token = $('inToken').value.trim();
+  localStorage.setItem('gh_token', $('inToken').value);
+  $('modal').classList.remove('on');
+  setStatus('✅ Token guardado');
+};
+$('btnDelToken').onclick = () => {
+  localStorage.removeItem('gh_token');
+  $('inToken').value = '';
+  setStatus('✅ Token eliminado');
+};
+$('btnDraft').onclick = () => {if (confirm('¿Descartar cambios?')) cargarDelRepo();};
+$('btnCategories').onclick = () => { renderCategoryList(); $('modalCat').classList.add('on'); };
+$('btnCatClose').onclick = () => $('modalCat').classList.remove('on');
+$('fileIn').onchange = e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = evt => {
+    localStorage.setItem('carniceria_data', evt.target.result);
+    renderLista();
+    renderForm();
+    setStatus('✅ JSON cargado');
+  };
+  reader.readAsText(file);
+};
+
+$('selCategory').onchange = renderLista;
+$('search').oninput = renderLista;
+$('onlyInc').onchange = renderLista;
+$('onlyDup').onchange = renderLista;
+
+loadCategories();
+updateCategorySelects();
 cargarDelRepo();
-</script>
+  </script>
 </body>
-</html>
+</html> 
