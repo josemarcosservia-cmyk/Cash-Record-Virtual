@@ -178,6 +178,31 @@
     .volver:hover {
       background: #ff7a3f;
     }
+        .lamina {
+            width: 100%;
+            max-width: 1100px;
+            margin: 26px auto 10px;
+            padding: 12px;
+            background: #ffffff;
+            border: 1px solid #ff5a1f;
+            border-radius: 10px;
+        }
+
+        .lamina h3 {
+            margin: 0 0 10px 0;
+            color: #ff5a1f;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .lamina img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+        }
+
   </style>
 </head>
 <body>
@@ -269,7 +294,20 @@
           ).join('')}
         </div>
       `;
+        contenido.innerHTML += laminaDespiece(categoria);
     }
+
+        // Laminas de despiece por categoria
+        const LAMINAS = {
+            'Vacuno': 'img/despiece-vacuno.png',
+            'Cerdo': 'img/despiece-cerdo.png'
+        };
+
+        function laminaDespiece(categoria) {
+            const ruta = LAMINAS[categoria];
+            if (!ruta) return '';
+            return `<div class="lamina"><h3>Piezas de ${categoria}</h3><a href="${ruta}" target="_blank" rel="noopener"><img src="${ruta}" alt="Despiece de ${categoria}" loading="lazy" onerror="this.closest('.lamina').remove()"></a></div>`;
+        }
 
     // Seleccionar subcategoría y mostrar productos
     function seleccionarSubcategoria(categoria, subcategoria) {
