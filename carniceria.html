@@ -110,13 +110,34 @@
       background: rgba(255, 90, 31, 0.15);
       transform: translateY(-4px);
     }
-    .producto img {
-      width: 100%;
-      height: 130px;
-      object-fit: contain;
-      background: #12160f;
-      border-radius: 6px;
-      margin-bottom: 8px;
+    .producto .foto {
+        width: 100%;
+        height: 130px;
+        background: #12160f;
+        border-radius: 6px;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .producto .foto::after {
+        content: 'Sin foto';
+        color: #5f6b56;
+        font-size: 0.75em;
+        display: none;
+    }
+
+    .producto .foto:empty::after,
+    .producto .foto.vacia::after {
+        display: block;
+    }
+
+    .producto .foto img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
     .producto h4 {
       margin: 0 0 6px 0;
@@ -183,7 +204,7 @@
     // Cargar datos del JSON (esquema del editor: campos con tilde)
     async function cargarProductos() {
       try {
-        const response = await fetch('carniceria-productos.json');
+        const response = await fetch('carniceria-productos.json?v=' + Date.now());
         productosData = await response.json();
         mostrarCategorias();
       } catch (error) {
@@ -262,7 +283,7 @@
       productos.forEach(prod => {
         productosHTML += `
           <div class="producto">
-            ${prod.imagen ? `<img src="${prod.imagen}" alt="${prod.nombre || ''}" onerror="this.style.display='none'">` : ''}
+            <div class="foto">${prod.imagen ? `<img src="${prod.imagen}" alt="${prod.nombre || ''}" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('vacia')">` : ''}</div>
             <h4>${prod.nombre || ''}</h4>
             ${prod.variante ? `<p><strong>Variante:</strong> ${prod.variante}</p>` : ''}
             <p><strong>Código:</strong> ${prod.código || ''}</p>
