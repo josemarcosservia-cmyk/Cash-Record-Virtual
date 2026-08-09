@@ -15,14 +15,14 @@ button:hover,.btn:hover{background:#3a3020}
 button.primary{background:#7a5c1e;border-color:#c9a24b;color:#fff2d0}
 button.danger{background:#5a1f1f;border-color:#8a3a3a}
 #status{font-size:12px;color:#9c9078;margin-left:auto}
-main{flex:1;display:flex;height:auto}
-aside{width:320px;border-right:1px solid #3a3020;display:flex;flex-direction:column;background:#171309}
+main{flex:1;min-height:0;display:flex;height:auto}
+aside{min-height:0;width:320px;border-right:1px solid #3a3020;display:flex;flex-direction:column;background:#171309}
 aside.filters{padding:10px;display:flex;flex-direction:column;gap:7px;border-bottom:1px solid #3a3020}
 select,input[type=text],input[type=number],textarea{background:#0e0c08;color:#e8e0cd;border:1px solid #4a3d28;border-radius:6px;padding:6px 8px;font:inherit;width:100%}
 textarea{resize:vertical;min-height:86px;line-height:1.55}
 label.check{font-size:12px;color:#b8ab90;display:flex;align-items:center;gap:6px;cursor:pointer}
 label.check input{width:auto}
-#list{flex:1;overflow:auto}
+#list{flex:1;min-height:0;overflow-y:scroll;overflow-x:hidden}
 .item{padding:7px 10px;border-bottom:1px solid #241d13;cursor:pointer;display:flex;gap:8px;align-items:center}
 .item:hover{background:#221b11}
 .item.sel{background:#3a2d16;border-left:3px solid #d9b96a;padding-left:7px}
@@ -33,7 +33,12 @@ label.check input{width:auto}
 .dot.dup{background:#c2453f}
 .footer{padding:8px;display:flex;gap:6px;border-top:1px solid #3a3020}
 .footer button{flex:1;padding:6px 4px;font-size:12px}
-section.form{flex:1;overflow:auto;padding:16px 20px}
+section.form{flex:1;min-height:0;overflow-y:scroll;padding:16px 20px}
+#list,section.form,#catContainer{scrollbar-width:auto;scrollbar-color:#c9a24b #171309}
+#list::-webkit-scrollbar,section.form::-webkit-scrollbar,#catContainer::-webkit-scrollbar{width:14px;height:14px}
+#list::-webkit-scrollbar-track,section.form::-webkit-scrollbar-track,#catContainer::-webkit-scrollbar-track{background:#171309;border-left:1px solid #3a3020}
+#list::-webkit-scrollbar-thumb,section.form::-webkit-scrollbar-thumb,#catContainer::-webkit-scrollbar-thumb{background:#5a4a2a;border:3px solid #171309;border-radius:8px}
+#list::-webkit-scrollbar-thumb:hover,section.form::-webkit-scrollbar-thumb:hover,#catContainer::-webkit-scrollbar-thumb:hover{background:#c9a24b}
 .empty{color:#7c7157;padding:40px;text-align:center}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px 16px;margin-bottom:14px}
 .f{display:flex;flex-direction:column;gap:4px}
