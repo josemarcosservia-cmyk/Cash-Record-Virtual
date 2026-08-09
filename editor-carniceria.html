@@ -346,11 +346,49 @@ function renderForm() {
     <div class="f"><label>Formato</label><input type="text" value="${esc(prod.formato)}" onchange="actualizar(${SEL},'formato',this.value)"></div>
     <div class="f"><label>Peso Aprox</label><input type="text" value="${esc(prod.peso_aprox)}" onchange="actualizar(${SEL},'peso_aprox',this.value)"></div>
     <div class="f wide"><label>Descripción</label><textarea onchange="actualizar(${SEL},'descripción',this.value)">${esc(prod.descripción)}</textarea></div>
-    <div class="f"><label>URL Imagen</label><input type="text" value="${esc(prod.imagen)}" onchange="actualizar(${SEL},'imagen',this.value)"></div>
+    <div class="f wide"><label>URL Imagen</label>
+      <div class="imgprev">
+        <img id="imgPrev" alt="" style="width:110px;height:80px;object-fit:cover">
+        <div style="flex:1">
+          <input type="text" id="fImg" value="${esc(prod.imagen)}" onchange="actualizar(${SEL},'imagen',this.value)">
+          <div style="margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <button type="button" onclick="generarNombreImagen()">Generar nombre desde el titulo</button>
+            <span class="note" id="avisoImg"></span>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="f"><label><input type="checkbox" ${prod.destacado ? 'checked' : ''} onchange="actualizar(${SEL},'destacado',this.checked)"> Destacado</label></div>
   </div>`;
   
   sect.innerHTML = html;
+  refrescarImg();
+}
+
+function slug(s) {
+  return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+function generarNombreImagen() {
+  const SEL = parseInt(sessionStorage.getItem('carniceria_sel') || '0');
+  const DATA = JSON.parse(localStorage.getItem('carniceria_data') || 'null');
+  if (!DATA) return;
+  const prod = DATA.find(p => p.id === SEL);
+  if (!prod) return;
+  const base = slug(prod.nombre);
+  if (!base) { setStatus('❌ El producto no tiene nombre'); return; }
+  actualizar(SEL, 'imagen', 'img/' + base + '.webp');
+}
+
+function refrescarImg() {
+  const im = $('imgPrev'), av = $('avisoImg');
+  if (!im || !av) return;
+  const ruta = $('fImg') ? $('fImg').value.trim() : '';
+  if (!ruta) { im.removeAttribute('src'); av.textContent = 'Sin ruta de imagen'; return; }
+  av.textContent = 'Buscando ' + ruta;
+  im.onload = () => { av.textContent = '✅ Imagen encontrada'; };
+  im.onerror = () => { av.textContent = '⚠️ Todavía no existe ese archivo en el repositorio'; };
+  im.src = ruta;
 }
 
 function seleccionar(id) {
